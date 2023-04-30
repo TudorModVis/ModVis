@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/portfolio.css">
+
+    <script src="../src/js/fitty.min.js" defer></script>
+    <script src="../src/js/app.js" defer></script>
+</head>
+<body>
+    <div class="max-w-screen h-full overflow-hidden">
+        <div class="noise"></div>
+        <img src="../images/SVG/Vector 2.svg" id="svg1" class="fixed right-0 w-[150vw] lg:w-1/2 hidden lg:block">
+        <img src="../images/SVG/Vector 1.svg" id="svg2" class="fixed right-0 w-full lg:w-1/2 lg:hidden ">
+        <section id="portfolio" class="z-10">
+            <div class="container flex flex-col items-center z-10">
+                <header class="flex items-center justify-center lg:justify-between relative pt-[40px] lg:pt-[50px] w-full">
+                    <nav id="left" class="lg:flex w-[41%] justify-end gap-[10%] 2xl:gap-[8%] z-10 hidden">
+                        <a href="../index.html" id="home-link">Home</a>
+                        <a href="" class="min-w-max">About Us</a>
+                        <a href="">Portfolio</a>
+                        <a href="">Contacts</a>
+                    </nav>
+                    <a href="" class="w-[12%] flex justify-center items-center z-10"><img src="../images/HOME/Logo.png" alt="" class="w-[121px] lg:w-full max-w-[210px]"></a> 
+                    <nav id="right" class="lg:flex w-[41%] gap-[6%] z-10 hidden">
+                        <a href="" class="min-w-max">Web Design</a>
+                        <a href="" class="min-w-max">Design Graphic</a>
+                        <a href="" class="min-w-max">SMM</a>
+                        <a href="" class="min-w-max">Video Services</a>
+                    </nav>
+                </header>
+            </div>
+            <div class="wrapper flex flex-col items-center z-10 px-[4%]">
+                <div class="z-10 w-[60%] text-center mt-[5%] mb-12">
+                    <h1 class="text-[5.5rem] mb-[25px]"> <span class="accent relative">PORTFOLIO.</span> </h1>
+                    <p>De la site-uri web de prezentare pentru mici afaceri, la platforme de e-commerce complexe și site-uri personalizate.</p>
+                </div>
+                <div class="work-container z-10 w-full flex justify-between ">
+                    <div class="work">
+                        <div class="flex">
+                            <img src="../images/PORTFOLIO/travel.png" alt="" class="site">
+                            <p class="info hidden">Info about talie</p>
+                        </div>
+                        <div class="title">
+                            <h2>TALIE TRAVEL</h2>
+                            <p class="text-[#F74264] text-sm">KNOW MORE <img src="../images/PORTFOLIO/arrow.svg" alt="" class="inline h-[0.875rem] ml-1"> </p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="../images/PORTFOLIO/PassportHQ.png" alt="" class="site">
+                        <div class="title">
+                            <h2>PASSPORT HQ</h2>
+                            <p class="text-[#F74264] text-sm">KNOW MORE <img src="../images/PORTFOLIO/arrow.svg" alt="" class="inline h-[0.875rem] ml-1"> </p>
+                        </div> 
+                    </div>
+                    <div class="work">
+                        <img src="../images/PORTFOLIO/travel.png" alt="" class="site">
+                        <div class="title">
+                            <h2>INVEST EASE</h2>
+                            <p class="text-[#F74264] text-sm">KNOW MORE <img src="../images/PORTFOLIO/arrow.svg" alt="" class="inline h-[0.875rem] ml-1"> </p>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

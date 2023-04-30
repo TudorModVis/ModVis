@@ -1,0 +1,43 @@
+.work {
+    width: 32%;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.work::-webkit-scrollbar {
+    display: none;
+}
+  
+.work {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+}
+
+.work.open {
+    background-color: white;
+    aspect-ratio: 560/450;
+    overflow: scroll;
+}
+
+.work .site {
+    border-radius: 12px;
+    border: 1px solid white;
+    width: 100%;
+
+    aspect-ratio: 560/315;
+    object-fit: cover;
+    object-position: 0% 0;
+}
+
+.work .site.open {
+    width: 50%;
+    aspect-ratio: auto;
+}
+
+.info.open {
+    display: block;
+}
+
+.title.open {
+    display: none;
+}
