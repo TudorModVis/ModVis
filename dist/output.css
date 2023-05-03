@@ -1028,11 +1028,11 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 #svg1 {
-  /* animation: svg1 5s linear infinite; */
+  animation: svg1 5s linear infinite;
 }
 
 #svg2 {
-  /* animation: svg2 5s linear infinite; */
+  animation: svg2 5s linear infinite;
 }
 
 @keyframes svg1 {
@@ -1066,7 +1066,7 @@ header nav a:hover::after, footer nav a:hover::after {
 /* -------- Home -------- */
 
 #home .circle img {
-  /* animation: circle 20s linear infinite; */
+  animation: circle 20s linear infinite;
 }
 
 @keyframes circle {
