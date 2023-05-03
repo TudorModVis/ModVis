@@ -1,0 +1,137 @@
+.work::-webkit-scrollbar {
+    display: none;
+}
+  
+.work {
+    cursor: pointer;
+    border-radius: 12px;
+    position: relative;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    aspect-ratio: 560/450;
+    overflow: hidden;
+
+    transition: none;
+}
+
+.cursour {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #F1F1F1;
+    position: absolute;
+
+    z-index: 100;
+    pointer-events: none;
+    display: none;
+}
+
+.cursour.active {
+    display: block;
+    height: 40px;
+    width: 40px;
+
+    animation: open 0.5s ;
+    animation: pulse 2s infinite;
+}   
+
+@keyframes open {
+    from{height: 20px; width: 20px; opacity: 0.5;}
+    to{height: 40px; width: 40px; opacity: 1;}
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: .5;
+    }
+
+    90% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.work.open {
+    border: 1px solid white;
+    overflow: scroll;
+    cursor: none;
+}
+
+.work .site {
+    z-index: 2;
+    border-radius: 12px;
+    width: 100%;
+
+    aspect-ratio: 560/315;
+    object-fit: cover;
+    object-position: 0% 0;
+    position: absolute;
+
+    top: 0;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.7s;
+
+    border: 1px solid white;
+}
+
+.work .site.open {
+    border: none;
+    aspect-ratio: auto;
+}
+
+.info {
+    text-align: justify;
+    padding: 25px;
+
+    position: absolute;
+
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: black;
+}
+
+.info.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    height: fit-content;
+}
+
+.title {
+    animation: title 0.8s;
+}
+
+@keyframes title {
+    0% {opacity: 0; text-indent: -50px;}
+    50%{opacity: 0; text-indent: -50px;}
+    100% {opacity: 1; text-indent: 0px;}
+}
+
+.title.open {
+    display: none;
+}
+
+.background {
+    background-color: black;
+    border-radius: 12px;
+    width: 100%;
+    aspect-ratio: 560/315;
+    position: relative;
+}
+
+.phone-card {
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.7s;
+}
+
+.phone-card.open {
+    top: 0;
+}
