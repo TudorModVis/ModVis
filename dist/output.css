@@ -554,6 +554,10 @@ video {
   }
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 .fixed{
   position: fixed;
 }
@@ -660,6 +664,10 @@ video {
 
 .h-\[0\.875rem\]{
   height: 0.875rem;
+}
+
+.h-\[200vh\]{
+  height: 200vh;
 }
 
 .h-fit{
@@ -905,6 +913,14 @@ video {
   color: rgb(247 66 100 / var(--tw-text-opacity));
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
+}
+
 .opacity-20{
   opacity: 0.2;
 }
@@ -1065,7 +1081,7 @@ header nav a:hover::after, footer nav a:hover::after {
 
 /* -------- Home -------- */
 
-#home .circle img {
+.circle img {
   animation: circle 20s linear infinite;
 }
 
@@ -1093,13 +1109,13 @@ header nav a:hover::after, footer nav a:hover::after {
 #home .mouse::before {
   content: '';
   width: 5px;
-  height: 5px;
+  height: 8px;
   position: absolute;
   top: 7px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #F1F1F1;
-  border-radius: 50%;
+  border-radius: 20px;
   opacity: 1;
   animation: wheel 2s infinite;
   -webkit-animation: wheel 2s infinite;
@@ -1108,7 +1124,7 @@ header nav a:hover::after, footer nav a:hover::after {
 @keyframes wheel {
   to {
     opacity: 0;
-    top: 30px;
+    top: 25px;
   }
 }
 
@@ -1121,8 +1137,12 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 .arrows.portfolio {
-  left: 20.5px;
-  top: 7.5px;
+  width: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .arrow {
@@ -1138,8 +1158,8 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 .arrow.portfolio {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
 }
 
 .arrow.one
@@ -1289,6 +1309,10 @@ header nav a:hover::after, footer nav a:hover::after {
 
   .lg\:w-\[60\%\]{
     width: 60%;
+  }
+
+  .lg\:w-\[65\%\]{
+    width: 65%;
   }
 
   .lg\:w-full{

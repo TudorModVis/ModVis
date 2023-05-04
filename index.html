@@ -14,11 +14,11 @@
 
 </head>
 <body>
-    <div class="max-w-screen h-full overflow-hidden relative">
+    <div class="max-w-screen h-[200vh] overflow-hidden relative">
         <div class="noise"></div>
         <img src="images/SVG/Vector 2.svg" id="svg1" class="fixed right-0 w-[150vw] lg:w-1/2 hidden lg:block">
         <img src="images/SVG/Vector 1.svg" id="svg2" class="fixed right-0 w-full lg:w-1/2 lg:hidden ">
-        <section id="home" class="min-h-screen w-screen h-fit z-10 relative">
+        <section id="home" class="min-h-screen w-screen h-fit z-10 fixed opacity-100">
             <div class="container flex flex-col min-h-screen h-full relative">
                 <header class="flex items-center justify-center lg:justify-between relative pt-[40px] lg:pt-[50px] w-full">
                     <nav id="left" class="lg:flex w-[41%] justify-end gap-[10%] 2xl:gap-[8%] z-10 hidden">
@@ -35,7 +35,7 @@
                         <a href="" class="min-w-max">ENG</a>
                     </nav>
                 </header>
-                <div class="flex-[10%] flex flex-col lg:justify-center justify-end relative">
+                <div class="wrapper flex-[10%] flex flex-col lg:justify-center justify-end relative">
                     <div class="circle absolute w-[75%] lg:w-[35%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 top-[10%] lg:top-auto"> 
                         <img src="images/HOME/textpath.png" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                         <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
@@ -47,19 +47,19 @@
                         <p class="text-sm text-[#F74264] text-center lg:text-left">MODVIS - MODERN VISION</p>
                         <h1 class="text-[2.7rem] text-center leading-tight" id="first-big">WE ENHANCE YOUR <span class="accent relative">ONLINE</span> <br> PRESENCE.</h1>
                     </div>
+                    <div class="mouse"></div>
+                    <div class="arrows">
+                        <div class="arrow one"></div>
+                        <div class="arrow two"></div>
+                    </div>
                 </div>
-                <div class="mouse"></div>
-                <div class="arrows">
-                    <div class="arrow one"></div>
-                    <div class="arrow two"></div>
-                </div>
+                
             </div>
-            
         </section>
 
-        <section id="sales" class="min-h-screen w-screen h-fit z-10">
+        <section id="sales" class="min-h-screen w-screen h-fit z-11 fixed">
             <div class="container flex flex-col min-h-screen h-full relative">
-                <header class="flex items-center justify-center lg:justify-between relative pt-[40px] lg:pt-[50px] w-full">
+                <header class="flex items-center justify-center lg:justify-between relative pt-[40px] lg:pt-[50px] w-full invisible">
                     <nav id="left" class="lg:flex w-[41%] justify-end gap-[10%] 2xl:gap-[8%] z-10 hidden">
                         <a href="" id="active">Home</a>
                         <a href="" class="min-w-max">About Us</a>
@@ -74,7 +74,7 @@
                         <a href="" class="min-w-max">ENG</a>
                     </nav>
                 </header>
-                <div class="flex-[10%] flex flex-col lg:justify-center justify-end relative">
+                <div class="wrapper flex-[10%] flex flex-col lg:justify-center justify-end relative opacity-0">
                     <div class="circle absolute w-[75%] lg:w-[35%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 top-[10%] lg:top-auto"> 
                         <img src="images/HOME/textpath.png" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                         <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 

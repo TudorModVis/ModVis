@@ -29,14 +29,16 @@ window.addEventListener('mousemove', (event) => {
 
 // -------- Sales Transition -------- //
 
-const home = document.querySelector('#home');
+const homeContainer = document.querySelector('#home .wrapper');
+const salesContainer = document.querySelector('#sales .wrapper');
+
 let check = false;
 
 function homeScroll() {
-    if (!check) {
-        console.log('check')
-    }
-    check = true;
+    let progres = window.scrollY / window.innerHeight;
+
+    homeContainer.style.opacity = 1 - progres;
+    salesContainer.style.opacity = progres;
 }
 
 window.addEventListener('scroll', homeScroll);
