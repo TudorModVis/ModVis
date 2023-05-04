@@ -554,10 +554,6 @@ video {
   }
 }
 
-.invisible{
-  visibility: hidden;
-}
-
 .fixed{
   position: fixed;
 }
@@ -1164,18 +1160,18 @@ header nav a:hover::after, footer nav a:hover::after {
 
 .arrow.one
 {
-  -webkit-animation-delay: .5s;
-  -moz-animation-delay: .5s;
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
   animation-direction: alternate;
   animation-delay: alternate;
 }
 
 .arrow.two
 {
-  -webkit-animation-delay: .6s;
-  -moz-animation-delay: .6s;
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
   -webkit-animation-direction: alternate;
-  animation-delay: .6s;
+  animation-delay: 1.6s;
   animation-direction: alternate;
   margin-top: -6px;
 }

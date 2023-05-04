@@ -31,13 +31,14 @@
     height: 50px;
     width: 50px;
 
-    animation: open 0.5s ;
-    animation: pulse 2s infinite;
+    animation: card 1.5s, pulse 2s infinite;
+    animation-delay: 0ms, 1.5s;
 }   
 
-@keyframes open {
-    from{height: 30px; width: 30px; opacity: 0.5;}
-    to{height: 50px; width: 50px; opacity: 1;}
+@keyframes card {
+    0%{transform: scale(0.5); opacity: 0.5;}
+    50%{transform: scale(1.2); opacity: 1;}
+    100%{transform: scale(1); opacity: 1;}
 }
 
 @keyframes pulse {
@@ -46,13 +47,14 @@
         opacity: .5;
     }
 
-    90% {
+    50% {
         transform: scale(1.2);
+        opacity: 1;
     }
 
     100% {
         transform: scale(1);
-        opacity: 1;
+        opacity: .5;
     }
 }
 
@@ -121,7 +123,6 @@
 }
 
 .background {
-    background-color: black;
     border-radius: 12px;
     width: 100%;
     aspect-ratio: 560/315;
