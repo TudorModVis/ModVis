@@ -27,13 +27,18 @@
 }
 
 .cursour.active {
-    display: block;
     height: 50px;
     width: 50px;
 
     animation: card 1.5s, pulse 2s infinite;
     animation-delay: 0ms, 1.5s;
 }   
+
+@media (min-width: 1024px) {
+    .cursour.active {
+        display: block;
+    }
+}
 
 @keyframes card {
     0%{transform: scale(0.5); opacity: .5;}

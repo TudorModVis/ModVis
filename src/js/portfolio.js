@@ -77,16 +77,27 @@ works.forEach(work => {
 const exitButton = phoneCard.querySelector('#close');
 exitButton.addEventListener('click', exitCard);
 
+let start = false;
 
-function dragCard() {
-    if (phoneCard.getBoundingClientRect().top > 100) {
-        wrapper.style.height = 'auto';
-        phoneCard.classList.remove('open');
+function dragCardEnd() {
+    if (window.scrollY == 0) {
+        if (start) {
+            phoneCard.classList.remove('open');
+            wrapper.style.height = 'auto';
+        }
+    }
+
+    start = false;
+}
+
+function dragCardStart() {
+    if (window.scrollY == 0) {
+        start = true;
     }
 }
 
-phoneCard.addEventListener('touchstart', () => {})
-phoneCard.addEventListener('touchend', dragCard)
+phoneCard.addEventListener('touchstart', dragCardStart);
+phoneCard.addEventListener('touchend', dragCardEnd);
 
 
 // -------- Portfolio Cursour -------- //
