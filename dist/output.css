@@ -632,6 +632,10 @@ video {
   margin-bottom: 15px;
 }
 
+.mb-\[20px\]{
+  margin-bottom: 20px;
+}
+
 .mb-\[25px\]{
   margin-bottom: 25px;
 }
@@ -642,6 +646,10 @@ video {
 
 .mb-\[5vh\]{
   margin-bottom: 5vh;
+}
+
+.mb-\[6vh\]{
+  margin-bottom: 6vh;
 }
 
 .ml-1{
@@ -694,6 +702,14 @@ video {
 
 .h-\[110\%\]{
   height: 110%;
+}
+
+.h-\[11vh\]{
+  height: 11vh;
+}
+
+.h-\[12vh\]{
+  height: 12vh;
 }
 
 .h-\[6\.4vh\]{
@@ -862,6 +878,10 @@ video {
   gap: 10%;
 }
 
+.gap-\[2\.5vw\]{
+  gap: 2.5vw;
+}
+
 .gap-\[25px\]{
   gap: 25px;
 }
@@ -968,6 +988,10 @@ video {
   padding-bottom: 13px;
 }
 
+.pb-\[9vh\]{
+  padding-bottom: 9vh;
+}
+
 .pt-\[40px\]{
   padding-top: 40px;
 }
@@ -1003,10 +1027,6 @@ video {
 
 .font-bold{
   font-weight: 700;
-}
-
-.leading-\[1\.1\]{
-  line-height: 1.1;
 }
 
 .leading-none{
@@ -1048,6 +1068,14 @@ video {
 html {
   color: #F1F1F1;
   scroll-behavior: smooth;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 @media (min-width: 1536px) {
@@ -1214,7 +1242,7 @@ header nav a:hover::after, footer nav a:hover::after {
 /* -------- Home -------- */
 
 .circle img {
-  /* animation: circle 20s linear infinite; */
+  animation: circle 20s linear infinite;
 }
 
 @keyframes circle {
@@ -1528,6 +1556,43 @@ header nav a:hover::after, footer nav a:hover::after {
   transform: rotate(-45deg) translateY(-8px);
 }
 
+.menu .social {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.menu .social a {
+  transition: 0.3s;
+}
+
+.menu .social a:hover {
+  color:#F74264;
+}
+
+.menu .social.active {
+  opacity: 1;
+}
+
+.change {
+  transform: translateY(15vh);
+  transition: all 1s cubic-bezier(.85,0,.2,.99);
+}
+
+.change.active {
+  transition: none;
+}
+
+.change img {
+  height: 12vh;
+  margin-bottom: 4vh;
+}
+
+@media (min-width: 1536px) {
+  .change img {
+    height: 10.5vh;
+  }
+}
+
 @media (min-width: 1024px){
   .lg\:left-auto{
     left: auto;
@@ -1666,6 +1731,10 @@ header nav a:hover::after, footer nav a:hover::after {
     margin-top: 8vh;
   }
 
+  .\32xl\:h-\[10\.5vh\]{
+    height: 10.5vh;
+  }
+
   .\32xl\:gap-\[8\%\]{
     gap: 8%;
   }
@@ -1676,4 +1745,3 @@ header nav a:hover::after, footer nav a:hover::after {
     margin-left: -5vw;
   }
 }
-

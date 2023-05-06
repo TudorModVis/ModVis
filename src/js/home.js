@@ -1,15 +1,3 @@
-// -------- Fitty Specifications -------- //
-
-const homeText = document.querySelector('#home #first-big');
-const salesText = document.querySelector('#sales #first-big');
-const websiteText = document.querySelector('#webiste #title');
-
-if (window.innerWidth >= 1024) {
-    fitty(homeText);
-    fitty(salesText);
-    // fitty(websiteText);
-}
-
 // -------- Eye Movement -------- //
 
 const pupil = document.querySelector('#home .pupil');
@@ -43,8 +31,37 @@ function homeScroll() {
 // -------- Word Change -------- //
 
 const change = document.querySelector('.change');
-const changeWrapper = change.querySelector('.change-wrapper');
-const words = change.querySelectorAll('h1');
+let index = 0, rate, changeWordsInterval;
+
+
+function changeWords() {
+    if (window.innerWidth >= 1536) rate = -14.5;
+    else rate = -16;
+    change.style.transform = 'translateY(' + rate * index + 'vh)';
+
+    if (index == 1) change.classList.remove('active');
+
+    if (index == 4) {
+        index = 0;
+        
+        setTimeout(() => {
+            change.classList.add('active');
+        }, 1000);
+    } else index++;
+}
+
+changeWords();
+
+function startInterval() {
+    changeWordsInterval = setInterval(changeWords, 2000);
+}
+
+function endInterval() {
+    clearInterval(changeWordsInterval);
+}
+
+startInterval();
+
 
 
 // -------- Menu -------- //
@@ -55,6 +72,7 @@ const lines = menuButton.querySelectorAll('div');
 
 const menuLinks = menu.querySelectorAll('.link');
 const menuWave = menu.querySelector('h1');
+const socialLinks = menu.querySelector('.social');
 
 anime({
     targets: menuLinks,
@@ -65,7 +83,6 @@ anime({
 
 menuButton.onclick = () => {
     menu.classList.toggle('open');
-    
     // document.body.classList.toggle('open-menu');
     
     lines.forEach(line => {
@@ -75,11 +92,11 @@ menuButton.onclick = () => {
     if (menu.classList.contains('open')) {
         menuWave.classList.add('active');
         lines[1].style.transition = 'all 700ms cubic-bezier(.9, 0, .33, 1)';
-
+        
         setTimeout(() => {
             menuLinks.forEach(link => {
                 link.classList.add('active');
-            })
+            });
         }, 1700);
 
         setTimeout(() => {
@@ -91,6 +108,10 @@ menuButton.onclick = () => {
                 delay: anime.stagger(100)
             });
         }, 400);
+
+        setTimeout(() => {
+            socialLinks.classList.add('active');
+        }, 1400);
         
     } else {
         setTimeout(() => {
@@ -100,7 +121,8 @@ menuButton.onclick = () => {
 
         menuLinks.forEach(link => {
             link.classList.remove('active');
-        })
+        });
+        socialLinks.classList.remove('active');
 
         anime({
             targets: menuLinks,
