@@ -12,4 +12,18 @@ const accentObserver = new IntersectionObserver((entries) => {
     })
 });
 
-accents.forEach(accent => accentObserver.observe(accent));
+// accents.forEach(accent => accentObserver.observe(accent));
+
+// const colors = ['#F74264', '#F54264', '#F12D5C', '#F54298'];
+// let index = 0;
+
+// function changeColor(event) {
+//     const accent = event.target;
+//     if (index == colors.length) index = 0;
+//     accent.style.setProperty('--color', colors[index])
+//     index++;
+// }
+
+// accents.forEach(accent => {
+//     accent.addEventListener('mouseenter', changeColor)
+// });

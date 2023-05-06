@@ -9,7 +9,8 @@
 
     <link href="dist/output.css" rel="stylesheet">
 
-    <script src="src/js/fitty.min.js" defer></script>
+    <script src="src/js/libraries/fitty.min.js" defer></script>
+    <script src="src/js/libraries/anime.min.js" defer></script>
     <script src="src/js/app.js" defer></script>
     <script src="src/js/home.js" defer></script>
 
@@ -17,65 +18,71 @@
 <body>
     <div class="max-w-screen h-full overflow-hidden relative">
         <div class="noise"></div>
-        <img src="images/SVG/Vector 2.svg" id="svg1" class="fixed right-0 w-[150vw] lg:w-1/2 hidden lg:block">
+        <img src="images/SVG/COLOR.svg" id="svg1" class="fixed left-0 w-[150vw] h-[110%] lg:w-[70%] hidden lg:block">
         <img src="images/SVG/Vector 1.svg" id="svg2" class="fixed right-0 w-full lg:w-1/2 lg:hidden ">
-        <section id="home" class="min-h-screen w-screen h-fit z-10 opacity-100">
+
+        <div class="menu fixed w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-20 flex right-[-130%] px-[5vw] text-right">
+            <nav class="flex flex-col leading-none gap-[7vh] big-text">
+                <div class="relative link">
+                    <h1>HOME</h1>
+                    <a href="" class="current">HOME</a>
+                </div>
+                <a href="pages/portfolio.html" class="link">PORTFOLIO</a>
+                <a href="#services" class="link">SERVICES</a>
+                <a href="#benefits" class="link">CONTACTS</a>
+            </nav>
+        </div>
+
+        <section id="home" class="min-h-screen w-screen h-fit z-10">
             <div class="container flex flex-col min-h-screen h-full relative">
-                <header class="flex items-center justify-center lg:justify-between relative pt-[40px] lg:pt-[50px] w-full">
-                    <nav id="left" class="lg:flex w-[41%] justify-end gap-[10%] 2xl:gap-[8%] z-10 hidden">
-                        <a href="" id="active">Home</a>
-                        <a href="" class="min-w-max">About Us</a>
-                        <a href="pages/portfolio.html">Portfolio</a>
-                        <a href="">Contacts</a>
-                    </nav>
-                    <a href="" class="w-[12%] flex justify-center items-center z-10"><img src="images/HOME/Logo.png" alt="" class="w-[121px] lg:w-full max-w-[210px]"></a> 
-                    <nav id="right" class="lg:flex w-[41%] gap-[10%] z-10 hidden">
-                        <a href="" class="min-w-max">Websites</a>
-                        <a href="" class="min-w-max">Branding</a>
-                        <a href="" class="min-w-max">PR Materials</a>
-                        <a href="" class="min-w-max">ENG</a>
-                    </nav>
+                <div class="circle absolute w-[75%] lg:w-[27%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 translate-y-[-50%] top-[10%] lg:top-[50vh] lg:right-[10%]"> 
+                    <img src="images/HOME/textpath.png" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                    <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                        <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                        </div> 
+                    </div>
+                </div>
+                <header class="flex items-center justify-center relative mt-[40px] lg:w-[90vw] lg:ml-[-2.5vw] 3xl:ml-[-5vw]">
+                    <div class="absolute top-1/2 translate-y-[-50%] left-0 flex gap-[25px] z-10">
+                        <a href="" class="text-[#F74264] font-bold">ENG</a>
+                        <a href="">RO</a>
+                        <a href="">РУ</a>
+                    </div>
+                    <div class="menu-btn absolute right-0 z-20 cursor-pointer flex flex-col items-end top-1/2 translate-y-[-50%]">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
                 </header>
-                <div class="wrapper flex-[10%] flex flex-col lg:justify-center justify-end relative">
-                    <div class="circle absolute w-[75%] lg:w-[35%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 top-[10%] lg:top-auto"> 
-                        <img src="images/HOME/textpath.png" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                <div class="wrapper flex-[10%] flex flex-col justify-end relative">
+                    <div class="z-10 mb-[100px] lg:mb-[7.5vh]">
+                        <p class="text-[#F74264] text-center lg:text-left">MODVIS - MODERN VISION</p>
+                        <h1 class="text-[2.7rem] leading-[1.1]" id="first-big"> 
+                            <div class="change overflow-hidden">
+                                <h1>MOD VIS</h1>
                             </div> 
-                        </div>
-                    </div>
-                    <div class="lg:mx-[6.5%] z-10 mb-[100px] lg:mb-0">
-                        <p class="text-sm text-[#F74264] text-center lg:text-left">MODVIS - MODERN VISION</p>
-                        <h1 class="text-[2.7rem] text-center leading-tight" id="first-big">WE ENHANCE YOUR <span class="accent relative">ONLINE</span> <br> PRESENCE.</h1>
-                    </div>
-                    <div class="mouse"></div>
-                    <div class="arrows">
-                        <div class="arrow one"></div>
-                        <div class="arrow two"></div>
+                            WILL <span class="accent relative">ENHANCE</span> YOUR <br> ONLINE PRESENCE.</h1>
                     </div>
                 </div>
                 
             </div>
         </section>
 
-        <section id="sales" class="min-h-screen w-screen h-fit z-11">
+        <section id="sales" class="min-h-screen w-screen h-screen z-10 relative">
             <div class="container flex flex-col min-h-screen h-full relative">
-                <header class="flex items-center justify-center lg:justify-between relative pt-[40px] lg:pt-[50px] w-full">
-                    <nav id="left" class="lg:flex w-[41%] justify-end gap-[10%] 2xl:gap-[8%] z-10 hidden">
-                        <a href="" id="active">Home</a>
-                        <a href="" class="min-w-max">About Us</a>
-                        <a href="pages/portfolio.html">Portfolio</a>
-                        <a href="">Contacts</a>
-                    </nav>
-                    <a href="" class="w-[12%] flex justify-center items-center z-10"><img src="images/HOME/Logo.png" alt="" class="w-[121px] lg:w-full max-w-[210px]"></a> 
-                    <nav id="right" class="lg:flex w-[41%] gap-[10%] z-10 hidden">
-                        <a href="" class="min-w-max">Websites</a>
-                        <a href="" class="min-w-max">Branding</a>
-                        <a href="" class="min-w-max">PR Materials</a>
-                        <a href="" class="min-w-max">ENG</a>
-                    </nav>
+                <header class="flex items-center justify-center relative mt-[40px] lg:w-[90vw] lg:ml-[-2.5vw] 3xl:ml-[-5vw]">
+                    <div class="absolute top-1/2 translate-y-[-50%] left-0 flex gap-[25px] z-10">
+                        <a href="" class="text-[#F74264] font-bold">ENG</a>
+                        <a href="">RO</a>
+                        <a href="">РУ</a>
+                    </div>
+                    <div class="menu-btn absolute right-0 z-20 cursor-pointer flex flex-col items-end top-1/2 translate-y-[-50%]">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
                 </header>
-                <div class="wrapper flex-[10%] flex flex-col lg:justify-center justify-end relative opacity-0">
+                <div class="wrapper flex-[10%] flex flex-col lg:justify-center justify-end relative">
                     <div class="circle absolute w-[75%] lg:w-[35%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 top-[10%] lg:top-auto"> 
                         <img src="images/HOME/textpath.png" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                         <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
@@ -91,6 +98,44 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="website" class="h-screen z-10 relative">
+            <div class="container h-full flex flex-col">
+                <header class="flex items-center justify-center relative mt-[40px] lg:w-[90vw] lg:ml-[-2.5vw] 3xl:ml-[-5vw]">
+                    <div class="absolute top-1/2 translate-y-[-50%] left-0 flex gap-[25px] z-10">
+                        <a href="" class="text-[#F74264] font-bold">ENG</a>
+                        <a href="">RO</a>
+                        <a href="">РУ</a>
+                    </div>
+                    <div class="menu-btn absolute right-0 z-20 cursor-pointer flex flex-col items-end top-1/2 translate-y-[-50%]">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
+                </header>
+                <div class="flex flex-grow">
+                    <div class="text w-[45%] flex items-center">
+                        <div class="h-fit">
+                            <h1 id="title" class="mb-[25px] 2xl:mb-[4vh] text-[4rem] leading-none">WEBSITE.</h1>
+                            <p class="mb-[25px] 2xl:mb-[8vh]">We offer website design, development, and maintenance services. Our process involves understanding your company, goals, and customers to create the perfect offer for YOU. <br> <span class="font-bold">Check our standard rates below.</span> </p>
+                            <p> <span class="font-bold">LANDING PAGE</span> - All content on one page.</p>
+                            <span class="text-[3rem] font-bold">$800</span>
+                            <span class="font-bold">/ starting price</span>
+        
+                            <p class="mt-[25px] 2xl:mt-[8vh]"><span class="font-bold">WEBSITE</span> - All content in a multi-page version.</p>
+                            <span class="text-[3rem] font-bold">$1.500</span>
+                            <span class="font-bold">/ starting price</span>
+                            <p>The price varies depending on the included functionalities*</p>
+                            <button class="py-[10px] px-[25px] rounded-xl mt-[25px] 2xl:mt-[8vh]">Explore our portfolio</button>
+                        </div>
+                    </div>
+                    <div class="image w-[55%]">
+    
+                    </div>
+                </div>
+                
             </div>
         </section>
     </div>
