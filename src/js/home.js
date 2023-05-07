@@ -3,8 +3,16 @@
 const pupil = document.querySelector('#home .pupil');
 
 window.addEventListener('mousemove', (event) => {
-    let x = event.clientX * 30 / window.innerWidth + 29 + "%";
-    let y = event.clientY * 30 / window.innerHeight + 33 + "%";
+    let offsetX = 35, offsetY = 33, mult = 40;
+
+    if (window.innerWidth >= 1024) {
+        offsetX = 29;
+        offsetY = 33;
+        mult = 30;
+    }
+
+    let x = event.clientX * mult / window.innerWidth + offsetX + "%";
+    let y = event.clientY * mult / window.innerHeight + offsetY + "%";
 
     pupil.style.left = x;
     pupil.style.top = y;
@@ -31,36 +39,44 @@ function homeScroll() {
 // -------- Word Change -------- //
 
 const change = document.querySelector('.change');
-let index = 0, rate, changeWordsInterval;
-
+const changeContainer = document.querySelector('.change-container');
+let index = 1, changeImage;
 
 function changeWords() {
-    if (window.innerWidth >= 1536) rate = -14.5;
-    else rate = -16;
-    change.style.transform = 'translateY(' + rate * index + 'vh)';
+    imageSelector();
+    setImageHeigth();
 
-    if (index == 1) change.classList.remove('active');
+    let changeImageHeight = changeImage.getBoundingClientRect().height;
+    let rate = -1 * changeImageHeight;
 
-    if (index == 4) {
-        index = 0;
+    change.style.transform = 'translateY(' + rate * index + 'px)';
+    if (index == 2) change.classList.remove('active');
+
+    if (index == 5) {
+        index = 1;
         
         setTimeout(() => {
             change.classList.add('active');
-        }, 1000);
+        }, 1500);
     } else index++;
+}
+
+function imageSelector() {
+    if (window.innerWidth >=1024) {
+        changeImage = changeContainer.querySelector('#pc');
+    } else changeImage = changeContainer.querySelector('#mobile');
+}
+
+function setImageHeigth() {
+    const images = change.querySelectorAll('img');
+    images.forEach(image => {
+        image.style.height = changeImage.getBoundingClientRect().height + 'px';
+    });
 }
 
 changeWords();
 
-function startInterval() {
-    changeWordsInterval = setInterval(changeWords, 2000);
-}
-
-function endInterval() {
-    clearInterval(changeWordsInterval);
-}
-
-startInterval();
+setInterval(changeWords, 2000);
 
 
 
@@ -68,7 +84,11 @@ startInterval();
 
 const menu = document.querySelector('.menu');
 const menuButton = document.querySelector('.menu-btn');
+const menuClicker = menuButton.querySelector('span');
 const lines = menuButton.querySelectorAll('div');
+const cover = document.querySelector('.cover');
+const logo = document.querySelector('.logo');
+const languages = document.querySelector('header .languages');
 
 const menuLinks = menu.querySelectorAll('.link');
 const menuWave = menu.querySelector('h1');
@@ -81,15 +101,22 @@ anime({
     opacity: 0
 });
 
-menuButton.onclick = () => {
+function menuClick () {
+    menuClicker.classList.toggle('active');
     menu.classList.toggle('open');
-    // document.body.classList.toggle('open-menu');
+    menuButton.classList.toggle('active');
+    
+    document.body.classList.toggle('open-menu');
     
     lines.forEach(line => {
         line.classList.toggle('cross');
     })
 
     if (menu.classList.contains('open')) {
+        logo.classList.add('active');
+        cover.classList.add('active');
+        setTimeout(() => {cover.classList.add('show')}, 100);
+
         menuWave.classList.add('active');
         lines[1].style.transition = 'all 700ms cubic-bezier(.9, 0, .33, 1)';
         
@@ -111,9 +138,17 @@ menuButton.onclick = () => {
 
         setTimeout(() => {
             socialLinks.classList.add('active');
+            languages.classList.add('active');
         }, 1400);
         
     } else {
+        languages.classList.remove('active');
+        cover.classList.remove('show');
+        setTimeout(() => {
+            cover.classList.remove('active');
+            logo.classList.remove('active');
+        }, 300);
+
         setTimeout(() => {
             lines[1].style.transition = '0.3s';
             menuWave.classList.remove('active');
@@ -133,3 +168,5 @@ menuButton.onclick = () => {
         });
     }
 }
+
+menuClicker.addEventListener('click', menuClick);

@@ -45,6 +45,22 @@ body {
     background-color: #0E0E0E;
 }
 
+body.open-menu {
+    overflow: hidden;
+}
+
+.cover {
+    transition: 0.4s;
+}
+
+.cover.active {
+    display: block;
+}
+
+.cover.show {
+    opacity: 1;
+}
+
 p {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
@@ -113,6 +129,10 @@ h3 {
 @keyframes accent {
     from{transform: scaleX(0);}
     to{transform: scaleX(1);}
+}
+
+header {
+    width: calc(100% - 50px);
 }
 
 header nav a, footer nav a {
@@ -340,11 +360,17 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 .menu nav {
-    margin-top: calc(6.4vh + 80px)
+    margin-top: calc(6.4vh + 100px);
+}
+
+@media (min-width: 1024px) {
+    .menu nav {
+        margin-top: calc(6.4vh + 80px);
+    }
 }
 
 .menu nav a {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Saira', sans-serif;
     font-weight: 600;
     -webkit-text-stroke: 1px #F1F1F1;
@@ -365,13 +391,23 @@ header nav a:hover::after, footer nav a:hover::after {
 
 .menu nav h1 {
     position: absolute;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Saira', sans-serif;
     right: 0;
     pointer-events: none;
     font-weight: 600;
 
     color: #F1F1F1;
+}
+
+@media (min-width: 1024px) {
+    .menu nav a {
+        font-size: 4rem;
+    }
+
+    .menu nav h1 {
+        font-size: 4rem;
+    }
 }
 
 .menu nav h1.active {
@@ -441,6 +477,12 @@ header nav a:hover::after, footer nav a:hover::after {
     transform: rotate(-45deg) translateY(-8px);
 }
 
+.menu-btn span.active {
+    width: 40px;
+    height: 40px;
+    top: -12px;
+}
+
 .menu .social {
     transition: 0.5s;
     opacity: 0;
@@ -458,38 +500,40 @@ header nav a:hover::after, footer nav a:hover::after {
     opacity: 1;
 }
 
+.logo {
+    transition: 0.4s;
+}
+
+@media (max-width: 1024px) {
+    .logo.active {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.languages {
+    transition: 0.7s all;
+}
+
+.languages.active {
+    left: 0;
+    opacity: 1;
+}
+
 .change {
     transform: translateY(15vh);
     transition: all 1s cubic-bezier(.85,0,.2,.99);
-}
-
-.change-container {
-    animation: change 3s;
-
-}
-
-#home-heading {
-    animation: changeHeading 3s;
-}
-
-@keyframes changeHeading {
-    0%{transform: scale(1); left: 0; filter: blur(0); opacity:1}
-    100%{transform: scale(3);left: 20vw; filter: blur(10px); opacity: 0}
-}
-
-@keyframes change {
-    0%{transform: scale(1); top: 0; filter: blur(0); opacity:1}
-    100%{transform: scale(3);top: -22vw; filter: blur(10px); opacity: 0}
 }
 
 .change.active {
     transition: none;
 }
 
-.change img {
-    height: 12vh;
-    margin-bottom: 4vh;
+.change-container img {
+    margin-bottom: 0px;
+    width: 100%;
 }
+
 
 @media (min-width: 1536px) {
     .change img {

@@ -560,6 +560,10 @@ video {
   }
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 .fixed{
   position: fixed;
 }
@@ -582,6 +586,10 @@ video {
 
 .left-\[-18\%\]{
   left: -18%;
+}
+
+.left-\[-50\%\]{
+  left: -50%;
 }
 
 .right-0{
@@ -616,6 +624,10 @@ video {
   top: 25px;
 }
 
+.top-\[35vh\]{
+  top: 35vh;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -624,16 +636,21 @@ video {
   z-index: 20;
 }
 
+.z-50{
+  z-index: 50;
+}
+
+.mx-\[25px\]{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 .mb-\[100px\]{
   margin-bottom: 100px;
 }
 
 .mb-\[15px\]{
   margin-bottom: 15px;
-}
-
-.mb-\[20px\]{
-  margin-bottom: 20px;
 }
 
 .mb-\[25px\]{
@@ -646,10 +663,6 @@ video {
 
 .mb-\[5vh\]{
   margin-bottom: 5vh;
-}
-
-.mb-\[6vh\]{
-  margin-bottom: 6vh;
 }
 
 .ml-1{
@@ -704,12 +717,8 @@ video {
   height: 110%;
 }
 
-.h-\[11vh\]{
-  height: 11vh;
-}
-
-.h-\[12vh\]{
-  height: 12vh;
+.h-\[20px\]{
+  height: 20px;
 }
 
 .h-\[6\.4vh\]{
@@ -727,10 +736,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[200vh\]{
-  height: 200vh;
 }
 
 .max-h-\[70px\]{
@@ -778,8 +783,16 @@ video {
   width: 45%;
 }
 
+.w-\[50px\]{
+  width: 50px;
+}
+
 .w-\[55\%\]{
   width: 55%;
+}
+
+.w-\[65\%\]{
+  width: 65%;
 }
 
 .w-\[70\%\]{
@@ -809,6 +822,14 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-\[90vw\]{
+  width: 90vw;
+}
+
+.w-\[calc\(100vw-50px\)\]{
+  width: calc(100vw - 50px);
 }
 
 .min-w-\[136\%\]{
@@ -880,10 +901,6 @@ video {
 
 .gap-\[10\%\]{
   gap: 10%;
-}
-
-.gap-\[2\.5vw\]{
-  gap: 2.5vw;
 }
 
 .gap-\[25px\]{
@@ -958,6 +975,10 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-30{
+  --tw-bg-opacity: 0.3;
+}
+
 .p-\[25px\]{
   padding: 25px;
 }
@@ -977,11 +998,6 @@ video {
   padding-right: 50px;
 }
 
-.px-\[5vw\]{
-  padding-left: 5vw;
-  padding-right: 5vw;
-}
-
 .py-\[10px\]{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -992,8 +1008,8 @@ video {
   padding-bottom: 13px;
 }
 
-.pb-\[9vh\]{
-  padding-bottom: 9vh;
+.pb-\[10vh\]{
+  padding-bottom: 10vh;
 }
 
 .pt-\[40px\]{
@@ -1051,6 +1067,10 @@ video {
   color: rgb(247 66 100 / var(--tw-text-opacity));
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
 .opacity-20{
   opacity: 0.2;
 }
@@ -1103,6 +1123,22 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   background-color: #0E0E0E;
+}
+
+body.open-menu {
+  overflow: hidden;
+}
+
+.cover {
+  transition: 0.4s;
+}
+
+.cover.active {
+  display: block;
+}
+
+.cover.show {
+  opacity: 1;
 }
 
 p {
@@ -1175,6 +1211,10 @@ h3 {
   to{
     transform: scaleX(1);
   }
+}
+
+header {
+  width: calc(100% - 50px);
 }
 
 header nav a, footer nav a {
@@ -1439,11 +1479,17 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 .menu nav {
-  margin-top: calc(6.4vh + 80px)
+  margin-top: calc(6.4vh + 100px);
+}
+
+@media (min-width: 1024px) {
+  .menu nav {
+    margin-top: calc(6.4vh + 80px);
+  }
 }
 
 .menu nav a {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Saira', sans-serif;
   font-weight: 600;
   -webkit-text-stroke: 1px #F1F1F1;
@@ -1464,12 +1510,22 @@ header nav a:hover::after, footer nav a:hover::after {
 
 .menu nav h1 {
   position: absolute;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Saira', sans-serif;
   right: 0;
   pointer-events: none;
   font-weight: 600;
   color: #F1F1F1;
+}
+
+@media (min-width: 1024px) {
+  .menu nav a {
+    font-size: 4rem;
+  }
+
+  .menu nav h1 {
+    font-size: 4rem;
+  }
 }
 
 .menu nav h1.active {
@@ -1560,6 +1616,12 @@ header nav a:hover::after, footer nav a:hover::after {
   transform: rotate(-45deg) translateY(-8px);
 }
 
+.menu-btn span.active {
+  width: 40px;
+  height: 40px;
+  top: -12px;
+}
+
 .menu .social {
   transition: 0.5s;
   opacity: 0;
@@ -1577,58 +1639,38 @@ header nav a:hover::after, footer nav a:hover::after {
   opacity: 1;
 }
 
+.logo {
+  transition: 0.4s;
+}
+
+@media (max-width: 1024px) {
+  .logo.active {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.languages {
+  transition: 0.7s all;
+}
+
+.languages.active {
+  left: 0;
+  opacity: 1;
+}
+
 .change {
   transform: translateY(15vh);
   transition: all 1s cubic-bezier(.85,0,.2,.99);
-}
-
-.change-container {
-  animation: change 3s;
-}
-
-#home-heading {
-  animation: changeHeading 3s;
-}
-
-@keyframes changeHeading {
-  0%{
-    transform: scale(1);
-    left: 0;
-    filter: blur(0);
-    opacity:1
-  }
-
-  100%{
-    transform: scale(3);
-    left: 20vw;
-    filter: blur(10px);
-    opacity: 0
-  }
-}
-
-@keyframes change {
-  0%{
-    transform: scale(1);
-    top: 0;
-    filter: blur(0);
-    opacity:1
-  }
-
-  100%{
-    transform: scale(3);
-    top: -22vw;
-    filter: blur(10px);
-    opacity: 0
-  }
 }
 
 .change.active {
   transition: none;
 }
 
-.change img {
-  height: 12vh;
-  margin-bottom: 4vh;
+.change-container img {
+  margin-bottom: 0px;
+  width: 100%;
 }
 
 @media (min-width: 1536px) {
@@ -1638,6 +1680,10 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 @media (min-width: 1024px){
+  .lg\:left-0{
+    left: 0px;
+  }
+
   .lg\:left-auto{
     left: auto;
   }
@@ -1659,8 +1705,17 @@ header nav a:hover::after, footer nav a:hover::after {
     margin-right: 6.5%;
   }
 
+  .lg\:mx-\[5vw\]{
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
   .lg\:mb-0{
     margin-bottom: 0px;
+  }
+
+  .lg\:mb-\[5px\]{
+    margin-bottom: 5px;
   }
 
   .lg\:mb-\[7\.5vh\]{
@@ -1719,6 +1774,11 @@ header nav a:hover::after, footer nav a:hover::after {
     width: 90vw;
   }
 
+  .lg\:w-fit{
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .lg\:w-full{
     width: 100%;
   }
@@ -1740,9 +1800,22 @@ header nav a:hover::after, footer nav a:hover::after {
     justify-content: space-between;
   }
 
+  .lg\:gap-\[2\.5vw\]{
+    gap: 2.5vw;
+  }
+
   .lg\:px-\[4\%\]{
     padding-left: 4%;
     padding-right: 4%;
+  }
+
+  .lg\:px-\[5vw\]{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .lg\:pb-\[9vh\]{
+    padding-bottom: 9vh;
   }
 
   .lg\:pt-\[50px\]{
@@ -1756,9 +1829,17 @@ header nav a:hover::after, footer nav a:hover::after {
   .lg\:text-\[5\.5rem\]{
     font-size: 5.5rem;
   }
+
+  .lg\:opacity-100{
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1536px){
+  .\32xl\:mb-\[1vh\]{
+    margin-bottom: 1vh;
+  }
+
   .\32xl\:mb-\[4vh\]{
     margin-bottom: 4vh;
   }
@@ -1773,10 +1854,6 @@ header nav a:hover::after, footer nav a:hover::after {
 
   .\32xl\:mt-\[8vh\]{
     margin-top: 8vh;
-  }
-
-  .\32xl\:h-\[10\.5vh\]{
-    height: 10.5vh;
   }
 
   .\32xl\:gap-\[8\%\]{

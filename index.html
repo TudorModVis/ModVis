@@ -17,11 +17,12 @@
 </head>
 <body>
     <div class="max-w-screen h-full overflow-hidden relative">
+        <div class="cover h-screen w-screen z-20 bg-[#0E0E0E] bg-opacity-30 fixed hidden opacity-0"></div>
         <div class="noise"></div>
         <img src="images/SVG/COLOR.svg" id="svg1" class="fixed left-0 w-[150vw] h-[110%] lg:w-[70%] hidden lg:block">
         <img src="images/SVG/Vector 1.svg" id="svg2" class="fixed right-0 w-full lg:w-1/2 lg:hidden ">
 
-        <div class="menu fixed w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-20 flex flex-col items-center justify-between right-[-130%] px-[5vw] pb-[9vh] text-right">
+        <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-50 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
             <nav class="flex flex-col leading-none gap-[7vh] big-text">
                 <div class="relative link">
                     <h1>HOME</h1>
@@ -31,50 +32,60 @@
                 <a href="#services" class="link">SERVICES</a>
                 <a href="#benefits" class="link">CONTACTS</a>
             </nav>
-            <div class="social flex gap-[2.5vw]">
+            <div class="social flex gap-[25px] lg:gap-[2.5vw]">
                 <a href="">YOUTUBE</a>
                 <a href="">INSTAGRAM</a>
                 <a href="">TIKTOK</a>
             </div>
         </div>
 
+        <header class="flex items-center justify-center mt-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
+            <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
+                <a href="" class="text-[#F74264] font-bold">ENG</a>
+                <a href="">RO</a>
+                <a href="">РУ</a>
+            </div>
+            <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%]">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
+            </div>
+            <a href="" class="logo flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
+        </header>
+
         <section id="home" class="min-h-screen w-screen h-fit z-10">
             <div class="container flex flex-col min-h-screen h-full relative">
-                <div class="circle absolute w-[75%] lg:w-[27%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 translate-y-[-50%] top-[10%] lg:top-[50vh] lg:right-[10%]"> 
+                <div class="circle absolute w-[65%] lg:w-[27%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 translate-y-[-50%] top-[35vh] lg:top-[50vh] lg:right-[10%]"> 
                     <img src="images/HOME/textpath.png" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                     <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
                         <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
                         </div> 
                     </div>
                 </div>
-                <header class="flex items-center justify-center mt-[40px] lg:w-[90vw] lg:ml-[-2.5vw] 3xl:ml-[-5vw] fixed z-20">
-                    <div class="absolute top-1/2 translate-y-[-50%] left-0 flex gap-[25px] z-10">
-                        <a href="" class="text-[#F74264] font-bold">ENG</a>
-                        <a href="">RO</a>
-                        <a href="">РУ</a>
-                    </div>
-                    <div class="menu-btn absolute right-0 z-20 cursor-pointer flex flex-col items-end top-1/2 translate-y-[-50%]">
-                        <div class="line-1"></div>
-                        <div class="line-2"></div>
-                    </div>
-                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
-                </header>
+                
                 <div class="wrapper flex-[10%] flex flex-col justify-end relative">
                     <div class="z-10 mb-[100px] lg:mb-[7.5vh]">
-                        <p class="text-[#F74264] text-center lg:text-left mb-[20px]">MODVIS - MODERN VISION</p>
+                        <p class="text-[#F74264] text-center lg:text-left">MODVIS - MODERN VISION</p>
                         
-                        <div class="change-container h-[12vh] 2xl:h-[10.5vh] mb-[6vh] overflow-hidden relative">
-                            <div class="change absolute">
-                                <img src="images/HOME/MOD VIS.svg" alt="" >
-                                <img src="images/HOME/WEBSITE.svg" alt="">
-                                <img src="images/HOME/BRAND IDENTITY.svg" alt="" >
-                                <img src="images/HOME/MARKETING.svg" alt="" >
-                                <img src="images/HOME/MOD VIS.svg" alt="" >
+                        <div class="change-container overflow-hidden relative">
+                            <img src="images/HOME/MOD VIS.svg" id="pc" alt="" class="invisible hidden lg:block">
+                            <img src="images/HOME/MOD VIS MOBILE.svg" id="mobile" alt="" class="invisible lg:hidden">
+                            <div class="change absolute w-full">
+                                <img src="images/HOME/MOD VIS.svg" alt="" class="hidden lg:block">
+                                <img src="images/HOME/MOD VIS MOBILE.svg" alt="" class="lg:hidden">
+                                <img src="images/HOME/WEBSITE.svg" alt="" class="hidden lg:block">
+                                <img src="images/HOME/WEBSITE MOBILE.svg" alt="" class="lg:hidden">
+                                <img src="images/HOME/BRAND IDENTITY.svg" alt="" class="hidden lg:block">
+                                <img src="images/HOME/BRAND IDENTITY MOBILE.svg" alt="" class="lg:hidden">
+                                <img src="images/HOME/MARKETING.svg" alt="" class="hidden lg:block">
+                                <img src="images/HOME/MARKETING MOBILE.svg" alt="" class="lg:hidden">
+                                <img src="images/HOME/MOD VIS.svg" alt="" class="hidden lg:block">
+                                <img src="images/HOME/MOD VIS MOBILE.svg" alt="" class="lg:hidden">
                             </div>
                         </div>
-                        <!-- <img src="images/HOME/text2.svg" alt="" class="h-[11vh] mb-[6vh]">
-                        <img src="images/HOME/text.svg" alt="" class="h-[11vh] w-[85%]"> -->
-                        <img src="images/HOME/text-home.svg" id="home-heading" alt="" class="w-full">
+                        <!-- <img src="images/HOME/MAIN TEXT.svg" alt=""> -->
+                        <img src="images/HOME/mobile-text.svg" alt="" class="lg:hidden">
+                        <img src="images/HOME/text-home.svg" id="home-heading" alt="" class="w-full hidden lg:block">
                     </div>
                 </div>
                 
@@ -83,17 +94,18 @@
 
         <section id="sales" class="min-h-screen w-screen h-screen z-10 relative">
             <div class="container flex flex-col min-h-screen h-full relative">
-                <header class="flex items-center justify-center relative mt-[40px] lg:w-[90vw] lg:ml-[-2.5vw] 3xl:ml-[-5vw]">
-                    <div class="absolute top-1/2 translate-y-[-50%] left-0 flex gap-[25px] z-10">
+                <header class="flex items-center justify-center mt-[40px] lg:w-[90vw] lg:ml-[-2.5vw] 3xl:ml-[-5vw] relative z-50">
+                    <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
                         <a href="" class="text-[#F74264] font-bold">ENG</a>
                         <a href="">RO</a>
                         <a href="">РУ</a>
                     </div>
-                    <div class="menu-btn absolute right-0 z-20 cursor-pointer flex flex-col items-end top-1/2 translate-y-[-50%]">
+                    <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%]">
                         <div class="line-1"></div>
                         <div class="line-2"></div>
+                        <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
                     </div>
-                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
+                    <a href="" class="logo flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
                 </header>
                 <div class="wrapper flex-[10%] flex flex-col lg:justify-center justify-end relative">
                     <div class="circle absolute w-[75%] lg:w-[35%] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 top-[10%] lg:top-auto"> 
