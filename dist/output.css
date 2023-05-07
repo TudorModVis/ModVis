@@ -729,6 +729,10 @@ video {
   height: 100vh;
 }
 
+.h-\[200vh\]{
+  height: 200vh;
+}
+
 .max-h-\[70px\]{
   max-height: 70px;
 }
@@ -1576,6 +1580,46 @@ header nav a:hover::after, footer nav a:hover::after {
 .change {
   transform: translateY(15vh);
   transition: all 1s cubic-bezier(.85,0,.2,.99);
+}
+
+.change-container {
+  animation: change 3s;
+}
+
+#home-heading {
+  animation: changeHeading 3s;
+}
+
+@keyframes changeHeading {
+  0%{
+    transform: scale(1);
+    left: 0;
+    filter: blur(0);
+    opacity:1
+  }
+
+  100%{
+    transform: scale(3);
+    left: 20vw;
+    filter: blur(10px);
+    opacity: 0
+  }
+}
+
+@keyframes change {
+  0%{
+    transform: scale(1);
+    top: 0;
+    filter: blur(0);
+    opacity:1
+  }
+
+  100%{
+    transform: scale(3);
+    top: -22vw;
+    filter: blur(10px);
+    opacity: 0
+  }
 }
 
 .change.active {
