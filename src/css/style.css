@@ -354,8 +354,6 @@ header nav a:hover::after, footer nav a:hover::after {
     background-position:center 0;
 }
 
-/* @keyframes */
-
 #sales #background {
     position: absolute;
     top: 0;
