@@ -673,6 +673,10 @@ video {
   margin-bottom: 35px;
 }
 
+.mb-\[5vh\]{
+  margin-bottom: 5vh;
+}
+
 .ml-1{
   margin-left: 0.25rem;
 }
@@ -729,8 +733,8 @@ video {
   height: 110%;
 }
 
-.h-\[170vh\]{
-  height: 170vh;
+.h-\[160vh\]{
+  height: 160vh;
 }
 
 .h-\[20px\]{
@@ -752,10 +756,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[160vh\]{
-  height: 160vh;
 }
 
 .max-h-\[70px\]{
@@ -995,6 +995,11 @@ video {
   padding: 25px;
 }
 
+.px-\[13vw\]{
+  padding-left: 13vw;
+  padding-right: 13vw;
+}
+
 .px-\[25px\]{
   padding-left: 25px;
   padding-right: 25px;
@@ -1007,10 +1012,6 @@ video {
 
 .pb-\[10vh\]{
   padding-bottom: 10vh;
-}
-
-.pt-\[20vh\]{
-  padding-top: 20vh;
 }
 
 .pt-\[40px\]{
@@ -1029,8 +1030,8 @@ video {
   text-align: justify;
 }
 
-.text-\[2rem\]{
-  font-size: 2rem;
+.text-\[1\.5rem\]{
+  font-size: 1.5rem;
 }
 
 .text-\[3rem\]{
@@ -1466,12 +1467,13 @@ header nav a:hover::after, footer nav a:hover::after {
   background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
 }
 
-#sales .container div {
+#sales .wrapper {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  background-image: linear-gradient(180deg, transparent 12%, #F74264 26%, #c958de 38%, #fbb1f7 50%, #c958de 64%, #F74264 76%, transparent 88%);
+  /* background-image: linear-gradient(180deg, transparent 12%, #9D3261 26%, #FDDAE4 38%, #FDDAE4 50%, #FDDAE4 64%, #F74264 76%, transparent 88%); */
+  background-image: linear-gradient(180deg, transparent 12%, #9D3261 26%, #FDDAE4 50%, #F74264 76%, transparent 88%);
   background-size:100% 650%;
   background-position:center 0;
 }
@@ -1812,12 +1814,28 @@ header nav a:hover::after, footer nav a:hover::after {
     text-align: left;
   }
 
-  .lg\:text-\[2\.5rem\]{
-    font-size: 2.5rem;
+  .lg\:text-\[1\.5rem\]{
+    font-size: 1.5rem;
+  }
+
+  .lg\:text-\[4\.5rem\]{
+    font-size: 4.5rem;
   }
 
   .lg\:text-\[5\.5rem\]{
     font-size: 5.5rem;
+  }
+
+  .lg\:text-\[4rem\]{
+    font-size: 4rem;
+  }
+
+  .lg\:text-\[3\.5rem\]{
+    font-size: 3.5rem;
+  }
+
+  .lg\:text-\[2rem\]{
+    font-size: 2rem;
   }
 
   .lg\:opacity-100{
@@ -1826,8 +1844,16 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 @media (min-width: 1280px){
-  .xl\:text-\[3rem\]{
-    font-size: 3rem;
+  .xl\:text-\[2\.5rem\]{
+    font-size: 2.5rem;
+  }
+
+  .xl\:text-\[2\.8rem\]{
+    font-size: 2.8rem;
+  }
+
+  .xl\:text-\[4\.5rem\]{
+    font-size: 4.5rem;
   }
 }
 
@@ -1855,10 +1881,34 @@ header nav a:hover::after, footer nav a:hover::after {
   .\32xl\:text-\[4rem\]{
     font-size: 4rem;
   }
+
+  .\32xl\:text-\[6rem\]{
+    font-size: 6rem;
+  }
+
+  .\32xl\:text-\[3rem\]{
+    font-size: 3rem;
+  }
+
+  .\32xl\:text-\[3\.5rem\]{
+    font-size: 3.5rem;
+  }
+
+  .\32xl\:text-\[3remrem\]{
+    color: 3remrem;
+  }
 }
 
 @media (min-width: 2500px){
   .\33xl\:text-\[4\.5rem\]{
     font-size: 4.5rem;
+  }
+
+  .\33xl\:text-\[4rem\]{
+    font-size: 4rem;
+  }
+
+  .\33xl\:text-\[7rem\]{
+    font-size: 7rem;
   }
 }

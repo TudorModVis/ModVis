@@ -344,12 +344,13 @@ header nav a:hover::after, footer nav a:hover::after {
     background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
 }
 
-#sales .container div {
+#sales .wrapper {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-    background-image: linear-gradient(180deg, transparent 12%, #F74264 26%, #c958de 38%, #fbb1f7 50%, #c958de 64%, #F74264 76%, transparent 88%);
+    /* background-image: linear-gradient(180deg, transparent 12%, #9D3261 26%, #FDDAE4 38%, #FDDAE4 50%, #FDDAE4 64%, #F74264 76%, transparent 88%); */
+    background-image: linear-gradient(180deg, transparent 12%, #9D3261 26%, #FDDAE4 50%, #F74264 76%, transparent 88%);
     background-size:100% 650%;
     background-position:center 0;
 }

@@ -175,7 +175,7 @@ menuClicker.addEventListener('click', menuClick);
 
 // -------- Sales Gradient -------- //
 
-const salesGradient = document.querySelector('#sales .container div');
+const salesGradient = document.querySelector('#sales .wrapper');
 const website = document.querySelector('#website');
 
 function moveGradient() {
