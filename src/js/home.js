@@ -1,3 +1,9 @@
+// -------- Fitty-------- //
+if (window.innerWidth >= 1024) {
+    fitty('#sales #big');
+}
+
+
 // -------- Eye Movement -------- //
 
 const pupil = document.querySelector('#home .pupil');
@@ -21,7 +27,7 @@ window.addEventListener('mousemove', (event) => {
 
 // -------- Sales Transition -------- //
 
-const homeContainer = document.querySelector('#home .wrapper');
+const home = document.querySelector('#home');
 const salesContainer = document.querySelector('#sales .wrapper');
 
 let check = false;

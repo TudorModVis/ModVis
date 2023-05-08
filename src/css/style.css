@@ -344,6 +344,14 @@ header nav a:hover::after, footer nav a:hover::after {
     background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
 }
 
+#sales .container div {
+    color: #5CA17C;
+    background: linear-gradient( transparent 10%, #F1F1F1, transparent);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-attachment: fixed;
+}
 
 /* -------- Website -------- */
 

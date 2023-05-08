@@ -612,10 +612,6 @@ video {
   top: -18%;
 }
 
-.top-\[10\%\]{
-  top: 10%;
-}
-
 .top-\[100\%\]{
   top: 100%;
 }
@@ -669,6 +665,10 @@ video {
   margin-left: 0.25rem;
 }
 
+.mt-\[20vh\]{
+  margin-top: 20vh;
+}
+
 .mt-\[25px\]{
   margin-top: 25px;
 }
@@ -683,6 +683,18 @@ video {
 
 .mt-\[9vh\]{
   margin-top: 9vh;
+}
+
+.mt-\[6\.5h\]{
+  margin-top: 6.5h;
+}
+
+.mb-\[7vh\]{
+  margin-bottom: 7vh;
+}
+
+.mb-\[10vh\]{
+  margin-bottom: 10vh;
 }
 
 .inline-block{
@@ -799,12 +811,12 @@ video {
   width: 70%;
 }
 
-.w-\[75\%\]{
-  width: 75%;
-}
-
 .w-\[85\%\]{
   width: 85%;
+}
+
+.w-\[calc\(100vw-50px\)\]{
+  width: calc(100vw - 50px);
 }
 
 .w-auto{
@@ -822,14 +834,6 @@ video {
 
 .w-screen{
   width: 100vw;
-}
-
-.w-\[90vw\]{
-  width: 90vw;
-}
-
-.w-\[calc\(100vw-50px\)\]{
-  width: calc(100vw - 50px);
 }
 
 .min-w-\[136\%\]{
@@ -983,11 +987,6 @@ video {
   padding: 25px;
 }
 
-.px-\[10\%\]{
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
 .px-\[25px\]{
   padding-left: 25px;
   padding-right: 25px;
@@ -1028,8 +1027,8 @@ video {
   text-align: justify;
 }
 
-.text-\[2\.7rem\]{
-  font-size: 2.7rem;
+.text-\[2rem\]{
+  font-size: 2rem;
 }
 
 .text-\[3rem\]{
@@ -1038,6 +1037,10 @@ video {
 
 .text-\[4rem\]{
   font-size: 4rem;
+}
+
+.text-\[5rem\]{
+  font-size: 5rem;
 }
 
 .text-sm{
@@ -1465,6 +1468,15 @@ header nav a:hover::after, footer nav a:hover::after {
   background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
 }
 
+#sales .container div {
+  color: #5CA17C;
+  background: linear-gradient( transparent 10%, #F1F1F1, transparent);
+  -webkit-background-clip: text;
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+  background-attachment: fixed;
+}
+
 /* -------- Website -------- */
 
 #website button {
@@ -1696,15 +1708,6 @@ header nav a:hover::after, footer nav a:hover::after {
     top: 50vh;
   }
 
-  .lg\:top-auto{
-    top: auto;
-  }
-
-  .lg\:mx-\[6\.5\%\]{
-    margin-left: 6.5%;
-    margin-right: 6.5%;
-  }
-
   .lg\:mx-\[5vw\]{
     margin-left: 5vw;
     margin-right: 5vw;
@@ -1712,10 +1715,6 @@ header nav a:hover::after, footer nav a:hover::after {
 
   .lg\:mb-0{
     margin-bottom: 0px;
-  }
-
-  .lg\:mb-\[5px\]{
-    margin-bottom: 5px;
   }
 
   .lg\:mb-\[7\.5vh\]{
@@ -1754,10 +1753,6 @@ header nav a:hover::after, footer nav a:hover::after {
     width: 32%;
   }
 
-  .lg\:w-\[35\%\]{
-    width: 35%;
-  }
-
   .lg\:w-\[60\%\]{
     width: 60%;
   }
@@ -1792,10 +1787,6 @@ header nav a:hover::after, footer nav a:hover::after {
     flex-direction: row;
   }
 
-  .lg\:justify-center{
-    justify-content: center;
-  }
-
   .lg\:justify-between{
     justify-content: space-between;
   }
@@ -1826,6 +1817,10 @@ header nav a:hover::after, footer nav a:hover::after {
     text-align: left;
   }
 
+  .lg\:text-\[2\.5rem\]{
+    font-size: 2.5rem;
+  }
+
   .lg\:text-\[5\.5rem\]{
     font-size: 5.5rem;
   }
@@ -1835,11 +1830,13 @@ header nav a:hover::after, footer nav a:hover::after {
   }
 }
 
-@media (min-width: 1536px){
-  .\32xl\:mb-\[1vh\]{
-    margin-bottom: 1vh;
+@media (min-width: 1280px){
+  .xl\:text-\[3rem\]{
+    font-size: 3rem;
   }
+}
 
+@media (min-width: 1536px){
   .\32xl\:mb-\[4vh\]{
     margin-bottom: 4vh;
   }
@@ -1859,10 +1856,18 @@ header nav a:hover::after, footer nav a:hover::after {
   .\32xl\:gap-\[8\%\]{
     gap: 8%;
   }
+
+  .\32xl\:text-\[4rem\]{
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 2500px){
   .\33xl\:ml-\[-5vw\]{
     margin-left: -5vw;
+  }
+
+  .\33xl\:text-\[4\.5rem\]{
+    font-size: 4.5rem;
   }
 }
