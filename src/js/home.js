@@ -179,7 +179,7 @@ const salesGradient = document.querySelector('#sales .container div');
 
 function moveGradient() {
     let progress = (window.scrollY / (window.innerHeight * 2) - 0.5) * 100;
-    if (progress <= 0 || progress > 100) salesGradient.style.display = 'none';
+    if (progress <= 0 || progress > 120) salesGradient.style.display = 'none';
     else salesGradient.style.display = 'block';
     salesGradient.style.backgroundPosition = 'center ' + progress + '%';
 }
