@@ -345,14 +345,23 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 #sales .container div {
-    color: #5CA17C;
-    background: linear-gradient( transparent 10%, #F1F1F1, transparent);
     -webkit-background-clip: text;
-    background-clip:text;
-    -webkit-text-fill-color: transparent;
-    background-attachment: fixed;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-image: linear-gradient(180deg, transparent 12%, #351073 26%, #c958de 38%, #fbb1f7 50%, #c958de 64%, #351073 76%, transparent 88%);
+    background-size:100% 500%;
+    background-position:center 0;
 }
 
+/* @keyframes */
+
+#sales #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: linear-gradient(180deg, transparent 12%, #351073 26%, #c958de 38%, #fbb1f7 50%, #c958de 64%, #351073 76%, transparent 88%);
+}
 /* -------- Website -------- */
 
 #website button {

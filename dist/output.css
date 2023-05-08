@@ -576,6 +576,10 @@ video {
   position: relative;
 }
 
+.sticky{
+  position: sticky;
+}
+
 .left-0{
   left: 0px;
 }
@@ -602,6 +606,10 @@ video {
 
 .right-\[25px\]{
   right: 25px;
+}
+
+.top-0{
+  top: 0px;
 }
 
 .top-1\/2{
@@ -645,6 +653,10 @@ video {
   margin-bottom: 100px;
 }
 
+.mb-\[10vh\]{
+  margin-bottom: 10vh;
+}
+
 .mb-\[15px\]{
   margin-bottom: 15px;
 }
@@ -655,10 +667,6 @@ video {
 
 .mb-\[35px\]{
   margin-bottom: 35px;
-}
-
-.mb-\[5vh\]{
-  margin-bottom: 5vh;
 }
 
 .ml-1{
@@ -685,16 +693,8 @@ video {
   margin-top: 9vh;
 }
 
-.mt-\[6\.5h\]{
-  margin-top: 6.5h;
-}
-
-.mb-\[7vh\]{
-  margin-bottom: 7vh;
-}
-
-.mb-\[10vh\]{
-  margin-bottom: 10vh;
+.block{
+  display: block;
 }
 
 .inline-block{
@@ -748,6 +748,10 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[200vh\]{
+  height: 200vh;
 }
 
 .max-h-\[70px\]{
@@ -1009,6 +1013,10 @@ video {
 
 .pb-\[10vh\]{
   padding-bottom: 10vh;
+}
+
+.pt-\[20vh\]{
+  padding-top: 20vh;
 }
 
 .pt-\[40px\]{
@@ -1469,12 +1477,22 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 #sales .container div {
-  color: #5CA17C;
-  background: linear-gradient( transparent 10%, #F1F1F1, transparent);
   -webkit-background-clip: text;
-  background-clip:text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-attachment: fixed;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(180deg, transparent 12%, #351073 26%, #c958de 38%, #fbb1f7 50%, #c958de 64%, #351073 76%, transparent 88%);
+  background-size:100% 500%;
+  background-position:center 0;
+}
+
+/* @keyframes */
+
+#sales #background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: linear-gradient(180deg, transparent 12%, #351073 26%, #c958de 38%, #fbb1f7 50%, #c958de 64%, #351073 76%, transparent 88%);
 }
 
 /* -------- Website -------- */
@@ -1725,10 +1743,6 @@ header nav a:hover::after, footer nav a:hover::after {
     margin-bottom: 9vh;
   }
 
-  .lg\:ml-\[-2\.5vw\]{
-    margin-left: -2.5vw;
-  }
-
   .lg\:block{
     display: block;
   }
@@ -1863,10 +1877,6 @@ header nav a:hover::after, footer nav a:hover::after {
 }
 
 @media (min-width: 2500px){
-  .\33xl\:ml-\[-5vw\]{
-    margin-left: -5vw;
-  }
-
   .\33xl\:text-\[4\.5rem\]{
     font-size: 4.5rem;
   }

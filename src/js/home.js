@@ -30,16 +30,12 @@ window.addEventListener('mousemove', (event) => {
 const home = document.querySelector('#home');
 const salesContainer = document.querySelector('#sales .wrapper');
 
-let check = false;
-
 function homeScroll() {
     let progres = window.scrollY / window.innerHeight;
 
-    homeContainer.style.opacity = 1 - progres;
-    salesContainer.style.opacity = progres;
 }
 
-// window.addEventListener('scroll', homeScroll);
+window.addEventListener('scroll', homeScroll);
 
 
 // -------- Word Change -------- //
@@ -83,7 +79,6 @@ function setImageHeigth() {
 changeWords();
 
 setInterval(changeWords, 2000);
-
 
 
 // -------- Menu -------- //
@@ -176,3 +171,17 @@ function menuClick () {
 }
 
 menuClicker.addEventListener('click', menuClick);
+
+
+// -------- Sales Gradient -------- //
+
+const salesGradient = document.querySelector('#sales .container div');
+
+function moveGradient() {
+    let progress = (window.scrollY / (window.innerHeight * 2) - 0.5) * 100;
+    if (progress <= 0 || progress > 100) salesGradient.style.display = 'none';
+    else salesGradient.style.display = 'block';
+    salesGradient.style.backgroundPosition = 'center ' + progress + '%';
+}
+
+window.addEventListener('scroll', moveGradient);
