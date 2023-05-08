@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/SVG/Logoochi.png">
 
     <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/libraries/locomotive-scroll.css">
 
     <script src="src/js/libraries/fitty.min.js" defer></script>
     <script src="src/js/libraries/anime.min.js" defer></script>
@@ -39,7 +40,7 @@
             </div>
         </div>
 
-        <header class="flex items-center justify-center mt-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
+        <header class="flex items-center justify-center translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
             <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
                 <a href="" class="text-[#F74264] font-bold">ENG</a>
                 <a href="">RO</a>
@@ -94,24 +95,22 @@
         <section id="sales" class="h-screen w-screen z-10 pt-[20vh] sticky top-0">
             <div class="container flex flex-col min-h-screen h-full relative">
                 <div class="z-10 mb-[100px] lg:mb-0">
-                        <h1 class="text-[4rem] leading-tight">DREAMING OF MORE SALES? <br> LET US MAKE IT REAL.</h1>
-                        <p class="text-[2rem] lg:text-[2.5rem] xl:text-[3rem] 2xl:text-[4rem] 3xl:text-[4.5rem] mt-[7vh] mb-[10vh] leading-tight">Don't miss out on potential clients due to a lack of online visibility. Let us help you develop a captivating website, establish a strong brand, and drive sales through PR.</p>
-                        <!-- <button class="py-[13px] px-[50px] w-fit rounded-xl ">Contact us now</button> -->
+                        <p class="text-[2rem] lg:text-[2.5rem] xl:text-[3rem] 2xl:text-[4rem] 3xl:text-[4.5rem] leading-tight text-justify">Dreaming of more sales? Let us make it real. <br> <br> Don't miss out on potential clients due to a lack of online visibility. Let us help you develop a captivating website, establish a strong brand, and drive sales through PR. <br> <br>Ready to get started? </p>
                 </div>
                 
             </div>
         </section>
 
-        <div class="h-[170vh]"></div>
+        <div class="h-[160vh]"></div>
 
-        <section id="website" class="h-screen z-10 relative mt-[20vh]">
+        <section data-scroll-section id="website" class="h-screen z-10 relative mt-[20vh]">
             <div class="container h-full flex flex-col">
                 <div class="mt-[40px] h-[6.4vh]"></div>
                 <div class="flex flex-grow">
                     <div class="text w-[45%] flex items-center">
                         <div class="h-fit">
-                            <h1 id="title" class="mb-[25px] 2xl:mb-[4vh] text-[4rem] leading-none">WEBSITE.</h1>
-                            <p class="mb-[25px] 2xl:mb-[8vh]">We offer website design, development, and maintenance services. Our process involves understanding your company, goals, and customers to create the perfect offer for YOU. <br> <span class="font-bold">Check our standard rates below.</span> </p>
+                            <h1 data-scroll id="title" class="mb-[25px] 2xl:mb-[4vh] text-[4rem] leading-none">WEBSITE.</h1>
+                            <p data-scroll class="mb-[25px] 2xl:mb-[8vh]">We offer website design, development, and maintenance services. Our process involves understanding your company, goals, and customers to create the perfect offer for YOU. <br> <span class="font-bold">Check our standard rates below.</span> </p>
                             <p> <span class="font-bold">LANDING PAGE</span> - All content on one page.</p>
                             <span class="text-[3rem] font-bold">$800</span>
                             <span class="font-bold">/ starting price</span>
@@ -131,6 +130,6 @@
             </div>
         </section>
     </div>
-    
+
 </body>
 </html>

@@ -176,9 +176,11 @@ menuClicker.addEventListener('click', menuClick);
 // -------- Sales Gradient -------- //
 
 const salesGradient = document.querySelector('#sales .container div');
+const website = document.querySelector('#website');
 
 function moveGradient() {
     let progress = (window.scrollY / (window.innerHeight * 2) - 0.5) * 100;
+    console.log(website.getClientRects().top);
     if (progress <= 0 || progress > 110) salesGradient.style.display = 'none';
     else salesGradient.style.display = 'block';
     salesGradient.style.backgroundPosition = 'center ' + progress + '%';
