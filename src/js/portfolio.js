@@ -1,11 +1,13 @@
 // -------- Portfolio Cards -------- //
 
 const works = document.querySelectorAll('#portfolio .work');
+const backgrounds = document.querySelectorAll('#portfolio .work .background');
+const titles = document.querySelectorAll('#portfolio .work .title');
 
 function openCard(event) {
     if (window.innerWidth < 1024) return;
 
-    const work = event.target;
+    const work = event.currentTarget.parentNode;
 
     const site = work.querySelector('.site');
     const info = work.querySelector('.info');
@@ -22,7 +24,7 @@ function openCard(event) {
 
 function closeCard(event) {
     if (window.innerWidth < 1024) return;
-    const work = event.target;
+    const work = event.currentTarget.parentNode;
 
     const site = work.querySelector('.site');
     const info = work.querySelector('.info');
@@ -38,7 +40,7 @@ function closeCard(event) {
 }
 
 const phoneCard =  document.querySelector('#portfolio .phone-card');
-const wrapper = document.querySelector('#portfolio .wrapper');
+const wrapper = document.querySelector('#portfolio .container');
 
 function clickCard(event) {
     if (window.innerWidth >= 1024) return;
@@ -68,11 +70,20 @@ function exitCard() {
     phoneCard.classList.remove('open');
 }
 
-works.forEach(work => {
-    work.addEventListener('mouseenter', openCard);
-    work.addEventListener('mouseleave', closeCard);
-    work.addEventListener('click', clickCard);
+backgrounds.forEach(background => {
+    background.addEventListener('mouseenter', openCard);
+    background.addEventListener('mouseleave', closeCard);
 });
+
+// titles.forEach(title => {
+//     title.addEventListener('mouseenter', openCard);
+//     title.addEventListener('mouseleave', closeCard);
+// });
+
+
+works.forEach(work => {
+    work.addEventListener('click', clickCard);
+})
 
 const exitButton = phoneCard.querySelector('#close');
 exitButton.addEventListener('click', exitCard);
@@ -117,7 +128,7 @@ function exitCursour() {
     cursour.classList.remove('active');
 }
 
-works.forEach(work => {
+backgrounds.forEach(work => {
     work.addEventListener('mousemove', moveCursour);
     work.addEventListener('mouseenter', enterCursour);
     work.addEventListener('mouseleave', exitCursour);

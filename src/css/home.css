@@ -1,0 +1,87 @@
+/* -------- Home -------- */
+
+.circle img {
+    animation: circle 20s linear infinite;
+}
+
+@keyframes circle {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#home .mouse {
+	width: 26px;
+	height: 44px;
+	border: 2px solid #F1F1F1;
+	border-radius: 60px;
+	position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#home .mouse::before {
+    content: '';
+    width: 5px;
+    height: 8px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F1F1F1;
+    border-radius: 20px;
+    opacity: 1;
+    animation: wheel 2s infinite;
+    -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 25px;
+	}
+}
+
+/* -------- Sales -------- */
+#sales .circle {
+    transform: translateX(-50%) scale(0);
+    transform-origin: center;
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#sales .circle.active {
+    transform: translateX(-50%) scale(1);
+}
+
+#sales h1 {
+    transform: translateY(100%);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#sales h1.active {
+    transform: translateY(0);
+}
+
+/* #sales h1.bottom {
+    transform: translateY(-100%);
+} */
+
+/* -------- Website -------- */
+
+#website button, #sales button {
+    background: rgb(238,64,99);
+    background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
+}

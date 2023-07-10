@@ -1,13 +1,6 @@
-// -------- Fitty-------- //
-if (window.innerWidth >= 1024) {
-    fitty('#sales #big');
-}
-
-
 // -------- Eye Movement -------- //
 
 const pupil = document.querySelector('#home .pupil');
-
 window.addEventListener('mousemove', (event) => {
     let offsetX = 35, offsetY = 33, mult = 40;
 
@@ -23,19 +16,6 @@ window.addEventListener('mousemove', (event) => {
     pupil.style.left = x;
     pupil.style.top = y;
 })
-
-
-// -------- Sales Transition -------- //
-
-const home = document.querySelector('#home');
-const salesContainer = document.querySelector('#sales .wrapper');
-
-function homeScroll() {
-    let progres = window.scrollY / window.innerHeight;
-
-}
-
-window.addEventListener('scroll', homeScroll);
 
 
 // -------- Word Change -------- //
@@ -81,109 +61,50 @@ changeWords();
 setInterval(changeWords, 2000);
 
 
-// -------- Menu -------- //
+// -------- Home Animation -------- //
 
-const menu = document.querySelector('.menu');
-const menuButton = document.querySelector('.menu-btn');
-const menuClicker = menuButton.querySelector('span');
-const lines = menuButton.querySelectorAll('div');
-const cover = document.querySelector('.cover');
-const logo = document.querySelector('.logo');
-const languages = document.querySelector('header .languages');
-
-const menuLinks = menu.querySelectorAll('.link');
-const menuWave = menu.querySelector('h1');
-const socialLinks = menu.querySelector('.social');
-
-anime({
-    targets: menuLinks,
-    translateX: 100,
-    duration: 1500,
-    opacity: 0
+const homeAnimation = anime({
+    targets: [changeContainer ,'#enhance', '#presence'],
+    opacity: 0,
+    rotate: function(el, i) {
+        return -5 + (5 * i);
+      },
+    marginBottom: function(el, i) {
+        return 50 + (-10 * i);
+      },
+    delay: anime.stagger(150),
+    easing: 'easeInOutQuad',
+    autoplay: false,
+    duration: 1000,
 });
 
-function menuClick () {
-    menuClicker.classList.toggle('active');
-    menu.classList.toggle('open');
-    menuButton.classList.toggle('active');
+const scrollPercent = () => {
+    const bodyST = document.body.scrollTop;
+    const docST = document.documentElement.scrollTop;
+    const docSH = document.documentElement.scrollHeight;
+    const docCH = document.documentElement.clientHeight;
     
-    document.body.classList.toggle('open-menu');
     
-    lines.forEach(line => {
-        line.classList.toggle('cross');
-    })
-
-    if (menu.classList.contains('open')) {
-        logo.classList.add('active');
-        cover.classList.add('active');
-        setTimeout(() => {cover.classList.add('show')}, 100);
-
-        menuWave.classList.add('active');
-        lines[1].style.transition = 'all 700ms cubic-bezier(.9, 0, .33, 1)';
-        
-        setTimeout(() => {
-            menuLinks.forEach(link => {
-                link.classList.add('active');
-            });
-        }, 1700);
-
-        setTimeout(() => {
-            anime({
-                targets: menuLinks,
-                translateX: 0,
-                duration: 1500,
-                opacity: 1,
-                delay: anime.stagger(100)
-            });
-        }, 400);
-
-        setTimeout(() => {
-            socialLinks.classList.add('active');
-            languages.classList.add('active');
-        }, 1400);
-        
-    } else {
-        languages.classList.remove('active');
-        cover.classList.remove('show');
-        setTimeout(() => {
-            cover.classList.remove('active');
-            logo.classList.remove('active');
-        }, 300);
-
-        setTimeout(() => {
-            lines[1].style.transition = '0.3s';
-            menuWave.classList.remove('active');
-        }, 700);
-
-        menuLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-        socialLinks.classList.remove('active');
-
-        anime({
-            targets: menuLinks,
-            translateX: 100,
-            duration: 1500,
-            opacity: 0,
-            delay: anime.stagger(100)
-        });
-    }
+    return (docST + bodyST) / (docSH - docCH);
 }
 
-menuClicker.addEventListener('click', menuClick);
+const homeEye = document.querySelector('#home .circle');
+const salesEye = document.querySelector('#sales .circle');
 
+const sales = document.querySelector('#sales div');
+const salesTitles = sales.querySelectorAll('h1');
 
-// -------- Sales Gradient -------- //
+function scrollEvents() {
+    if (scrollPercent() * 5 < .9) {
+    homeAnimation.seek((scrollPercent() * 5) * homeAnimation.duration);
+        homeEye.style.display = 'block';
+        homeEye.style.scale = 1 - scrollPercent() * 5;
+        salesEye.classList.remove('active');
+    } else { homeEye.style.scale = 0; homeEye.style.display = 'none'; salesEye.classList.add('active')}
 
-const salesGradient = document.querySelector('#sales .wrapper');
-const website = document.querySelector('#website');
-
-function moveGradient() {
-    let progress = (window.scrollY / (window.innerHeight * 2) - 0.5) * 100;
-    console.log(website.getClientRects().top);
-    if (progress <= 0 || progress > 110) salesGradient.style.display = 'none';
-    else salesGradient.style.display = 'block';
-    salesGradient.style.backgroundPosition = 'center ' + progress + '%';
+    if (sales.getBoundingClientRect().top == 0) salesTitles.forEach(title => {title.classList.add('active'); title.classList.remove('bottom');}); 
+        else if (sales.getBoundingClientRect().top > 0) salesTitles.forEach(title => {title.classList.remove('active')});
+            // else salesTitles.forEach(title => {title.classList.add('bottom');}); 
 }
 
-window.addEventListener('scroll', moveGradient);
+window.addEventListener('scroll', scrollEvents);

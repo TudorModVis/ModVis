@@ -71,6 +71,18 @@ h1 {
     font-weight: 600;
 }
 
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    h1 {
+        font-size: 5.5rem;
+    }
+}
+
 h2 {
     font-weight: 700;
     font-size: 1.7rem;
@@ -120,10 +132,9 @@ h3 {
 }
 
 .accent:hover::after {
-    transform: scaleX(1);
     transform-origin: bottom left;
 
-    animation: accent 0.8s;
+    animation: accent 0.8s forwards;
 }
 
 @keyframes accent {
@@ -135,31 +146,30 @@ header {
     width: calc(100% - 50px);
 }
 
-header nav a, footer nav a {
+footer a, footer .link {
     position: relative;
 }
 
-header nav a::after, footer nav a::after {
+footer a::after, footer .link::after {
     content: '';
     position: absolute;
-    width: 120%;
+    width: 100%;
     transform: scaleX(0);
-    height: 2px;
-    bottom: -5px;
-    left: -10%;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
     background-color: #F74264;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
 
-header nav #active::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
 }
 
-header nav a:hover::after, footer nav a:hover::after {
+footer a:hover::after, footer .link:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+
+    animation: accent 0.5s;
 }
 
 #svg1 {
@@ -181,186 +191,6 @@ header nav a:hover::after, footer nav a:hover::after {
     50% {bottom: -10%}
     100% {bottom: 0}
 }
-
-/* -------- Home -------- */
-
-.circle img {
-    animation: circle 20s linear infinite;
-}
-
-@keyframes circle {
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-#home .mouse {
-	width: 26px;
-	height: 44px;
-	border: 2px solid #F1F1F1;
-	border-radius: 60px;
-	position: absolute;
-    bottom: 55px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-#home .mouse::before {
-    content: '';
-    width: 5px;
-    height: 8px;
-    position: absolute;
-    top: 7px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #F1F1F1;
-    border-radius: 20px;
-    opacity: 1;
-    animation: wheel 2s infinite;
-    -webkit-animation: wheel 2s infinite;
-}
-
-@keyframes wheel {
-	to {
-		opacity: 0;
-		top: 25px;
-	}
-}
-
-.arrows {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 24px;
-}
-
-.arrows.portfolio {
-    width: 20px;
-    height: fit-content;
-
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.arrow {
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-   
-  border-right: 2px solid #F1F1F1;
-  border-bottom: 2px solid #F1F1F1;
-  margin: 0 0 3px 4px;
-  
-  width: 16px;
-  height: 16px;
-
-  -webkit-animation: arrow 1s infinite;
-  -moz-animation: arrow 1s infinite;
-  animation: arrow 1s infinite;
-}
-
-.arrow.portfolio {
-    width: 12px;
-    height: 12px;
-}
-
-.arrow.one
-{
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  -webkit-animation-direction: alternate;
-  
-  animation-direction: alternate;
-  animation-delay: alternate;
-}
-
-.arrow.two
-{
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  -webkit-animation-direction: alternate;
-  
-  animation-delay: 1.6s;
-  animation-direction: alternate;
-  
-  margin-top: -6px;
-}
-
-@keyframes arrow {
-    0% {opacity: 0;}
-    50% {opacity: .5;}
-    100%{opacity: 1;}
-}
-
-.noise {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation .2s infinite;
-    opacity: .9;
-    visibility: visible;
-
-    z-index: 1;
-  }
-  
-  @keyframes bg-animation {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
-
-
-/* -------- Sales -------- */
-
-#sales button {
-    background: rgb(238,64,99);
-    background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
-}
-
-#sales .wrapper {
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-    /* background-image: linear-gradient(180deg, transparent 12%, #9D3261 26%, #FDDAE4 38%, #FDDAE4 50%, #FDDAE4 64%, #F74264 76%, transparent 88%); */
-    background-image: linear-gradient(180deg, transparent 12%, #9D3261 26%, #FDDAE4 50%, #F74264 76%, transparent 88%);
-    background-size:100% 650%;
-    background-position:center 0;
-}
-/* -------- Website -------- */
-
-#website button {
-    background: rgb(238,64,99);
-    background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
-}
-
 
 /* -------- Menu -------- */
 
@@ -549,3 +379,38 @@ header nav a:hover::after, footer nav a:hover::after {
         height: 10.5vh;
     }
 }
+
+footer .details{
+    font-family: 'Saira', sans-serif;
+}
+
+/* -------- Noise -------- */
+
+.noise {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+
+    z-index: 1;
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }
