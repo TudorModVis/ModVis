@@ -89,14 +89,17 @@ const salesTitles = sales.querySelectorAll('h1');
 // -------- Sales Animation -------- //
 
 const typingText = document.querySelectorAll('#sales .typing');
-typingText[0].innerHTML = typingText[0].textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+typingText[0].innerHTML = typingText[0].textContent.split(' ').map(function(word) {
+    return "<span class='letter'>" + word + "</span>";
+  }).join(' ');
   typingText[1].innerHTML = typingText[1].textContent.split(' ').map(function(word) {
     return "<span class='letter'>" + word + "</span>";
   }).join(' ');
 
 const typingTimeline = anime.timeline({
     easing: 'easeOutQuad',
-    autoplay: false
+    autoplay: false,
+    duration: 1000
 })
 
 typingTimeline
@@ -104,14 +107,20 @@ typingTimeline
     targets: typingText[0].querySelectorAll('span'),
     opacity: 1,
     translateY: [15, 0], 
-    delay: anime.stagger(50)
+    delay: anime.stagger(300),
 })
 .add({
     targets: typingText[1].querySelectorAll('span'),
     opacity: 1,
     translateY: [15, 0], 
     delay: anime.stagger(300)
-});
+})
+.add({
+    targets: '#sales .pupil',
+    left: ['30%', '70%', '30%', '70%'],
+    top: ['40%', '40%', '60%', '60%'],
+    duration: 16000,
+}, 0);
 
 function scrollEvents() {
     let posY = window.scrollY;
