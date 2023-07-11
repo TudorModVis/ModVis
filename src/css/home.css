@@ -75,13 +75,16 @@
     transform: translateY(0);
 }
 
-/* #sales h1.bottom {
+#sales h1.bottom {
     transform: translateY(-100%);
-} */
-
-/* -------- Website -------- */
-
-#website button, #sales button {
-    background: rgb(238,64,99);
-    background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
 }
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+}
+
+.letter.active {
+    display: none
+}
+

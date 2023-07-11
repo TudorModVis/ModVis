@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModVis</title>
+    <link rel="icon" type="image/x-icon" href="../images/SVG/Logoochi.png">
+
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/services.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/scrolly-video@0.0.2/dist/scrolly-video.js"></script>
+    <script src="../src/js/libraries/anime.min.js"></script>
+    <script src="../src/js/app.js" defer></script>
+    <script src="../src/js/services.js" defer></script>
+
+</head>
+<body>
+    <div class="max-w-screen h-full relative">
+        <div class="cover h-screen w-screen z-20 bg-[#0E0E0E] bg-opacity-30 fixed hidden opacity-0"></div>
+        <!-- <div class="noise"></div> -->
+        <img src="../images/SVG/COLOR.svg" id="svg1" class="fixed left-0 w-[150vw] h-[110%] lg:w-[70%] hidden lg:block">
+        <img src="../images/SVG/Vector 1.svg" id="svg2" class="fixed right-0 w-full lg:w-1/2 lg:hidden ">
+
+        <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-50 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
+            <nav class="flex flex-col leading-none gap-[7vh] big-text">
+                <div class="relative link">
+                    <h1>HOME</h1>
+                    <a href="" class="current">HOME</a>
+                </div>
+                <a href="portfolio.html" class="link">PORTFOLIO</a>
+                <a href="#services" class="link">SERVICES</a>
+                <a href="#benefits" class="link">CONTACTS</a>
+            </nav>
+            <div class="social flex gap-[25px] lg:gap-[2.5vw]">
+                <a href="">YOUTUBE</a>
+                <a href="">INSTAGRAM</a>
+                <a href="">TIKTOK</a>
+            </div>
+        </div>
+
+        <header class="flex items-center justify-center translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
+            <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
+                <a href="" class="text-[#F74264] font-bold">ENG</a>
+                <a href="">RO</a>
+                <a href="">РУ</a>
+            </div>
+            <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%]">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
+            </div>
+            <a href="../index.html" class="logo flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="../images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
+        </header>     
+            <section id="website" class="section h-[500vh] z-10 relative">
+                <div class="sticky top-0 w-screen h-screen flex flex-col">
+                    <div class="h-[calc(6.4vh+40px)]"><div></div></div>
+                    <div class="container flex-1 flex items-center">
+                        <div class="flex">
+                            <div class="text w-[45%] flex items-center">
+                                <div class="h-fit">
+                                    <h1 id="title" class="mb-[25px] 2xl:mb-[4vh] text-[4rem] leading-none accent relative w-fit">WEBSITE.</h1>
+                                    <p class="mb-[25px] lg:mb-[4.5vh] 2xl:mb-[8vh]">We offer website design, development, and maintenance services. Our process involves understanding your company, goals, and customers to create the perfect offer for YOU. <br> <span class="font-bold">Check our standard rates below.</span> </p>
+                                    <p> <span class="font-bold">LANDING PAGE</span> - All content on one page.</p>
+                                    <span class="text-[3rem] font-semibold font-['Saira']">$800</span>
+                                    <span class="font-bold">/ starting price</span>
+                        
+                                    <p class="mt-[25px] lg:mt-[2.3vh] 2xl:mt-[8vh]"><span class="font-bold">WEBSITE</span> - All content in a multi-page version.</p>
+                                    <span class="text-[3rem] font-semibold font-['Saira']">$1.500</span>
+                                    <span class="font-bold">/ starting price</span>
+                                    <div class="flex items-center gap-2 mt-[25px] lg:mt-[2.3vh]">
+                                        <img src="../images/SERVICES/info icon.png" class="h-[3vh]" alt="">
+                                        <p class="text-sm">The price varies depending on the included functionalities*</p>
+                                    </div>
+                                    <button class="py-[10px] px-[25px] rounded-xl mt-[25px] lg:mt-[4.5vh] 2xl:mt-[8vh]">Explore our portfolio</button>
+                                </div>
+                            </div>
+                            <div class="image w-[55%]">
+                                <img src="../images/SERVICES/webanimation.gif" class="w-full h-full object-contain" alt="">
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+                
+            </section>            
+        <footer class="z-10 bg-[#0E0E0E] relative pt-[9vh] 2xl:pt-[12vh]">
+            <div class="container w-full">
+                <div class="w-full lg:w-[90%]">
+                    <h1 class="heading leading-none hidden lg:block">WE ARE READY TO TAKE A <br> NEW PROJECT. <br> <div class="h-[5vh]"></div> ARE YOU? <span class="accent relative">CONTACT US</span> </h1>                    
+                    <h1 class="mobile-heading leading-none lg:hidden text-center">WE ARE READY <br> TO TAKE A <br> NEW PROJECT. <br> <div class="h-[25px]"></div> ARE YOU? <br> <span class="accent relative">CONTACT US</span> </h1>
+                </div>
+                <div class="lg:hidden mt-[50px] text-center">
+                    <p class="details">LET'S WORK TOGETHER</p>
+                    <br>
+                    <div class="flex justify-center w-full">
+                        <div class="text-center flex flex-col items-center">
+                            <p class="link w-fit cursor-pointer">MODVIS3@GMAIL.COM</p>
+                            <p class="link w-fit cursor-pointer">+373 68 550 009</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text flex mt-[25px] lg:mt-[9vh] 2xl:mt-[12vh]">
+                    <div class="w-1/2 3xl:w-[60%] hidden lg:block">
+                        <img src="../images/FOOTER/MODERN VISION.png" class="w-[90%]" alt="">
+                    </div>
+                    <div class="w-full lg:w-1/2 flex 3xl:w-[40%] justify-between">
+                        <div class="hidden lg:block">
+                            <p class="details">LET'S WORK TOGETHER</p>
+                            <br>
+                            <p class="link w-fit cursor-pointer">MODVIS3@GMAIL.COM</p>
+                            <p class="link w-fit cursor-pointer">+373 68 550 009</p>
+                        </div>
+                        <div>
+                            <p class="details">FIND MORE</p>
+                            <br>
+                            <a href="">HOME</a>
+                            <br>
+                            <a href="">PORTFOLIO</a>
+                            <br>
+                            <a href="">SERVICES</a>
+                            <br>
+                            <a href="">CONTACTS</a>
+                        </div>
+                        <div>
+                            <p class="details">SOCIALS</p>
+                            <br>
+                            <a href="">INSTAGRAM</a>
+                            <br>
+                            <a href="">LINKEDIN</a>
+                            <br>
+                            <a href="">DRIBBBLE</a>
+                            <br>
+                            <a href="">BEHANCE</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="py-[25px] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

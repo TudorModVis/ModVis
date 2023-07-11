@@ -78,33 +78,62 @@ const homeAnimation = anime({
     duration: 1000,
 });
 
-const scrollPercent = () => {
-    const bodyST = document.body.scrollTop;
-    const docST = document.documentElement.scrollTop;
-    const docSH = document.documentElement.scrollHeight;
-    const docCH = document.documentElement.clientHeight;
-    
-    
-    return (docST + bodyST) / (docSH - docCH);
-}
-
+const home = document.getElementById('home');
 const homeEye = document.querySelector('#home .circle');
 const salesEye = document.querySelector('#sales .circle');
 
+const salesContainer = document.getElementById('sales');
 const sales = document.querySelector('#sales div');
 const salesTitles = sales.querySelectorAll('h1');
 
+// -------- Sales Animation -------- //
+
+const typingText = document.querySelectorAll('#sales .typing');
+typingText[0].innerHTML = typingText[0].textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  typingText[1].innerHTML = typingText[1].textContent.split(' ').map(function(word) {
+    return "<span class='letter'>" + word + "</span>";
+  }).join(' ');
+
+const typingTimeline = anime.timeline({
+    easing: 'easeOutQuad',
+    autoplay: false
+})
+
+typingTimeline
+.add({
+    targets: typingText[0].querySelectorAll('span'),
+    opacity: 1,
+    translateY: [15, 0], 
+    delay: anime.stagger(50)
+})
+.add({
+    targets: typingText[1].querySelectorAll('span'),
+    opacity: 1,
+    translateY: [15, 0], 
+    delay: anime.stagger(300)
+});
+
 function scrollEvents() {
-    if (scrollPercent() * 5 < .9) {
-    homeAnimation.seek((scrollPercent() * 5) * homeAnimation.duration);
+    let posY = window.scrollY;
+
+    if (home.getBoundingClientRect().bottom > window.innerHeight / 100 * 10) {
+        homeAnimation.seek((posY / (home.clientHeight - (window.innerHeight / 100 * 10))) * homeAnimation.duration);
         homeEye.style.display = 'block';
-        homeEye.style.scale = 1 - scrollPercent() * 5;
+        homeEye.style.scale = 1 - posY / home.clientHeight;
         salesEye.classList.remove('active');
     } else { homeEye.style.scale = 0; homeEye.style.display = 'none'; salesEye.classList.add('active')}
 
-    if (sales.getBoundingClientRect().top == 0) salesTitles.forEach(title => {title.classList.add('active'); title.classList.remove('bottom');}); 
-        else if (sales.getBoundingClientRect().top > 0) salesTitles.forEach(title => {title.classList.remove('active')});
-            // else salesTitles.forEach(title => {title.classList.add('bottom');}); 
+    if (sales.getBoundingClientRect().top == 0) {
+        salesTitles.forEach(title => {title.classList.add('active'); title.classList.remove('bottom');}); 
+        typingTimeline.seek((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 * 2) * typingTimeline.duration);
+    }
+    else if (sales.getBoundingClientRect().top > 0) {
+        typingTimeline.seek(0);
+        salesTitles.forEach(title => {title.classList.remove('active')});
+    }
+    else {
+        salesTitles.forEach(title => {title.classList.add('bottom');}); 
+    }
 }
 
 window.addEventListener('scroll', scrollEvents);

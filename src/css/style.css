@@ -173,11 +173,11 @@ footer a:hover::after, footer .link:hover::after {
 }
 
 #svg1 {
-    animation: svg1 5s linear infinite;
+    /* animation: svg1 5s linear infinite; */
 }
 
 #svg2 {
-    animation: svg2 5s linear infinite;
+    /* animation: svg2 5s linear infinite; */
 }
 
 @keyframes svg1 {
@@ -394,7 +394,7 @@ footer .details{
     height: 200vh;
     background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
     background-repeat: repeat;
-    animation: bg-animation .2s infinite;
+    /* animation: bg-animation .2s infinite; */
     opacity: .9;
     visibility: visible;
 

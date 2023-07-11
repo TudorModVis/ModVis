@@ -1,0 +1,11 @@
+.accent::after {
+    height: 30%;
+    bottom: 7%;
+}
+
+/* -------- Website -------- */
+
+#website button, #sales button {
+    background: rgb(238,64,99);
+    background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
+}
