@@ -186,7 +186,7 @@ function scrollEvents() {
         homeEye.style.display = 'block';
         homeEye.style.scale = 1 - posY / home.clientHeight;
         salesEye.classList.remove('active');
-    } else { homeEye.style.scale = 0; homeEye.style.display = 'none'; salesEye.classList.add('active'); aboutEye.classList.remove('active');}
+    } else { homeEye.style.scale = 0; homeEye.style.display = 'none'; salesEye.classList.add('active');}
 
     if (sales.getBoundingClientRect().top == 0) {
         salesTitles.forEach(title => {title.classList.add('active'); title.classList.remove('bottom');}); 
@@ -205,7 +205,7 @@ function scrollEvents() {
         exitTimeline.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 - .65) * 2.5) * exitTimeline.duration);
     }
 
-    if (sales.getBoundingClientRect().top * -1 > window.innerHeight / 3) { salesButton.classList.add('bottom'); salesEye.classList.remove('active'); aboutEye.classList.add('active');}
+    if (sales.getBoundingClientRect().top * -1 > window.innerHeight / 3) { salesButton.classList.add('bottom'); salesEye.classList.remove('active');}
     else if (sales.getBoundingClientRect().top < 0) { salesButton.classList.add('active'); salesButton.classList.remove('bottom'); }
 }
 
@@ -291,6 +291,18 @@ window.addEventListener('scroll', moveBackground);
 const aboutUs = document.getElementById('about-us');
 const box = aboutUs.querySelector('div');
 const scrollBox = aboutUs.querySelector('.scroll');
+
+const aboutEyeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            aboutEye.classList.add('active');
+        } else {
+            aboutEye.classList.remove('active');
+        }
+    })
+});
+
+aboutEyeObserver.observe(aboutEye);
 
 const aboutUsTimeline = anime.timeline({
     easing: 'easeOutQuad',
