@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
 }
   
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     -ms-overflow-style: none;  
     scrollbar-width: none;
 
@@ -148,6 +148,7 @@ header {
 
 footer a, footer .link {
     position: relative;
+    transition: .3s;
 }
 
 footer a::after, footer .link::after {
@@ -172,24 +173,8 @@ footer a:hover::after, footer .link:hover::after {
     animation: accent 0.5s;
 }
 
-#svg1 {
-    /* animation: svg1 5s linear infinite; */
-}
-
-#svg2 {
-    /* animation: svg2 5s linear infinite; */
-}
-
-@keyframes svg1 {
-    0% {transform: scale(1.2); top: 0;}
-    50% {transform: scale(1); top: -10%;}
-    100% {transform: scale(1.2); top: 0;}
-}
-
-@keyframes svg2 {
-    0% {bottom: 0}
-    50% {bottom: -10%}
-    100% {bottom: 0}
+footer a:hover, footer .link:hover {
+    letter-spacing: 2px;
 }
 
 /* -------- Menu -------- */

@@ -59,11 +59,20 @@
 #sales .circle {
     transform: translateX(-50%) scale(0);
     transform-origin: center;
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: .5s ease-out;
 }
 
 #sales .circle.active {
     transform: translateX(-50%) scale(1);
+}
+
+#about-us .circle {
+    transform: scale(0);
+    transition: .5s ease-out;
+}
+
+#about-us .circle.active {
+    transform: scale(1);
 }
 
 #sales h1 {
@@ -84,7 +93,51 @@
     opacity: 0;
 }
 
-.letter.active {
-    display: none
+#sales button  {
+    background: rgb(238,64,99);
+    background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
+    background-size: 200% 100%;
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(110%);
 }
 
+#sales button:hover, #portfolio button:hover {
+    background-position: 100% 0;
+    transition: .5s ease-out;
+}
+
+#sales button.active {
+    transform: translateY(0);
+}
+
+#sales button.bottom {
+    transform: translateY(-110%);
+}
+
+/* -------- Portfolio -------- */
+
+#portfolio .text {
+    opacity: 0;
+    scale: 0;
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#portfolio .text.active {
+    opacity: 1;
+    scale: 1;
+}
+
+#portfolio .plan {
+    transition: none;
+}
+
+#portfolio .plan.active {
+    transition: .15s;
+}
+
+#portfolio button {
+    background: rgb(238,64,99);
+    background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
+    background-size: 200% 100%;
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
