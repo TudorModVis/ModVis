@@ -798,6 +798,10 @@ video {
   display: block;
 }
 
+.inline-block{
+  display: inline-block;
+}
+
 .inline{
   display: inline;
 }
@@ -901,6 +905,10 @@ video {
 
 .h-\[6rem\]{
   height: 6rem;
+}
+
+.h-\[10rem\]{
+  height: 10rem;
 }
 
 .max-h-\[70px\]{

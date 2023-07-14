@@ -106,9 +106,9 @@ return "<span class='letter'>" + word + "</span>";
 }).join(' ');
 
   typingText[1].innerHTML = typingText[1].textContent.split(' ').map(function(word) {
-    if (word == 'WEBSITE,') return "<span class='relative word hover:z-20 cursor-pointer'> <span class='font-bold'>" + word + " </span> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[6rem]'> </span>";
-    if (word == 'BRAND,') return "<span class='relative word z-10 cursor-pointer'> <span class='font-bold'>" + word + " </span> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[6rem]'> </span>";
-    if (word == 'PR.') return "<span class='relative word z-10 cursor-pointer'> <span class='font-bold'>" + word + " </span> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[6rem]'> </span>";
+    if (word == 'WEBSITE,') return "<span class='relative word hover:z-20 cursor-pointer accent'> <div class='font-bold inline'>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'BRAND,') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline'>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'PR.') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline'>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
 
     return "<span class='letter'>" + word + "</span>";
 }).join(' ');
@@ -134,7 +134,7 @@ function moveTextImage(event) {
 
 highlightedWords.forEach(word => {
     word.addEventListener('mouseenter', enterTextImage);
-    word.querySelector('span').addEventListener('mousemove', moveTextImage);
+    word.querySelector('div').addEventListener('mousemove', moveTextImage);
     word.addEventListener('mouseleave', exitTextImage);
 })
 
@@ -154,7 +154,10 @@ const exitTimeline = anime.timeline({
 exitTimeline
 .add({
     targets: typingText[1].querySelectorAll('span'),
-    opacity: [1, 0],
+    opacity: (el) => {
+        if (el.classList.contains('word')) return [1, 1];
+        return [1, 0];
+    },
     rotate: function(el, i) {
         return anime.random(-5, 5)
       },
