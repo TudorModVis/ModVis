@@ -114,6 +114,30 @@
     transform: translateY(-110%);
 }
 
+#sales .word img {
+    animation: wordImageBack .5s forwards;
+}
+
+#sales .word img.active {
+    animation: wordImage .5s forwards;
+}
+
+#sales .word span.active {
+    color: #F74264;
+}
+
+
+@keyframes wordImage {
+    from {opacity: 0; transform: translate(-50%, -50%) scale(0);}
+    to {opacity: 1; transform: translate(-50%, -50%) scale(1);}
+}
+
+@keyframes wordImageBack {
+    from {opacity: 1; transform: translate(-50%, -50%) scale(1);}
+    to {opacity: 0; transform: translate(-50%, -50%) scale(0);}
+}
+
+
 /* -------- Portfolio -------- */
 
 #portfolio .text {
@@ -121,6 +145,7 @@
     scale: 0;
     transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 
 #portfolio .text.active {
     opacity: 1;

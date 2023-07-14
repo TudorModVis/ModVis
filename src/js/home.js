@@ -102,12 +102,41 @@ homeColorObserver.observe(home);
 
 const typingText = document.querySelectorAll('#sales .typing');
 typingText[0].innerHTML = typingText[0].textContent.split(' ').map(function(word) {
-    return "<span class='letter'>" + word + "</span>";
+return "<span class='letter'>" + word + "</span>";
 }).join(' ');
 
   typingText[1].innerHTML = typingText[1].textContent.split(' ').map(function(word) {
+    if (word == 'WEBSITE,') return "<span class='relative word hover:z-20 cursor-pointer'> <span class='font-bold'>" + word + " </span> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[6rem]'> </span>";
+    if (word == 'BRAND,') return "<span class='relative word z-10 cursor-pointer'> <span class='font-bold'>" + word + " </span> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[6rem]'> </span>";
+    if (word == 'PR.') return "<span class='relative word z-10 cursor-pointer'> <span class='font-bold'>" + word + " </span> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[6rem]'> </span>";
+
     return "<span class='letter'>" + word + "</span>";
 }).join(' ');
+
+const highlightedWords = document.querySelectorAll('#sales .word');
+let highlightImage;
+
+function enterTextImage(event) {
+    highlightImage = event.currentTarget.querySelector('img');
+    highlightImage.classList.add('active');
+}
+
+function exitTextImage(event) {
+    highlightImage.classList.remove('active');
+}
+
+function moveTextImage(event) {
+    let rect = event.currentTarget.getBoundingClientRect();
+    
+    highlightImage.style.left = event.clientX - rect.left + 'px';
+    highlightImage.style.top = event.clientY - rect.top + 'px';
+}
+
+highlightedWords.forEach(word => {
+    word.addEventListener('mouseenter', enterTextImage);
+    word.querySelector('span').addEventListener('mousemove', moveTextImage);
+    word.addEventListener('mouseleave', exitTextImage);
+})
 
 const typingTimeline = anime.timeline({
     easing: 'easeOutQuad',
@@ -129,9 +158,6 @@ exitTimeline
     rotate: function(el, i) {
         return anime.random(-5, 5)
       },
-    //   scale: function(el, i) {
-    //     return anime.random(1, 1.3)
-    //   },
       translateY: () => {
         return [0, anime.random(-10, -20)]
       },
@@ -145,9 +171,6 @@ exitTimeline
     rotate: function(el, i) {
         return anime.random(-5, 5)
       },
-    //   scale: function(el, i) {
-    //     return anime.random(1, 1.3)
-    //   },
       translateY: () => {
         return [0, anime.random(-10, -20)]
       },
@@ -321,7 +344,7 @@ aboutUsTimeline
     targets: aboutUs.querySelectorAll('.two'),
     translateY: ['-20%', 0],
     translateX: ['30%', 0],
-    rotate: [25, 0],
+    rotate: [35, 0],
 }, 400)
 .add({
     targets: aboutUs.querySelectorAll('.three'),
