@@ -241,6 +241,7 @@ window.addEventListener('scroll', scrollEvents);
 // -------- Portfolio Animation -------- //
 
 const portfolio = document.getElementById('portfolio')
+const portfolioWrapper = portfolio.querySelector('div');
 const plans = portfolio.querySelectorAll('.plan');
 
 function movePlans(event) {
@@ -294,6 +295,22 @@ const portfolioObserver = new IntersectionObserver(entries => {
 
 portfolioObserver.observe(portfolioText);
 
+const textSwitch = portfolio.querySelector('.carousell');
+const portfolioSpace = portfolio.querySelector('.space');
+
+function switchWords() {
+    let percent = portfolioWrapper.offsetTop / window.innerHeight;
+    if (percent > .75) {
+        portfolioSpace.classList.add('active');
+        textSwitch.classList.add('active');
+    } else {
+        portfolioSpace.classList.remove('active');
+        textSwitch.classList.remove('active');
+    }
+}
+
+window.addEventListener('scroll', switchWords);
+
 // -------- Background Animation -------- //
 
 function moveBackground() {
@@ -321,9 +338,9 @@ const scrollBox = aboutUs.querySelector('.scroll');
 const aboutEyeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            aboutEye.classList.add('active');
+            entry.target.classList.add('active');
         } else {
-            aboutEye.classList.remove('active');
+            entry.target.classList.remove('active');
         }
     })
 });
@@ -388,4 +405,27 @@ window.addEventListener('mousemove', (event) => {
 
     aboutPupil.style.left = x;
     aboutPupil.style.top = y;
-})
+});
+
+
+// -------- Footer -------- //
+
+const footer = document.querySelector('footer');
+const footerLogo = document.getElementById('footer-logo');
+const footerEye = document.querySelector('.footer .circle');
+
+const footerAnim = anime({
+    targets: footerLogo,
+    autoplay: false,
+    translateY: [100, 0],
+    easing: 'easeOutQuad',
+});
+
+function animateFooter() {
+    let percent = Math.abs(footer.getBoundingClientRect().bottom - window.innerHeight) / footer.clientHeight;
+    footerAnim.seek((1 -percent) * footerAnim.duration);
+
+    if (percent < .4) footerEye.classList.add('active'); else footerEye.classList.remove('active')
+}
+
+window.addEventListener('scroll', animateFooter);

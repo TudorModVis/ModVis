@@ -146,12 +146,12 @@ header {
     width: calc(100% - 50px);
 }
 
-footer a, footer .link {
+.footer a, .footer .link {
     position: relative;
     transition: .3s;
 }
 
-footer a::after, footer .link::after {
+.footer a::after, .footer .link::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -166,16 +166,26 @@ footer a::after, footer .link::after {
     transition: transform 0.5s ease-out;
 }
 
-footer a:hover::after, footer .link:hover::after {
+.footer a:hover::after, .footer .link:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 
     animation: accent 0.5s;
 }
 
-footer a:hover, footer .link:hover {
+.footer a:hover, .footer .link:hover {
     letter-spacing: 2px;
 }
+
+.footer .circle {
+    transform: translateY(-50%);
+    transition: 1s ease;
+}
+
+.footer .circle.active {
+    transform: translateY(0);
+}
+
 
 /* -------- Menu -------- */
 
@@ -365,7 +375,7 @@ footer a:hover, footer .link:hover {
     }
 }
 
-footer .details{
+.footer .details{
     font-family: 'Saira', sans-serif;
 }
 
