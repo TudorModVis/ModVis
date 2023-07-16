@@ -56,7 +56,7 @@
 }
 
 /* -------- Sales -------- */
-#sales .circle {
+#sales .circle{
     transform: translateX(-50%) scale(0);
     transform-origin: center;
     transition: .5s ease-out;
@@ -66,9 +66,19 @@
     transform: translateX(-50%) scale(1);
 }
 
-#about-us .circle{
+#about-us .circle {
     transform: scale(0);
     transition: .5s ease-out;
+}
+
+#contact-us .circle {
+    transform: translateY(-50%) scale(0);
+    transform-origin: center;
+    transition: .5s ease-out;
+}
+
+#contact-us .circle.active {
+    transform: translateY(-50%) scale(1);
 }
 
 #about-us .circle.active {
@@ -93,7 +103,7 @@
     opacity: 0;
 }
 
-#sales button  {
+#sales button, #contact-us button  {
     background: rgb(238,64,99);
     background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
     background-size: 200% 100%;
@@ -101,12 +111,12 @@
     transform: translateY(110%);
 }
 
-#sales button:hover, #portfolio button:hover {
+#sales button:hover, #portfolio button:hover,  #contact-us button:hover {
     background-position: 100% 0;
     transition: .5s ease-out;
 }
 
-#sales button.active {
+#sales button.active, #contact-us button.active {
     transform: translateY(0);
 }
 
@@ -182,4 +192,15 @@
 
 #portfolio .space.active {
     margin-right: 0;
+}
+
+/* -------- Contact Us -------- */
+
+#contact-us p {
+    transform: translateY(100%);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#contact-us p.active {
+    transform: translateY(0);
 }

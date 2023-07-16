@@ -253,7 +253,7 @@ function movePlans(event) {
     plans[0].style.transform = 'translate(' + moveX * 5 + '%, ' + moveY * 5 + '%)';
 }
 
-portfolio.addEventListener('mousemove', movePlans);
+portfolioWrapper.addEventListener('mousemove', movePlans);
 
 const portfolioText = portfolio.querySelector('.text');
 
@@ -291,7 +291,7 @@ const portfolioObserver = new IntersectionObserver(entries => {
             });
         }
     })
-})
+});
 
 portfolioObserver.observe(portfolioText);
 
@@ -408,6 +408,51 @@ window.addEventListener('mousemove', (event) => {
 });
 
 
+// -------- Contact Us -------- //
+
+const contactUs = document.getElementById('contact-us');
+const contactHeadings = contactUs.querySelectorAll('img');
+const contactButton = contactUs.querySelector('button');
+const contactText = contactUs.querySelector('p');
+const contactEye = contactUs.querySelector('.circle');
+
+const contactAnimation = anime({
+    targets: contactHeadings,
+    translateX: (el) => {
+        if (el.classList.contains('left')) return ['-30%', 0];
+        return ['30%', 0];
+    },
+    delay: anime.stagger(290),
+    easing: 'easeOutQuad',
+    autoplay: false
+});
+
+aboutEyeObserver.observe(contactEye);
+
+function animateContacts() {
+    let percent = contactUs.getBoundingClientRect().top / (window.innerHeight * 1.2) * -1 + .75;
+    console.log(percent);
+    contactAnimation.seek(percent * contactAnimation.duration);
+}
+
+window.addEventListener('scroll', animateContacts);
+
+const footerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            contactText.classList.add('active');
+            setTimeout(() => {
+                contactButton.classList.add('active');
+            }, 300);
+        } else {
+            contactButton.classList.remove('active');
+            contactText.classList.remove('active');
+        }
+    })
+});
+
+footerObserver.observe(contactText);
+
 // -------- Footer -------- //
 
 const footer = document.querySelector('footer');
@@ -420,6 +465,7 @@ const footerAnim = anime({
     translateY: [100, 0],
     easing: 'easeOutQuad',
 });
+
 
 function animateFooter() {
     let percent = Math.abs(footer.getBoundingClientRect().bottom - window.innerHeight) / footer.clientHeight;

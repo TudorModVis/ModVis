@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
 }
   
 body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     -ms-overflow-style: none;  
     scrollbar-width: none;
 
@@ -142,6 +142,10 @@ h3 {
     to{transform: scaleX(1);}
 }
 
+button:hover {
+    letter-spacing: 1px;
+}
+
 header {
     width: calc(100% - 50px);
 }
@@ -185,7 +189,6 @@ header {
 .footer .circle.active {
     transform: translateY(0);
 }
-
 
 /* -------- Menu -------- */
 
