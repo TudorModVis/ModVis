@@ -25,6 +25,7 @@ const languages = document.querySelector('header .languages');
 const menuLinks = menu.querySelectorAll('.link');
 const menuWave = menu.querySelector('h1');
 const socialLinks = menu.querySelector('.social');
+let logoSwitch;
 
 anime({
     targets: menuLinks,
@@ -45,7 +46,10 @@ function menuClick () {
     })
 
     if (menu.classList.contains('open')) {
-        logo.classList.remove('active');
+        if (logo.classList.contains('active')) {
+            logoSwitch = true;
+            logo.classList.remove('active');
+        }
         cover.classList.add('active');
         setTimeout(() => {cover.classList.add('show')}, 100);
 
@@ -79,7 +83,10 @@ function menuClick () {
 
         setTimeout(() => {
             cover.classList.remove('active');
-            logo.classList.add('active');
+            if (logoSwitch == true) {
+                logo.classList.add('active');
+                logoSwitch = false;
+            }
         }, 300);
 
         anime.remove(menuLinks);

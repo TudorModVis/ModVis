@@ -100,17 +100,14 @@ homeColorObserver.observe(home);
 
 // -------- Sales Animation -------- //
 
-const typingText = document.querySelectorAll('#sales .typing');
-typingText[0].innerHTML = typingText[0].textContent.split(' ').map(function(word) {
-return "<span class='letter'>" + word + "</span>";
-}).join(' ');
+const typingText = document.querySelector('#sales .typing');
 
-  typingText[1].innerHTML = typingText[1].textContent.split(' ').map(function(word) {
+  typingText.innerHTML = typingText.textContent.split(' ').map(function(word) {
     if (word == 'WEB-DEVELOPMENT') return "<span class='relative word hover:z-20 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
     if (word == 'BRAND') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
     if (word == 'MARKETING') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
 
-    return "<span class='letter'>" + word + "</span>";
+    return "<span class='letter font'>" + word + "</span>";
 }).join(' ');
 
 const highlightedWords = document.querySelectorAll('#sales .word');
@@ -146,14 +143,8 @@ const typingTimeline = anime.timeline({
 
 //Exit Timeline
 
-const exitTimeline = anime.timeline({
-    easing: 'easeOutQuad',
-    autoplay: false,
-});
-
-exitTimeline
-.add({
-    targets: typingText[1].querySelectorAll('span'),
+const exitAnimation = anime({
+    targets: typingText.querySelectorAll('span'),
     opacity: (el) => {
         if (el.classList.contains('word')) return [1, 1];
         return [1, 0];
@@ -167,32 +158,15 @@ exitTimeline
       translateX: () => {
         return anime.random(-50, 50)
       },
-})
-.add({
-    targets: typingText[0].querySelectorAll('span'),
-    opacity: [1, 0],
-    rotate: function(el, i) {
-        return anime.random(-5, 5)
-      },
-      translateY: () => {
-        return [0, anime.random(-10, -20)]
-      },
-      translateX: () => {
-        return anime.random(-50, 50)
-      },
-}, 0);
+      easing: 'easeOutQuad',
+      autoplay: false,
+});
 
 //Typing Timeline
 
 typingTimeline
 .add({
-    targets: typingText[0].querySelectorAll('span'),
-    opacity: [0, 1],
-    translateY: [15, 0], 
-    delay: anime.stagger(300),
-})
-.add({
-    targets: typingText[1].querySelectorAll('span'),
+    targets: typingText.querySelectorAll('span'),
     opacity: [0, 1],
     translateY: [15, 0], 
     delay: anime.stagger(300)
@@ -235,7 +209,7 @@ function scrollEvents() {
         if (salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 * 2 <= 1) {
             salesButton.classList.remove('active');
         } else {salesButton.classList.add('active'); salesButton.classList.remove('bottom');}
-        exitTimeline.seek(0);
+        exitAnimation.seek(0);
     }
     else if (sales.getBoundingClientRect().top > 0) {
         typingTimeline.seek(0);
@@ -243,7 +217,7 @@ function scrollEvents() {
     }
     else {
         salesTitles.forEach(title => {title.classList.add('bottom');});
-        exitTimeline.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 - .65) * 2.5) * exitTimeline.duration);
+        exitAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 - .65) * 2.5) * exitAnimation.duration);
     }
 
     if (sales.getBoundingClientRect().top * -1 > window.innerHeight / 3) { salesButton.classList.add('bottom'); salesEye.classList.remove('active');}
@@ -260,12 +234,14 @@ const portfolioWrapper = portfolio.querySelector('div');
 const plans = portfolio.querySelectorAll('.plan');
 
 function movePlans(event) {
-    let moveX = event.clientX / window.innerWidth;
-    let moveY = event.clientY / window.innerHeight;
+    let moveX = event.clientX / window.innerWidth - .5;
+    let moveY = event.clientY / window.innerHeight - .5;
 
     plans[2].style.transform = 'translate(' + moveX * 10 + '%, ' + moveY * 10 + '%)';
     plans[1].style.transform = 'translate(' + moveX * 7 + '%, ' + moveY * 7 + '%)';
     plans[0].style.transform = 'translate(' + moveX * 5 + '%, ' + moveY * 5 + '%)';
+
+    console.log(moveX, moveY);
 }
 
 portfolioWrapper.addEventListener('mousemove', movePlans);
@@ -326,24 +302,6 @@ function switchWords() {
 
 window.addEventListener('scroll', switchWords);
 
-// -------- Background Animation -------- //
-
-function moveBackground() {
-    let percent = (window.innerHeight - salesContainer.getBoundingClientRect().bottom) / window.innerHeight * 100;
-    if (percent < 0 ) {
-        firstSvg.style.top = 0;
-        return;
-    }
-
-    if (percent > 120) {
-        firstSvg.style.top = '120%';
-        return;
-    }
-    firstSvg.style.top = percent * -1 + '%';
-}
-
-window.addEventListener('scroll', moveBackground);
-
 // -------- About Us -------- //
 
 const aboutUs = document.getElementById('about-us');
@@ -363,7 +321,6 @@ const aboutEyeObserver = new IntersectionObserver(entries => {
 });
 
 aboutEyeObserver.observe(aboutEye);
-aboutEyeObserver.observe(aboutUsHeading);
 
 const aboutUsTimeline = anime.timeline({
     easing: 'easeOutQuad',
@@ -419,6 +376,7 @@ function moveBox() {
     const percent = cord / (aboutUs.clientHeight - window.innerHeight);
     aboutUsTimeline.seek(percent * aboutUsTimeline.duration);
     if (percent >= .9) logo.classList.add('active'); else logo.classList.remove('active');
+    if (percent > 0) aboutUsHeading.classList.add('active'); else aboutUsHeading.classList.remove('active');
 }
 
 window.addEventListener('scroll', moveBox);
@@ -464,7 +422,7 @@ const contactAnimation = anime({
 aboutEyeObserver.observe(contactEye);
 
 function animateContacts() {
-    let percent = contactUs.getBoundingClientRect().top / (window.innerHeight * 1.2) * -1 + .75;
+    let percent = contactUs.getBoundingClientRect().top / (window.innerHeight * .8) * -1 + 1;
     contactAnimation.seek(percent * contactAnimation.duration);
 }
 
