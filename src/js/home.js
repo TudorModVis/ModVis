@@ -334,6 +334,8 @@ window.addEventListener('scroll', moveBackground);
 const aboutUs = document.getElementById('about-us');
 const box = aboutUs.querySelector('div');
 const scrollBox = aboutUs.querySelector('.scroll');
+const aboutUsHeading = aboutUs.querySelector('.heading');
+const aboutUsText = aboutUs.querySelectorAll('.text');
 
 const aboutEyeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -345,7 +347,9 @@ const aboutEyeObserver = new IntersectionObserver(entries => {
     })
 });
 
+// aboutUsText.forEach(text => aboutEyeObserver.observe(text));
 aboutEyeObserver.observe(aboutEye);
+aboutEyeObserver.observe(aboutUsHeading);
 
 const aboutUsTimeline = anime.timeline({
     easing: 'easeOutQuad',
@@ -361,17 +365,32 @@ aboutUsTimeline
     rotate: [-25, 0],
 })
 .add({
+    targets: aboutUsText[0],
+    translateX: ['-100%', 0],
+    duration: 400
+}, 0)
+.add({
     targets: aboutUs.querySelectorAll('.two'),
     translateY: ['-20%', 0],
     translateX: ['30%', 0],
     rotate: [35, 0],
 }, 400)
 .add({
+    targets: aboutUsText[1],
+    translateX: ['-100%', 0],
+    duration: 400
+}, 800)
+.add({
     targets: aboutUs.querySelectorAll('.three'),
     translateY: ['50%', 0],
     translateX: ['20%', 0],
     rotate: [-25, 0],
 }, 800)
+.add({
+    targets: aboutUsText[2],
+    translateX: ['-100%', 0],
+    duration: 400
+}, 1800)
 .add({
     targets: aboutUs.querySelectorAll('.four'),
     translateY: ['-150%', 0],

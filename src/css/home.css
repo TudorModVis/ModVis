@@ -85,12 +85,21 @@
     transform: scale(1);
 }
 
-#sales h1 {
+/* #about-us .text {
+    transform: translateX(-100%);
+    transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+} */
+
+#about-us .text.active {
+    transform: translateX(0);
+}
+
+#sales h1, #contact-us p, #about-us .heading {
     transform: translateY(100%);
     transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-#sales h1.active {
+#sales h1.active, #contact-us p.active, #about-us .heading.active {
     transform: translateY(0);
 }
 
@@ -192,15 +201,4 @@
 
 #portfolio .space.active {
     margin-right: 0;
-}
-
-/* -------- Contact Us -------- */
-
-#contact-us p {
-    transform: translateY(100%);
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-#contact-us p.active {
-    transform: translateY(0);
 }
