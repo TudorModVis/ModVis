@@ -61,7 +61,6 @@ changeWords();
 
 setInterval(changeWords, 2000);
 
-
 // -------- Home Animation -------- //
 
 const homeAnimation = anime({
@@ -88,7 +87,8 @@ const firstSvg = document.getElementById('svg1');
 const salesContainer = document.getElementById('sales');
 const sales = document.querySelector('#sales div');
 const salesTitles = sales.querySelectorAll('h1');
-const salesButton = sales.querySelector('button');
+const salesButton = sales.querySelector('button')
+const salesHeadings = sales.querySelectorAll('.heading');
 
 const homeColorObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -106,9 +106,9 @@ return "<span class='letter'>" + word + "</span>";
 }).join(' ');
 
   typingText[1].innerHTML = typingText[1].textContent.split(' ').map(function(word) {
-    if (word == 'WEBSITE,') return "<span class='relative word hover:z-20 cursor-pointer accent'> <div class='font-bold inline'>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
-    if (word == 'BRAND,') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline'>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
-    if (word == 'PR.') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline'>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'WEB-DEVELOPMENT') return "<span class='relative word hover:z-20 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'BRAND') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'MARKETING') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
 
     return "<span class='letter'>" + word + "</span>";
 }).join(' ');
@@ -204,8 +204,23 @@ typingTimeline
     duration: 16000,
 }, 0);
 
+//Heading animation
+
+const headingAnimation = anime({
+    targets: salesHeadings,
+    translateX: (el) => {
+        if (el.classList.contains('left')) return ['-30%', 0];
+        return ['30%', 0];
+    },
+    delay: anime.stagger(290),
+    easing: 'easeOutQuad',
+    autoplay: false
+});
+
 function scrollEvents() {
     let posY = window.scrollY;
+
+    headingAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * 4 * -1) + 1) * headingAnimation.duration)
 
     if (home.getBoundingClientRect().bottom > window.innerHeight / 100 * 10) {
         homeAnimation.seek((posY / (home.clientHeight - (window.innerHeight / 100 * 10))) * homeAnimation.duration);
@@ -306,7 +321,7 @@ function switchWords() {
     } else {
         portfolioSpace.classList.remove('active');
         textSwitch.classList.remove('active');
-    }
+    }    
 }
 
 window.addEventListener('scroll', switchWords);
@@ -347,7 +362,6 @@ const aboutEyeObserver = new IntersectionObserver(entries => {
     })
 });
 
-// aboutUsText.forEach(text => aboutEyeObserver.observe(text));
 aboutEyeObserver.observe(aboutEye);
 aboutEyeObserver.observe(aboutUsHeading);
 
@@ -396,7 +410,7 @@ aboutUsTimeline
     translateY: ['-150%', 0],
     translateX: ['-60%', 0],
     rotate: [25, 0],
-}, 800);
+}, 1200);
 
 function moveBox() {
     const cord = box.offsetTop;
@@ -404,6 +418,7 @@ function moveBox() {
 
     const percent = cord / (aboutUs.clientHeight - window.innerHeight);
     aboutUsTimeline.seek(percent * aboutUsTimeline.duration);
+    if (percent >= .9) logo.classList.add('active'); else logo.classList.remove('active');
 }
 
 window.addEventListener('scroll', moveBox);
@@ -450,7 +465,6 @@ aboutEyeObserver.observe(contactEye);
 
 function animateContacts() {
     let percent = contactUs.getBoundingClientRect().top / (window.innerHeight * 1.2) * -1 + .75;
-    console.log(percent);
     contactAnimation.seek(percent * contactAnimation.duration);
 }
 
@@ -471,6 +485,24 @@ const footerObserver = new IntersectionObserver(entries => {
 });
 
 footerObserver.observe(contactText);
+
+const contactPupil = document.querySelector('#contact-us .pupil');
+
+window.addEventListener('mousemove', (event) => {
+    let offsetX = 35, offsetY = 33, mult = 40;
+
+    if (window.innerWidth >= 1024) {
+        offsetX = 42;
+        offsetY = 38;
+        mult = 30;
+    }
+
+    let x = event.clientX * mult / window.innerWidth + offsetX + "%";
+    let y = event.clientY * mult / window.innerHeight + offsetY + "%";
+
+    contactPupil.style.left = x;
+    contactPupil.style.top = y;
+});
 
 // -------- Footer -------- //
 

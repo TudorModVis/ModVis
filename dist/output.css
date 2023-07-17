@@ -560,6 +560,12 @@ video {
   }
 }
 
+@media (min-width: 1800px){
+  .container{
+    max-width: 1800px;
+  }
+}
+
 @media (min-width: 2500px){
   .container{
     max-width: 2500px;
@@ -766,6 +772,10 @@ video {
   margin-bottom: 100px;
 }
 
+.mb-\[10px\]{
+  margin-bottom: 10px;
+}
+
 .mb-\[15px\]{
   margin-bottom: 15px;
 }
@@ -780,10 +790,6 @@ video {
 
 .mb-\[35px\]{
   margin-bottom: 35px;
-}
-
-.mb-\[4\.5vh\]{
-  margin-bottom: 4.5vh;
 }
 
 .ml-1{
@@ -860,10 +866,6 @@ video {
 
 .h-\[25px\]{
   height: 25px;
-}
-
-.h-\[3\.5rem\]{
-  height: 3.5rem;
 }
 
 .h-\[300vh\]{
@@ -1139,10 +1141,6 @@ video {
   gap: 25px;
 }
 
-.gap-\[2vw\]{
-  gap: 2vw;
-}
-
 .gap-\[7vh\]{
   gap: 7vh;
 }
@@ -1233,6 +1231,11 @@ video {
   padding: 25px;
 }
 
+.px-\[1\.3vw\]{
+  padding-left: 1.3vw;
+  padding-right: 1.3vw;
+}
+
 .px-\[2\.3vw\]{
   padding-left: 2.3vw;
   padding-right: 2.3vw;
@@ -1281,10 +1284,6 @@ video {
   padding-bottom: 9vh;
 }
 
-.pt-\[25px\]{
-  padding-top: 25px;
-}
-
 .pt-\[4\.5vh\]{
   padding-top: 4.5vh;
 }
@@ -1309,12 +1308,8 @@ video {
   font-family: 'Saira';
 }
 
-.text-\[1\.2rem\]{
-  font-size: 1.2rem;
-}
-
-.text-\[1\.4rem\]{
-  font-size: 1.4rem;
+.text-\[1\.3rem\]{
+  font-size: 1.3rem;
 }
 
 .text-\[1\.5rem\]{
@@ -1371,10 +1366,6 @@ video {
 
 .mix-blend-overlay{
   mix-blend-mode: overlay;
-}
-
-.mix-blend-difference{
-  mix-blend-mode: difference;
 }
 
 .transition{
@@ -1520,6 +1511,10 @@ h3 {
   to{
     transform: scaleX(1);
   }
+}
+
+button {
+  font-size: 1.1rem;
 }
 
 button:hover {
@@ -1739,11 +1734,9 @@ header {
   transition: 0.4s;
 }
 
-@media (max-width: 1024px) {
-  .logo.active {
-    opacity: 0;
-    pointer-events: none;
-  }
+.logo.active {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .languages {
@@ -1883,20 +1876,12 @@ header {
     margin-bottom: 4vh;
   }
 
-  .lg\:mb-\[9vh\]{
-    margin-bottom: 9vh;
-  }
-
   .lg\:mt-\[2\.3vh\]{
     margin-top: 2.3vh;
   }
 
   .lg\:mt-\[4\.5vh\]{
     margin-top: 4.5vh;
-  }
-
-  .lg\:mt-\[7vh\]{
-    margin-top: 7vh;
   }
 
   .lg\:mt-\[9vh\]{
@@ -2050,10 +2035,6 @@ header {
     margin-bottom: 4vh;
   }
 
-  .\32xl\:mb-\[50px\]{
-    margin-bottom: 50px;
-  }
-
   .\32xl\:mb-\[8vh\]{
     margin-bottom: 8vh;
   }
@@ -2095,12 +2076,18 @@ header {
   }
 }
 
+@media (min-width: 1800px){
+  .\33xl\:mt-\[9vh\]{
+    margin-top: 9vh;
+  }
+}
+
 @media (min-width: 2500px){
-  .\33xl\:w-\[40\%\]{
+  .\34xl\:w-\[40\%\]{
     width: 40%;
   }
 
-  .\33xl\:w-\[60\%\]{
+  .\34xl\:w-\[60\%\]{
     width: 60%;
   }
 }

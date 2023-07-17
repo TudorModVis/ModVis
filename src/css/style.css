@@ -142,6 +142,10 @@ h3 {
     to{transform: scaleX(1);}
 }
 
+button {
+    font-size: 1.1rem;
+}
+
 button:hover {
     letter-spacing: 1px;
 }
@@ -341,11 +345,9 @@ header {
     transition: 0.4s;
 }
 
-@media (max-width: 1024px) {
-    .logo.active {
-        opacity: 0;
-        pointer-events: none;
-    }
+.logo.active {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .languages {

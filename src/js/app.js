@@ -45,7 +45,7 @@ function menuClick () {
     })
 
     if (menu.classList.contains('open')) {
-        logo.classList.add('active');
+        logo.classList.remove('active');
         cover.classList.add('active');
         setTimeout(() => {cover.classList.add('show')}, 100);
 
@@ -79,7 +79,7 @@ function menuClick () {
 
         setTimeout(() => {
             cover.classList.remove('active');
-            logo.classList.remove('active');
+            logo.classList.add('active');
         }, 300);
 
         anime.remove(menuLinks);

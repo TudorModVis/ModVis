@@ -75,11 +75,6 @@ backgrounds.forEach(background => {
     background.addEventListener('mouseleave', closeCard);
 });
 
-// titles.forEach(title => {
-//     title.addEventListener('mouseenter', openCard);
-//     title.addEventListener('mouseleave', closeCard);
-// });
-
 
 works.forEach(work => {
     work.addEventListener('click', clickCard);
@@ -133,3 +128,11 @@ backgrounds.forEach(work => {
     work.addEventListener('mouseenter', enterCursour);
     work.addEventListener('mouseleave', exitCursour);
 });
+
+// -------- Logo Hide -------- //
+
+function hideLogo() {
+    if (window.scrollY > 0) logo.classList.add('active'); else logo.classList.remove('active');
+}
+
+window.addEventListener('scroll', hideLogo);
