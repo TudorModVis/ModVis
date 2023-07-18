@@ -18,8 +18,6 @@
 <body>
     <div class="max-w-screen min-w-screen h-full relative bg-[#0E0E0E] big-container z-10">
         <div class="cover h-screen w-screen z-20 bg-[#0E0E0E] bg-opacity-30 fixed hidden opacity-0"></div>
-        <img src="images/SVG/Vector 1.svg" id="svg2" class="fixed right-0 w-full lg:w-1/2 lg:hidden ">
-
         <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-50 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
             <nav class="flex flex-col leading-none gap-[7vh] big-text">
                 <div class="relative link">
@@ -37,7 +35,7 @@
             </div>
         </div>
 
-        <header class="flex items-center justify-center translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
+        <header class="flex items-center justify-center translate-y-[20px] lg:translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
             <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
                 <a href="" class="text-[#F74264] font-bold">ENG</a>
                 <a href="">RO</a>
@@ -51,10 +49,10 @@
             <a href="" class="logo flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
         </header>
 
-            <section id="home" class="min-h-screen w-screen h-screen z-10 relative overflow-hidden">
+            <section id="home" class="lg:min-h-screen w-screen h-screen z-10 relative overflow-hidden">
                 <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute top-0 left-0 -z-10">
                 <div class="container flex flex-col h-screen relative z-10">
-                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto lg:translate-x-0 translate-y-[-50%] top-[35vh] lg:top-[50vh] lg:right-[10%]"> 
+                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto translate-y-[-50%] top-[35vh] lg:top-[50vh] lg:right-[-3%]"> 
                         <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                         <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
                             <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
@@ -62,7 +60,7 @@
                         </div>
                     </div>
                     <div class="wrapper flex-[10%] flex flex-col justify-end relative z-10">
-                        <div class="z-10 mb-[100px] lg:mb-[4vh]">
+                        <div class="z-10 mb-[50px] lg:mb-[4vh]">
                             <p class="text-[#F74264] text-center lg:text-left">MODVIS - MODERN VISION</p>
                             
                                 <div class="change-container overflow-hidden relative z-10">
@@ -82,20 +80,25 @@
                                     </div>
                                 </div>
                            
-                            <img src="images/HOME/mobile-text.svg" alt="" class="lg:hidden w-full">
-                            <img src="images/HOME/will enhance.png" alt="" class="w-full hidden lg:block" id="enhance">
-                            <img src="images/HOME/online presence.png" alt="" class="w-full hidden lg:block" id="presence">
+                            <img src="images/HOME/HOME/will enhance mob.png" alt="" class="lg:hidden w-full homeTextMob">
+                            <img src="images/HOME/HOME/your online mob.png" alt="" class="lg:hidden w-full homeTextMob">
+                            <img src="images/HOME/HOME/presence.png" alt="" class="lg:hidden w-full homeTextMob">
+
+                            <img src="images/HOME/will enhance.png" alt="" class="w-full hidden lg:block homeText">
+                            <img src="images/HOME/online presence.png" alt="" class="w-full hidden lg:block homeText">
                         </div>
                     </div>
-                    
+                    <div class="flex justify-center lg:hidden mb-[50px]">
+                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold">READ MORE</button>
+                    </div>
                 </div>
             </section>
 
             <section id="sales" class="h-[300vh] w-screen relative z-10">
                 <div class="sticky top-0 w-screen h-screen overflow-hidden">
                 <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute bottom-0 left-0">
-                    <div class="flex flex-col items-center z-10 h-[calc(6.4vh+40px)]"><div></div></div>
-                    <div class="container lg:mt-[4.5vh] 3xl:mt-[9vh] z-20 w-screen overflow-x-hidden">
+                    <div class="flex-col items-center z-10 h-[calc(6.4vh+40px)] hidden lg:flex"><div></div></div>
+                    <div class="container mt-[20px] lg:mt-[4.5vh] 3xl:mt-[9vh] z-20 w-screen overflow-x-hidden">
                         <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
                             <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                             <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
@@ -103,14 +106,17 @@
                             </div>
                         </div>
                         <div class="relative z-10">                                
-                            <img src="images/HOME/SALES/TEXT1.png" alt="" class="mb-[2.3vh] heading left">
-                            <img src="images/HOME/SALES/TEXT2.png" alt="" class="heading">
+                            <img src="images/HOME/SALES/TEXT1.png" alt="" class="mb-[2.3vh] heading left hidden lg:block">
+                            <img src="images/HOME/SALES/TEXT2.png" alt="" class="heading hidden lg:block">
 
-                            <div class="container my-[4.5vh]">
-                                <p class="typing mt-[4.5vh] text-[1.3rem] 2xl:text-[1.7rem] text-center">Modern Vision can establish you a powerful <span class="word website">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold">MARKETING</span> strategies, ensuring you target the right audience.</p>
+                            <img src="images/HOME/SALES/text1 mob.png" alt="" class="mb-[2.3vh] headingMob left lg:hidden">
+                            <img src="images/HOME/SALES/text2 mob.png" alt="" class="headingMob lg:hidden">
+
+                            <div class="my-[4.5vh] px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
+                                <p class="typing mt-[4.5vh] text-base lg:text-[1.3rem] 2xl:text-[1.7rem] text-justify lg:text-center">Modern Vision can establish you a powerful <span class="word website">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold">MARKETING</span> strategies, ensuring you target the right audience.</p>
                             </div>
                             <div class="flex justify-center overflow-hidden mt-[25px] 2xl:mt-[8vh]">
-                                <button class="py-[1.8vh] w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CHECK OUR SERVICES</button>
+                                <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CHECK OUR SERVICES</button>
                             </div>
                         </div>
                     </div>
@@ -196,7 +202,7 @@
                         </div>
 
                         <p class="text-[1.3rem]">Explore our recent projects.</p>
-                        <button class="py-[1.8vh] w-[16.5rem] rounded-lg font-['Saira'] font-semibold mt-[4.5vh]">CHECK OUR WORKS</button>
+                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold mt-[4.5vh]">CHECK OUR WORKS</button>
                     </div>
                 </div>
             </section>
@@ -218,7 +224,7 @@
                         <p class="mt-[2.3vh] text-center text-[1.3rem]">Don't miss out on potential clients due to a lack of online visibility. This is an example of text that doesn’t have any meaning but soon will have more sense.</p>
                     </div>
                     <div class="flex justify-center overflow-hidden mt-[4.5vh]">
-                        <button class="py-[1.8vh] w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CONTACT US</button>
+                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CONTACT US</button>
                     </div>
                     <div class="h-[calc(6.4vh+40px)]"><div></div></div>
                 </div>

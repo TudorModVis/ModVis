@@ -63,20 +63,40 @@ setInterval(changeWords, 2000);
 
 // -------- Home Animation -------- //
 
-const homeAnimation = anime({
-    targets: [changeContainer ,'#enhance', '#presence'],
-    opacity: 0,
-    rotate: function(el, i) {
-        return -5 + (5 * i);
-      },
-    marginBottom: function(el, i) {
-        return 50 + (-10 * i);
-      },
-    delay: anime.stagger(150),
-    easing: 'easeInOutQuad',
-    autoplay: false,
-    duration: 1000,
-});
+let homeAnimation;
+
+if (window.innerWidth < 1024) {
+    homeAnimation = anime({
+        targets: [changeContainer, document.querySelectorAll('.homeTextMob')],
+        opacity: 0,
+        rotate: function(el, i) {
+            return -5 + (5 * i);
+          },
+        marginBottom: function(el, i) {
+            return 50 + (-10 * i);
+          },
+        delay: anime.stagger(150),
+        easing: 'easeInOutQuad',
+        autoplay: false,
+        duration: 1000,
+    });
+} else {
+    homeAnimation = anime({
+        targets: [changeContainer, document.querySelectorAll('.homeText')],
+        opacity: 0,
+        rotate: function(el, i) {
+            return -5 + (5 * i);
+          },
+        marginBottom: function(el, i) {
+            return 50 + (-10 * i);
+          },
+        delay: anime.stagger(150),
+        easing: 'easeInOutQuad',
+        autoplay: false,
+        duration: 1000,
+    });
+}
+
 
 const home = document.getElementById('home');
 const homeEye = document.querySelector('#home .circle');
@@ -88,24 +108,21 @@ const salesContainer = document.getElementById('sales');
 const sales = document.querySelector('#sales div');
 const salesTitles = sales.querySelectorAll('h1');
 const salesButton = sales.querySelector('button')
-const salesHeadings = sales.querySelectorAll('.heading');
-
-const homeColorObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) firstSvg.style.top = 0;
-    });
-})
-
-homeColorObserver.observe(home);
+let salesHeadings;
+if (window.innerWidth < 1024) {
+    salesHeadings = sales.querySelectorAll('.headingMob');
+} else {
+    salesHeadings = sales.querySelectorAll('.heading');
+}
 
 // -------- Sales Animation -------- //
 
 const typingText = document.querySelector('#sales .typing');
 
   typingText.innerHTML = typingText.textContent.split(' ').map(function(word) {
-    if (word == 'WEB-DEVELOPMENT') return "<span class='relative word hover:z-20 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
-    if (word == 'BRAND') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
-    if (word == 'MARKETING') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'WEB-DEVELOPMENT') return "<span class='relative word hover:z-20 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'BRAND') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'MARKETING') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
 
     return "<span class='letter font'>" + word + "</span>";
 }).join(' ');
@@ -199,9 +216,9 @@ function scrollEvents() {
     if (home.getBoundingClientRect().bottom > window.innerHeight / 100 * 10) {
         homeAnimation.seek((posY / (home.clientHeight - (window.innerHeight / 100 * 10))) * homeAnimation.duration);
         homeEye.style.display = 'block';
-        homeEye.style.scale = 1 - posY / home.clientHeight;
+        homeEye.style.transform = 'translate(-50%, -50%) scale(' + (1 - posY / home.clientHeight) + ')';
         salesEye.classList.remove('active');
-    } else { homeEye.style.scale = 0; homeEye.style.display = 'none'; salesEye.classList.add('active');}
+    } else { homeEye.style.transform = 'translate(-50%, -50%) scale(0)'; homeEye.style.display = 'none'; salesEye.classList.add('active');}
 
     if (sales.getBoundingClientRect().top == 0) {
         salesTitles.forEach(title => {title.classList.add('active'); title.classList.remove('bottom');}); 
@@ -240,8 +257,6 @@ function movePlans(event) {
     plans[2].style.transform = 'translate(' + moveX * 10 + '%, ' + moveY * 10 + '%)';
     plans[1].style.transform = 'translate(' + moveX * 7 + '%, ' + moveY * 7 + '%)';
     plans[0].style.transform = 'translate(' + moveX * 5 + '%, ' + moveY * 5 + '%)';
-
-    console.log(moveX, moveY);
 }
 
 portfolioWrapper.addEventListener('mousemove', movePlans);
@@ -375,7 +390,7 @@ function moveBox() {
 
     const percent = cord / (aboutUs.clientHeight - window.innerHeight);
     aboutUsTimeline.seek(percent * aboutUsTimeline.duration);
-    if (percent >= .9) logo.classList.add('active'); else logo.classList.remove('active');
+    if (percent >= .9 ) logo.classList.add('active'); else if (window.innerWidth > 1024) logo.classList.remove('active');
     if (percent > 0) aboutUsHeading.classList.add('active'); else aboutUsHeading.classList.remove('active');
 }
 
@@ -411,8 +426,8 @@ const contactEye = contactUs.querySelector('.circle');
 const contactAnimation = anime({
     targets: contactHeadings,
     translateX: (el) => {
-        if (el.classList.contains('left')) return ['-30%', 0];
-        return ['30%', 0];
+        if (el.classList.contains('left')) return ['-20%', 0];
+        return ['20%', 0];
     },
     delay: anime.stagger(290),
     easing: 'easeOutQuad',

@@ -151,7 +151,13 @@ h3 {
 }
 
 button {
-    font-size: 1.1rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+    button {
+        font-size: 1.1rem;
+    }
 }
 
 button:hover {

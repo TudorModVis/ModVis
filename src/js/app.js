@@ -110,3 +110,14 @@ function menuClick () {
 }
 
 menuClicker.addEventListener('click', menuClick);
+
+
+// -------- Hide Logo -------- //
+
+function hideLogo() {
+    if (window.innerWidth >= 1024) return;
+
+    if (window.scrollY > 0) logo.classList.add('active'); else {logo.classList.remove('active')}
+}
+
+window.addEventListener('scroll', hideLogo);

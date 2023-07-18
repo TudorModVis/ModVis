@@ -21,40 +21,6 @@
     }
 }
 
-#home .mouse {
-	width: 26px;
-	height: 44px;
-	border: 2px solid #F1F1F1;
-	border-radius: 60px;
-	position: absolute;
-    bottom: 55px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-#home .mouse::before {
-    content: '';
-    width: 5px;
-    height: 8px;
-    position: absolute;
-    top: 7px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #F1F1F1;
-    border-radius: 20px;
-    opacity: 1;
-    animation: wheel 2s infinite;
-    -webkit-animation: wheel 2s infinite;
-}
-
-@keyframes wheel {
-	to {
-		opacity: 0;
-		top: 25px;
-	}
-}
-
 /* -------- Sales -------- */
 #sales .circle{
     transform: translateX(-50%) scale(0);
@@ -174,7 +140,7 @@
     transition: .15s;
 }
 
-#portfolio button {
+#portfolio button, #home button {
     background: rgb(238,64,99);
     background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
     background-size: 200% 100%;
