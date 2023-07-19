@@ -38,13 +38,22 @@
 }
 
 #contact-us .circle {
-    transform: translateY(-50%) scale(0);
-    transform-origin: center;
+    transform: translateX(-50%) scale(0);
     transition: .5s ease-out;
 }
 
 #contact-us .circle.active {
-    transform: translateY(-50%) scale(1);
+    transform: translateX(-50%) scale(1);
+}
+
+@media (min-width: 1024px) {
+    #contact-us .circle {
+        transform: translateY(-50%) scale(0);
+    }
+    
+    #contact-us .circle.active {
+        transform: translateY(-50%) scale(1);
+    }
 }
 
 #about-us .circle.active {
@@ -152,12 +161,22 @@
 }
 
 #portfolio .carousell.active {
-    transform: translateY(-4.5rem);
+    transform: translateY(-3.5rem);
 }
 
 #portfolio .space {
     transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    margin-right: -4.16vw;
+    margin-right: 0;
+}
+
+@media (min-width: 1024px) {
+    #portfolio .space {
+        margin-right: -4.16vw;
+    }
+
+    #portfolio .carousell.active {
+        transform: translateY(-4.5rem);
+    }
 }
 
 #portfolio .space.active {

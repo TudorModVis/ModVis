@@ -5,7 +5,9 @@
 
 /* -------- Website -------- */
 
-#website button {
+button {
     background: rgb(238,64,99);
-    background: linear-gradient(90deg, rgba(238,64,99,1) 0%, rgba(240,111,136,1) 100%);
+    background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
+    background-size: 200% 100%;
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }

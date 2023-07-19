@@ -200,12 +200,22 @@ header {
 }
 
 .footer .circle {
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     transition: 1s ease;
 }
 
 .footer .circle.active {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
+}
+
+@media (min-width: 1024px) {
+    .footer .circle {
+        transform: translateY(-50%);
+    }
+    
+    .footer .circle.active {
+        transform: translateY(0);
+    }
 }
 
 /* -------- Menu -------- */

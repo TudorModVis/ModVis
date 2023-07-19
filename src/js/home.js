@@ -108,12 +108,8 @@ const salesContainer = document.getElementById('sales');
 const sales = document.querySelector('#sales div');
 const salesTitles = sales.querySelectorAll('h1');
 const salesButton = sales.querySelector('button')
-let salesHeadings;
-if (window.innerWidth < 1024) {
-    salesHeadings = sales.querySelectorAll('.headingMob');
-} else {
-    salesHeadings = sales.querySelectorAll('.heading');
-}
+let salesHeadings = sales.querySelectorAll('.heading');
+if (window.innerWidth < 1024) salesHeadings = salesContainer.querySelectorAll('.headingMob');
 
 // -------- Sales Animation -------- //
 
@@ -124,7 +120,7 @@ const typingText = document.querySelector('#sales .typing');
     if (word == 'BRAND') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
     if (word == 'MARKETING') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
 
-    return "<span class='letter font'>" + word + "</span>";
+    return "<span class='letter mb-[.5rem]'>" + word + "</span>";
 }).join(' ');
 
 const highlightedWords = document.querySelectorAll('#sales .word');
@@ -210,8 +206,11 @@ const headingAnimation = anime({
 
 function scrollEvents() {
     let posY = window.scrollY;
+    let amplifier = 4;
 
-    headingAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * 4 * -1) + 1) * headingAnimation.duration)
+    if (window.innerWidth < 1024) amplifier = 1;
+
+    headingAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * amplifier * -1) + 1) * headingAnimation.duration)
 
     if (home.getBoundingClientRect().bottom > window.innerHeight / 100 * 10) {
         homeAnimation.seek((posY / (home.clientHeight - (window.innerHeight / 100 * 10))) * homeAnimation.duration);
@@ -418,7 +417,8 @@ window.addEventListener('mousemove', (event) => {
 // -------- Contact Us -------- //
 
 const contactUs = document.getElementById('contact-us');
-const contactHeadings = contactUs.querySelectorAll('img');
+let contactHeadings = contactUs.querySelectorAll('.heading');
+if (window.innerWidth < 1024) contactHeadings = contactUs.querySelectorAll('.headingMob');
 const contactButton = contactUs.querySelector('button');
 const contactText = contactUs.querySelector('p');
 const contactEye = contactUs.querySelector('.circle');

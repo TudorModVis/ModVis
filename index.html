@@ -49,8 +49,9 @@
             <a href="" class="logo flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
         </header>
 
-            <section id="home" class="lg:min-h-screen w-screen h-screen z-10 relative overflow-hidden">
-                <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute top-0 left-0 -z-10">
+            <section id="home" class="lg:min-h-screen w-screen h-screen z-10 relative lg:overflow-hidden">
+                <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute top-0 left-0 -z-10 hidden lg:block">
+                <img src="images/HOME/HOME/color mob.png" alt="" class="h-[200vh] max-w-none absolute top-0 left-0 -z-10 lg:hidden">
                 <div class="container flex flex-col h-screen relative z-10">
                     <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto translate-y-[-50%] top-[35vh] lg:top-[50vh] lg:right-[-3%]"> 
                         <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
@@ -94,9 +95,9 @@
                 </div>
             </section>
 
-            <section id="sales" class="h-[300vh] w-screen relative z-10">
-                <div class="sticky top-0 w-screen h-screen overflow-hidden">
-                <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute bottom-0 left-0">
+            <section id="sales" class="h-fit lg:h-[300vh] w-screen relative z-10 mb-[75px] lg:mb-0">
+                <div class="sticky top-0 w-screen h-screen overflow-hidden hidden lg:block">
+                <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute bottom-0 left-0 hidden lg:block">
                     <div class="flex-col items-center z-10 h-[calc(6.4vh+40px)] hidden lg:flex"><div></div></div>
                     <div class="container mt-[20px] lg:mt-[4.5vh] 3xl:mt-[9vh] z-20 w-screen overflow-x-hidden">
                         <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
@@ -109,15 +110,32 @@
                             <img src="images/HOME/SALES/TEXT1.png" alt="" class="mb-[2.3vh] heading left hidden lg:block">
                             <img src="images/HOME/SALES/TEXT2.png" alt="" class="heading hidden lg:block">
 
-                            <img src="images/HOME/SALES/text1 mob.png" alt="" class="mb-[2.3vh] headingMob left lg:hidden">
-                            <img src="images/HOME/SALES/text2 mob.png" alt="" class="headingMob lg:hidden">
-
                             <div class="my-[4.5vh] px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
                                 <p class="typing mt-[4.5vh] text-base lg:text-[1.3rem] 2xl:text-[1.7rem] text-justify lg:text-center">Modern Vision can establish you a powerful <span class="word website">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold">MARKETING</span> strategies, ensuring you target the right audience.</p>
                             </div>
                             <div class="flex justify-center overflow-hidden mt-[25px] 2xl:mt-[8vh]">
                                 <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CHECK OUR SERVICES</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-[25px] z-20 w-screen overflow-x-hidden lg:hidden">
+                    <!-- <img src="images/HOME/HOME/color mob.png" alt="" class="h-[200vh] max-w-none absolute bottom-0 left-0 -z-10 lg:hidden"> -->
+                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
+                        <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"></div> 
+                        </div>
+                    </div>
+                    <div class="relative z-10">                                
+                        <img src="images/HOME/SALES/text1 mob.png" alt="" class="mb-[2.3vh] headingMob left lg:hidden">
+                        <img src="images/HOME/SALES/text2 mob.png" alt="" class="headingMob lg:hidden">
+
+                        <div class="my-[4.5vh] px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
+                            <p class="mt-[4.5vh] text-justify">Modern Vision can establish you a powerful <span class="font-bold text-lg accent relative">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold text-lg accent relative">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold text-lg accent relative">MARKETING</span> strategies, ensuring you target the right audience.</p>
+                        </div>
+                        <div class="flex justify-center overflow-hidden mt-[calc(25px-.5rem)] 2xl:mt-[8vh]">
+                            <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold active">CHECK OUR SERVICES</button>
                         </div>
                     </div>
                 </div>
@@ -182,65 +200,78 @@
                 </div>
             </section>
             
-            <section id="portfolio" class="min-h-screen w-screen h-[250vh] z-10 relative my-[13.5vh]">
+            <section id="portfolio" class="min-h-screen w-screen h-[250vh] z-10 relative mb-0 lg:my-[13.5vh]">
                 <div class="sticky w-screen h-screen top-0 flex justify-center items-center">
-                    <img src="images/HOME/PORTFOLIO/color.png" alt="" class="absolute left-0 top-0 h-screen w-screen">
-                    <img src="images/HOME/PORTFOLIO/3 PLAN.png" alt="" class="plan absolute -left-[13%] bottom-0 w-[60%]">
-                    <img src="images/HOME/PORTFOLIO/2 PLAN.png" alt="" class="plan absolute left-0 bottom-0 w-[105%] max-w-none">
-                    <img src="images/HOME/PORTFOLIO/1 PLAN.png" alt="" class="plan absolute left-0 bottom-0 w-[90%]">
+                    <img src="images/HOME/PORTFOLIO/color.png" alt="" class="absolute left-0 top-0 h-screen w-screen hidden lg:block">
+                    <img src="images/HOME/PORTFOLIO/color mob.png" alt="" class="absolute left-0 top-0 h-screen w-screen lg:hidden">
+
+                    <img src="images/HOME/PORTFOLIO/3 PLAN.png" alt="" class="plan absolute -left-[13%] bottom-0 w-[60%] hidden lg:block">
+                    <img src="images/HOME/PORTFOLIO/2 PLAN.png" alt="" class="plan absolute left-0 bottom-0 w-[105%] max-w-none hidden lg:block">
+                    <img src="images/HOME/PORTFOLIO/1 PLAN.png" alt="" class="plan absolute left-0 bottom-0 w-[90%] hidden lg:block">
+
+                    <img src="images/HOME/PORTFOLIO/2 PLAN MOB.png" alt="" class="plan absolute left-0 bottom-0 h-screen max-w-none lg:hidden">
+                    <img src="images/HOME/PORTFOLIO/1 PLAN MOB.png" alt="" class="plan absolute left-0 bottom-0 h-screen max-w-none lg:hidden">
                 
                     <div class="flex flex-col items-center text">
-                        <div class="flex wrapper space">
-                            <h1 class="font-semibold text-[3rem]">DISCOVER&nbsp;</h1>
-                            <div class="relative overflow-hidden h-[4.5rem]">
-                                <h1 class="text-[3rem] invisible">MODERN VISION.</h1>
-                                <div class="carousell absolute top-0 left-0">
-                                    <h1 class="text-[3rem] accent relative w-fit">OUR BEAUTY.</h1>
-                                    <h1 class="text-[3rem] accent relative">MODERN VISION.</h1>
+                        <div class="flex flex-col lg:flex-row wrapper space items-center lg:items-start">
+                            <h1 class="font-semibold text-[3rem] hidden lg:block">DISCOVER&nbsp;</h1>
+                            <h1 class="font-semibold text-[2.3rem] leading-tight lg:hidden">DISCOVER</h1>
+                            <div class="relative overflow-hidden h-[3.5rem] lg:h-[4.5rem]">
+                                <h1 class="text-[2.3rem] lg:text-[3rem] invisible">MODERN VISION.</h1>
+                                <div class="carousell absolute top-0 left-0 flex flex-col items-center lg:items-start">
+                                    <h1 class="text-[2.3rem] lg:text-[3rem] accent relative w-fit">OUR BEAUTY.</h1>
+                                    <h1 class="text-[2.3rem] lg:text-[3rem] accent relative">MODERN VISION.</h1>
                                 </div>
                             </div>
                         </div>
 
-                        <p class="text-[1.3rem]">Explore our recent projects.</p>
-                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold mt-[4.5vh]">CHECK OUR WORKS</button>
+                        <p class="mt-[15px] lg:mt-0 lg:text-[1.3rem]">Explore our recent projects.</p>
+                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold mt-[45px] lg:mt-[4.5vh]">CHECK OUR WORKS</button>
                     </div>
                 </div>
             </section>
 
             <section class="relative z-10 w-screen" id="contact-us">
-                <div class="container pb-[9vh] w-screen overflow-x-hidden">
-                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-[14vw] top-1/2"> 
+                <div class="container pb-[100px] lg:pb-[9vh] w-screen overflow-x-hidden">
+                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:left-[14vw] top-[15vh] lg:top-1/2"> 
                         <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                         <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
                             <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
                             </div> 
                         </div>
                     </div>
-                    <div class="h-[calc(6.4vh+40px)]"><div></div></div>
-                    <img src="images/HOME/CONTACT US/were always.png" alt="" class="w-full mt-[9vh] left">
-                    <img src="images/HOME/CONTACT US/ready for.png" alt="" class="w-full mt-[2.3vh]">
-                    <img src="images/HOME/CONTACT US/project.png" alt="" class="w-full mt-[2.3vh] left">
-                    <div class="container overflow-hidden">
-                        <p class="mt-[2.3vh] text-center text-[1.3rem]">Don't miss out on potential clients due to a lack of online visibility. This is an example of text that doesn’t have any meaning but soon will have more sense.</p>
+                    <div class="h-[calc(6.4vh+40px)] hidden lg:block"><div></div></div>
+
+                    <img src="images/HOME/CONTACT US/were always.png" alt="" class="heading w-full mt-[9vh] left hidden lg:block">
+                    <img src="images/HOME/CONTACT US/ready for.png" alt="" class="heading w-full mt-[2.3vh] hidden lg:block">
+                    <img src="images/HOME/CONTACT US/project.png" alt="" class="heading w-full mt-[2.3vh] left hidden lg:block">
+
+                    <img src="images/HOME/CONTACT US/WE’RE ALWAYS MOB.png" alt="" class="headingMob w-full mt-[33vh] left lg:hidden">
+                    <img src="images/HOME/CONTACT US/READY TO MOB.png" alt="" class="headingMob w-full lg:hidden">
+                    <img src="images/HOME/CONTACT US/TAKE A NEW MOB.png" alt="" class="headingMob w-full left lg:hidden">
+                    <img src="images/HOME/CONTACT US/project MOB.png" alt="" class="headingMob w-full lg:hidden">
+
+                    <div class="px-0 lg:px-[7.5vw] 4xl:px-[10vw] overflow-hidden">
+                        <p class="mt-[2.3vh] text-justify lg:text-center lg:text-[1.3rem]">Don't miss out on potential clients due to a lack of online visibility. This is an example of text that doesn’t have any meaning but soon will have more sense.</p>
                     </div>
                     <div class="flex justify-center overflow-hidden mt-[4.5vh]">
                         <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CONTACT US</button>
                     </div>
-                    <div class="h-[calc(6.4vh+40px)]"><div></div></div>
+                    <div class="h-[calc(6.4vh+40px)] hidden lg:block"><div></div></div>
                 </div>
             </section>
     </div>
 
     <footer class="bg-[#0E0E0E] relative pt-[4.5vh] overflow-hidden invisible">
         <div class="container w-full">
-            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 -top-[40%] right-[8vw]"> 
+            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-top-[40%] lg:right-[8vw]"> 
                 <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                 <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
                     <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-[75%] left-[35%] translate-x-[-50%] translate-y-[-50%]">
                     </div> 
                 </div>
             </div>
-            <div class="lg:hidden mt-[50px] text-center">
+            <div class="lg:hidden mt-[190px] mb-[25px] text-center">
                 <p class="details">LET'S WORK TOGETHER</p>
                 <br>
                 <div class="flex justify-center w-full">
@@ -250,7 +281,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text flex w-1/2">
+            <div class="text flex w-full justify-between lg:justify-normal lg:w-1/2">
                     <div class="w-1/3">
                         <p class="details">FIND MORE</p>
                         <br>
@@ -276,26 +307,25 @@
                     <div class="hidden lg:block w-1/3">
                         <p class="details">LET'S WORK TOGETHER</p>
                         <br>
-                        <p class="link w-fit cursor-pointer">MODVIS3@GMAIL.COM</p>
-                        <p class="link w-fit cursor-pointer">+373 68 550 009</p>
+                        <p class="link w-fit">modvis3@gmail.com</p>
+                        <p class="link w-fit">+373 68 550 009</p>
                     </div>
             </div>
-            <p class="py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
+            <p class="pb-[10px] lg:py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
             </div>
-            <img src="images/FOOTER/logo.png" alt="" class="w-full">
-            </div>
+            <img src="images/FOOTER/logo.png" alt="">
         </footer>
 
     <div class="fixed pt-[4.5vh] overflow-hidden bottom-0 footer w-screen bg-[#010101]">
         <div class="container w-full">
-            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 -top-[40%] right-[8vw]"> 
+            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:translate-x-0 top-[-15%] lg:-top-[40%] lg:right-[8vw]"> 
                 <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                 <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
                     <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-[75%] left-[35%] translate-x-[-50%] translate-y-[-50%]">
                     </div> 
                 </div>
             </div>
-            <div class="lg:hidden mt-[50px] text-center">
+            <div class="lg:hidden mt-[190px] mb-[25px] text-center">
                 <p class="details">LET'S WORK TOGETHER</p>
                 <br>
                 <div class="flex justify-center w-full">
@@ -305,7 +335,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text flex w-1/2">
+            <div class="text flex w-full justify-between lg:justify-normal lg:w-1/2">
                     <div class="w-1/3">
                         <p class="details">FIND MORE</p>
                         <br>
@@ -331,15 +361,13 @@
                     <div class="hidden lg:block w-1/3">
                         <p class="details">LET'S WORK TOGETHER</p>
                         <br>
-                        <p class="link w-fit cursor-pointer">modvis3@gmail.com</p>
-                        <p class="link w-fit cursor-pointer">+373 68 550 009</p>
+                        <p class="link w-fit">modvis3@gmail.com</p>
+                        <p class="link w-fit">+373 68 550 009</p>
                     </div>
             </div>
-            <p class="py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
+            <p class="pb-[10px] pt-[50px] lg:py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
             </div>
             <img src="images/FOOTER/logo.png" alt="" class="w-full" id="footer-logo">
-            </div>
         </div>
-
 </body>
 </html>
