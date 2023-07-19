@@ -32,6 +32,10 @@
     transform: translateX(-50%) scale(1);
 }
 
+#sales .accent::after {
+    bottom: 10%;
+}
+
 #about-us .circle {
     transform: scale(0);
     transition: .5s ease-out;
