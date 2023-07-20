@@ -34,9 +34,18 @@ img {
 }
 
 body::-webkit-scrollbar {
-    background: transparent;
-    width: 10px;
+    display: none;
 }
+
+@media (min-width: 1024px) {
+    body::-webkit-scrollbar {
+        background: transparent;
+        width: 10px;
+    }
+    
+}
+
+
 
 body::-webkit-scrollbar-thumb {
     background: #696969;
