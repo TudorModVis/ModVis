@@ -120,7 +120,7 @@ const typingText = document.querySelector('#sales .typing');
     if (word == 'BRAND') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
     if (word == 'MARKETING') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
 
-    return "<span class='letter mb-[.5rem]'>" + word + "</span>";
+    return "<span class='letter'>" + word + "</span>";
 }).join(' ');
 
 const highlightedWords = document.querySelectorAll('#sales .word');
@@ -411,6 +411,100 @@ window.addEventListener('mousemove', (event) => {
 
     aboutPupil.style.left = x;
     aboutPupil.style.top = y;
+});
+
+// About Us Mobile Carousell
+
+const carousell = document.querySelector('.carousell');
+const widthPanel = carousell.querySelector('.first');
+const panels = carousell.querySelectorAll('.panel');
+let panelCircles = document.querySelectorAll('#about-us-mobile .circle');
+
+let panelIndex = 0;
+
+function moveRight() {
+    var style = widthPanel.currentStyle || window.getComputedStyle(widthPanel);
+    const width = widthPanel.clientWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight) + parseFloat(style.borderLeft) + parseFloat(style.borderRight);
+    panelIndex++;
+
+
+    if (panelIndex >= panels.length) {
+        panelIndex--;
+        return;
+    }
+
+    carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
+}
+
+function moveLeft() {
+    var style = widthPanel.currentStyle || window.getComputedStyle(widthPanel);
+    const width = widthPanel.clientWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight) + parseFloat(style.borderLeft) + parseFloat(style.borderRight);
+    panelIndex--;
+
+    if (panelIndex < 0) {
+        panelIndex = 0;
+        return;
+    }
+
+    carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
+}
+
+const leftArrows = document.querySelectorAll('#about-us-mobile .arrow.left');
+const rightArrows = document.querySelectorAll('#about-us-mobile .arrow.right');
+
+leftArrows.forEach(arrow => {
+    arrow.addEventListener('click', moveLeft);
+});
+
+rightArrows.forEach(arrow => {
+    arrow.addEventListener('click', moveRight);
+})
+
+function cirlceMove(event) {
+    panelCircles = panels[panelIndex].querySelectorAll('.circle');
+
+    var style = widthPanel.currentStyle || window.getComputedStyle(widthPanel);
+    const width = widthPanel.clientWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight) + parseFloat(style.borderLeft) + parseFloat(style.borderRight);
+
+    for (let i = 0; i < panelCircles.length; i++) {
+        if (panelCircles[i].isEqualNode(event.target)) {
+            panelIndex = i;
+            carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
+            return;
+        }
+    }
+}
+
+panelCircles.forEach (circle => {
+    circle.addEventListener('click', cirlceMove);
+});
+
+let panelStartX = 0, panelDist = 0;
+
+function touchStart(e) {
+    let touchobj = e.changedTouches[0];
+    panelStartX = parseInt(touchobj.clientX);
+}
+
+function touchMove(e) {
+    let touchobj = e.changedTouches[0];
+    panelDist = parseInt(touchobj.clientX) - panelStartX;
+
+}
+
+function touchEnd() {
+    if (panelDist > 50) {
+        moveLeft();
+     } else if (panelDist < -50) {
+        moveRight();
+     }
+     panelDist = 0;
+}
+
+panels.forEach (panel => {
+    panel.addEventListener('touchstart', touchStart);
+    panel.addEventListener('touchmove', touchMove);
+    panel.addEventListener('touchend', touchEnd);
 });
 
 

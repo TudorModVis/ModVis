@@ -33,7 +33,8 @@
 }
 
 #sales .accent::after {
-    bottom: 10%;
+    bottom: 5%;
+    height: 30%;
 }
 
 #about-us .circle {
@@ -68,6 +69,10 @@
     transform: translateX(0);
 }
 
+#about-us-mobile .carousell {
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 #sales h1, #contact-us p, #about-us .heading {
     transform: translateY(100%);
     transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -84,6 +89,13 @@
 #sales .letter, #sales .word {
     display: inline-block;
     opacity: 0;
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 1536px) {
+    #sales .letter, #sales .word {
+        margin-bottom: 1rem;
+    }
 }
 
 #sales button, #contact-us button  {

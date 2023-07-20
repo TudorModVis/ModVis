@@ -37,16 +37,41 @@
 
         <header class="flex items-center justify-center translate-y-[20px] lg:translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
             <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
-                <a href="" class="text-[#F74264] font-bold">ENG</a>
-                <a href="">RO</a>
-                <a href="">РУ</a>
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                    <a href="" class="text-[#F74264] font-bold invisible block">ENG</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="" class="text-[#F74264] font-bold block">ENG</a>
+                        <a href="" class="text-[#F74264] font-bold">ENG</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                    <a href="" class="block invisible">RO</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="" class="block">RO</a>
+                        <a href="">RO</a>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                    <a href="" class="block invisible">РУ</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="" class="block">РУ</a>
+                        <a href="">РУ</a>
+                    </div>
+                </div>
             </div>
             <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%]">
                 <div class="line-1"></div>
                 <div class="line-2"></div>
                 <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
             </div>
-            <a href="" class="logo flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo">
+                <div class="transition duration-500">
+                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px] mb-[10%]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                </div>
+            </div>
         </header>
 
             <section id="home" class="lg:min-h-screen w-screen h-screen z-10 relative lg:overflow-hidden">
@@ -141,7 +166,7 @@
                 </div>
             </section> 
 
-            <section id="about-us" class="h-[calc(250vw+100vh)] xl:h-[calc(176vw+100vh)] 3xl:h-[calc(134vw+100vh)] w-screen relative z-10">
+            <section id="about-us" class="h-[calc(250vw+100vh)] xl:h-[calc(176vw+100vh)] 3xl:h-[calc(134vw+100vh)] w-screen relative z-10 hidden lg:block">
                 <div class="sticky top-0 h-screen w-screen overflow-hidden">
                     <div class="flex flex-col justify-center scroll absolute top-0 left-0 h-screen">
                         <div class="overflow-hidden absolute z-10 left-[25px] lg:left-[7.5vw] 3xl:left-[10vw] top-[calc(13.5vh+40px)]">
@@ -190,9 +215,75 @@
 
                                 <div class="w-[65%] h-fit z-10 overflow-hidden">
                                     <div class="text">
-                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh]">WE DELIVER RESULTS <br> & OFFER MAINTANANCE.</h1>
+                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh]">WE DELIVER RESULTS <br> & OFFER MAINTENANCE.</h1>
                                         <p>We merge <span class='font-bold'>creativity</span> and <span class='font-bold'>strategy</span> for effective marketing that <span class='font-bold'>boosts traffic</span> and <span class='font-bold'>engages</span> your audience. Also, we understand that maintaining a successful online presence requires ongoing effort. That's why we offer <span class='font-bold'>comprehensive maintenance</span> services to keep your website up to date and secure.</p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about-us-mobile" class="w-screen mb-[75px] relative lg:hidden">
+                <img src="images/ABOUT US/color mob.png" alt="" class="absolute w-full -top-1/4 left-0">
+                <div class="container overflow-hidden">
+                    <h1 class="text-center mb-[25px]">WHY <span class="accent relative">MODERN</span> <span class="accent relative">VISION?</span></h1>
+                    <div class="carousell w-fit flex">
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[25px] container border border-[#F1F1F1] rounded-md overflow-hidden first relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="images/ABOUT US/01.png" alt="" class="h-[12vh]">
+                                <img src="images/ABOUT US/1.png" alt="" class="absolute right-0 translate-x-[15%] top-[40%] -translate-y-1/2 h-[220%]">
+                            </div>
+                            <h2 class="text-center relative">WE CONNECT THROUGH TALK WITH THE CLIENT.</h2>
+                            <p class="text-justify mt-[25px] mb-[70px]">Modern Vision believes in the power of <span class='font-bold'>effective communication</span>. We understand that every client is unique, with their <span class='font-bold'>own goal</span> and <span class='font-bold'>vision</span>. Our approach involves actively listening and truly comprehending your needs. Through conversations, we establish a solid foundation for <span class='font-bold'>collaboration</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 opacity-25 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                    </div>
+                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[25px] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="images/ABOUT US/02.png" alt="" class="h-[12vh]">
+                                <img src="images/ABOUT US/2.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[170%]">
+                            </div>
+                            <h2 class="text-center z-10 relative">WE TRY TO MATCH YOUR VISION.</h2>
+                            <p class="text-justify mt-[50px] mb-[70px]">With meticulous attention to detail, we work closely with you to ensure the end result<span class='font-bold'> aligns perfectly</span> with <span class='font-bold'>your vision</span>. At Modern Vision, we believe that a commitment to <span class='font-bold'>unique solutions</span> and <span class='font-bold'>designs</span> is what catches the <span class='font-bold'>attention of the public</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                    </div>
+                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="images/ABOUT US/03.png" alt="" class="h-[12vh]">
+                                <img src="images/ABOUT US/3.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[150%]">
+                            </div>
+                            <h2 class="text-center relative">WE DELIVER <br> RESULTS & OFFER MAINTENANCE.</h2>
+                            <p class="text-justify mt-[25px] mb-[70px]">We merge <span class='font-bold'>creativity</span> and <span class='font-bold'>strategy</span> for effective marketing that <span class='font-bold'>boosts traffic</span> and <span class='font-bold'>engages</span> your audience. Also, we understand that maintaining a successful online presence requires ongoing effort. That's why we offer <span class='font-bold'>comprehensive maintenance</span> services to keep your website up to date and secure.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                    </div>
+                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right opacity-25">
                                 </div>
                             </div>
                         </div>
@@ -318,7 +409,7 @@
 
     <div class="fixed pt-[4.5vh] overflow-hidden bottom-0 footer w-screen bg-[#010101]">
         <div class="container w-full">
-            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:translate-x-0 top-[-15%] lg:-top-[40%] lg:right-[8vw]"> 
+            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 top-[-15%] lg:-top-[40%] lg:right-[8vw]"> 
                 <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                 <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
                     <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-[75%] left-[35%] translate-x-[-50%] translate-y-[-50%]">
@@ -330,7 +421,7 @@
                 <br>
                 <div class="flex justify-center w-full">
                     <div class="text-center flex flex-col items-center">
-                        <p class="link w-fit cursor-pointer">modvis3@gmail.com</p>
+                        <p class="link w-fit cursor-pointer">studiomodvis@gmail.com</p>
                         <p class="link w-fit cursor-pointer">+373 68 550 009</p>
                     </div>
                 </div>
@@ -361,7 +452,7 @@
                     <div class="hidden lg:block w-1/3">
                         <p class="details">LET'S WORK TOGETHER</p>
                         <br>
-                        <p class="link w-fit">modvis3@gmail.com</p>
+                        <p class="link w-fit">studiomodvis@gmail.com</p>
                         <p class="link w-fit">+373 68 550 009</p>
                     </div>
             </div>
