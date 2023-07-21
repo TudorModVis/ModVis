@@ -21,13 +21,13 @@
 
         <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-50 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
             <nav class="flex flex-col leading-none gap-[7vh] big-text">
-                <a href="../index.html" class="link">HOME</a>
+                <a href="javascript:setTimeout(()=>{window.location = '../index.html' }, 1000);" class="link page-link">HOME</a>
                 <div class="relative link">
                     <h1>PORTFOLIO</h1>
                     <a href="" class="current">PORTFOLIO</a>
                 </div>
-                <a href="#services" class="link">SERVICES</a>
-                <a href="#benefits" class="link">CONTACTS</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 1000);" class="link page-link">SERVICES</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 1000);" class="link page-link">CONTACTS</a>
             </nav>
             <div class="social flex gap-[25px] lg:gap-[2.5vw]">
                 <a href="">YOUTUBE</a>
@@ -36,18 +36,45 @@
             </div>
         </div>
 
-        <header class="flex items-center justify-center translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
+        <div class="page-transition w-screen h-screen fixed bg-[#0E0E0E] z-[999]"></div>
+
+        <header class="flex items-center justify-center translate-y-[20px] lg:translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
             <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
-                <a href="" class="text-[#F74264] font-bold">ENG</a>
-                <a href="">RO</a>
-                <a href="">РУ</a>
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                    <a href="" class="text-[#F74264] font-bold invisible block">ENG</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="" class="text-[#F74264] font-bold block">ENG</a>
+                        <a href="" class="text-[#F74264] font-bold">ENG</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                    <a href="" class="block invisible">RO</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="" class="block">RO</a>
+                        <a href="">RO</a>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                    <a href="" class="block invisible">РУ</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="" class="block">РУ</a>
+                        <a href="">РУ</a>
+                    </div>
+                </div>
             </div>
             <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%]">
                 <div class="line-1"></div>
                 <div class="line-2"></div>
                 <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
             </div>
-            <a href="" class="logo flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="../images/HOME/Logo.png" alt="" class="h-full w-auto"></a>
+            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo">
+                <div class="transition duration-500">
+                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px] mb-[10%]"><img src="../images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="../images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                </div>
+            </div>
         </header>
 
         <section id="portfolio" class="z-10 relative">

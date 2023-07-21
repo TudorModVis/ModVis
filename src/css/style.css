@@ -46,7 +46,6 @@ body::-webkit-scrollbar {
 }
 
 
-
 body::-webkit-scrollbar-thumb {
     background: #696969;
     border-radius: 5px;
@@ -196,17 +195,6 @@ header {
     transform: scaleX(1);
     transform-origin: bottom left;
     transition: transform 0.5s ease-out;
-}
-
-.footer a:hover::after, .footer .link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-
-    animation: accent 0.5s;
-}
-
-.footer a:hover, .footer .link:hover {
-    letter-spacing: 2px;
 }
 
 .footer .circle {
@@ -367,10 +355,6 @@ header {
     transition: 0.3s;
 }
 
-.menu .social a:hover {
-    color:#F74264;
-}
-
 .menu .social.active {
     opacity: 1;
 }
@@ -422,33 +406,41 @@ header {
     font-family: 'Saira', sans-serif;
 }
 
-/* -------- Noise -------- */
+/* -------- Transition -------- */
 
-.noise {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-    background-repeat: repeat;
-    /* animation: bg-animation .2s infinite; */
-    opacity: .9;
-    visibility: visible;
+.page-transition.active {
+    animation: load 1.5s cubic-bezier(0.83, 0, 0.17, 1) forwards;
+}
 
-    z-index: 1;
-  }
-  
-  @keyframes bg-animation {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
+.page-transition.transition {
+    animation: transition 1.5s cubic-bezier(0.83, 0, 0.17, 1) forwards;
+}
+
+body.load {
+    animation: loadBody 1.5s ease;
+    transform: none;
+}
+
+body.transition {
+    animation: transitionBody 1.5s cubic-bezier(0.83, 0, 0.17, 1) forwards;
+}
+
+@keyframes loadBody {
+    from {transform: translateX(30%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes transitionBody {
+    from {transform: translateX(0);}
+    to {transform: translateX(-30%);}
+}
+
+@keyframes load {
+    from {transform: translateX(0);}
+    to {transform: translateX(-100%);}
+}
+
+@keyframes transition {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}

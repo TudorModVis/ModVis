@@ -420,32 +420,87 @@ const widthPanel = carousell.querySelector('.first');
 const panels = carousell.querySelectorAll('.panel');
 let panelCircles = document.querySelectorAll('#about-us-mobile .circle');
 
-let panelIndex = 0;
+let panelIndex = 3;
+panels[panelIndex].classList.add('active');
+carousell.style.transform = 'translateX(' + panelIndex * -findWidth() + 'px)';
+
+let moving;
+
+function findWidth() {
+    var style = widthPanel.currentStyle || window.getComputedStyle(widthPanel);
+    return width = widthPanel.clientWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight) + parseFloat(style.borderLeft) + parseFloat(style.borderRight);
+}
 
 function moveRight() {
-    var style = widthPanel.currentStyle || window.getComputedStyle(widthPanel);
-    const width = widthPanel.clientWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight) + parseFloat(style.borderLeft) + parseFloat(style.borderRight);
+    if (moving) return;
+
+    const width = findWidth();
+    carousell.classList.remove('active');
     panelIndex++;
 
 
-    if (panelIndex >= panels.length) {
-        panelIndex--;
+    if (panelIndex == panels.length - 2) {
+        moving = true;
+
+        panels[panelIndex - 1].classList.remove('active');
+        panels[panelIndex].classList.add('active');
+        carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
+
+        panelIndex = 3;
+        panels[panelIndex].classList.add('active');
+
+        setTimeout(() => {
+            panels[panels.length - 2].classList.remove('active');
+            carousell.classList.add('active');
+            carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
+            moving = false;
+        }, 500);
         return;
     }
+    moving = true;
 
+    setTimeout(() => {
+        moving = false;
+    }, 550);
+
+    panels[panelIndex - 1].classList.remove('active');
+    panels[panelIndex].classList.add('active');
     carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
 }
 
 function moveLeft() {
-    var style = widthPanel.currentStyle || window.getComputedStyle(widthPanel);
-    const width = widthPanel.clientWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight) + parseFloat(style.borderLeft) + parseFloat(style.borderRight);
+    if (moving) return;
+
+    const width = findWidth();
+    carousell.classList.remove('active');
     panelIndex--;
 
-    if (panelIndex < 0) {
-        panelIndex = 0;
+    if (panelIndex == 1) {
+        moving = true;
+
+        panels[panelIndex + 1].classList.remove('active');
+        panels[panelIndex].classList.add('active');
+        carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
+
+        panelIndex = 4;
+        panels[panelIndex].classList.add('active');
+
+        setTimeout(() => {
+            panels[1].classList.remove('active');
+            carousell.classList.add('active');
+            carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
+            moving = false;
+        }, 500);
         return;
     }
+    moving = true;
 
+    setTimeout(() => {
+        moving = false;
+    }, 550);
+
+    panels[panelIndex + 1].classList.remove('active');
+    panels[panelIndex].classList.add('active');
     carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
 }
 
@@ -459,25 +514,6 @@ leftArrows.forEach(arrow => {
 rightArrows.forEach(arrow => {
     arrow.addEventListener('click', moveRight);
 })
-
-function cirlceMove(event) {
-    panelCircles = panels[panelIndex].querySelectorAll('.circle');
-
-    var style = widthPanel.currentStyle || window.getComputedStyle(widthPanel);
-    const width = widthPanel.clientWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight) + parseFloat(style.borderLeft) + parseFloat(style.borderRight);
-
-    for (let i = 0; i < panelCircles.length; i++) {
-        if (panelCircles[i].isEqualNode(event.target)) {
-            panelIndex = i;
-            carousell.style.transform = 'translateX(' + panelIndex * -width + 'px)';
-            return;
-        }
-    }
-}
-
-panelCircles.forEach (circle => {
-    circle.addEventListener('click', cirlceMove);
-});
 
 let panelStartX = 0, panelDist = 0;
 

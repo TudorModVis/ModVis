@@ -48,8 +48,11 @@ function menuClick () {
     if (menu.classList.contains('open')) {
         if (logo.classList.contains('active')) {
             logoSwitch = true;
-            logo.classList.remove('active');
+
+            if (window.innerWidth >= 1024) logo.classList.remove('active');
         }
+
+        if (window.innerWidth < 1024) logo.classList.add('active');
         cover.classList.add('active');
         setTimeout(() => {cover.classList.add('show')}, 100);
 
@@ -121,3 +124,21 @@ function hideLogo() {
 }
 
 window.addEventListener('scroll', hideLogo);
+
+// -------- Page Transition -------- //
+
+const pageTransition = document.querySelector('.page-transition');
+const pageLinks = document.querySelectorAll('.page-link');
+const bodyContainer = document.querySelector('body');
+
+setTimeout(() => {
+    pageTransition.classList.add('active');
+    bodyContainer.classList.add('load');
+}, 1000);
+
+pageLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        bodyContainer.classList.add('transition');
+        pageTransition.classList.add('transition');
+    })
+})
