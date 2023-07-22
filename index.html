@@ -15,37 +15,48 @@
     <script src="src/js/home.js" defer></script>
 
 </head>
-<body>
-    <div class="max-w-screen min-w-screen h-full relative bg-[#0E0E0E] big-container z-10">
-        <div class="page-transition w-screen h-full fixed top-0 bg-[#0E0E0E] z-[999]"></div>
+<body class="relative">
+    <div class="page-transition w-[200vw] h-full fixed top-0 bg-[#0E0E0E] z-[999]"></div>
 
+    <div class="loading w-screen h-screen fixed bg-[#0E0E0E] z-[999] flex justify-center items-center">
+        <!-- <img src="../images/loading-modVis.gif" alt="" class="w-[23.8vw]"> -->
+        <video src="../images/loadingmodvis.mp4" class="w-[23.8vw]" autoplay muted playsinline></video>
+    </div>
+
+    <div id="cursorFollow" class="fixed rounded-full bg-transparent border border-[#F1F1F1] pointer-events-none z-50 min-h-[20px] min-w-[20px] h-[2.87vh] w-[2.87vh] mix-blend-difference flex justify-center items-center">
+        <img src="images/HOME/cursour text.svg" alt="" id="offer" class="h-0 max-w-none">
+        <img src="images/HOME/projects text.svg" alt="" id="projects" class="h-0 max-w-none">
+        <img src="images/HOME/contact text.svg" alt="" id="contact-text" class="h-0 max-w-none">
+    </div>
+
+    <div class="max-w-screen min-w-screen h-full relative bg-[#0E0E0E] big-container z-10">
         <div class="cover h-screen w-screen z-20 bg-[#0E0E0E] bg-opacity-50 fixed hidden opacity-0"></div>
-        <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-50 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
+        <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-40 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
             <nav class="flex flex-col leading-none gap-[7vh] big-text">
-                <div class="relative link">
+                <div class="relative link cursour-button">
                     <h1>HOME</h1>
                     <a href="" class="current">HOME</a>
                 </div>
-                <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 1500);" class="link page-link">PORTFOLIO</a>
-                <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 1500);" class="link page-link">SERVICES</a>
-                <a href="javascript:setTimeout(()=>{window.location = 'ENG/contacts.html' }, 1500);" class="link page-link">CONTACTS</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 1300);" class="link page-link cursour-button">PORTFOLIO</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 1300);" class="link page-link cursour-button">SERVICES</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'ENG/contacts.html' }, 1300);" class="link page-link cursour-button">CONTACTS</a>
             </nav>
             <div class="social flex gap-[25px] lg:gap-[2.5vw]">
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
                     <a href="" class="block invisible">INSTAGRAM</a>
                     <div class="transition duration-500 absolute top-0 left-0">
                         <a href="" class="block">INSTAGRAM</a>
                         <a href="">INSTAGRAM</a>
                     </div>
                 </div>
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
                     <a href="" class="block invisible">FACEBOOK</a>
                     <div class="transition duration-500 absolute top-0 left-0">
                         <a href="" class="block">FACEBOOK</a>
                         <a href="">FACEBOOK</a>
                     </div>
                 </div>
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
                     <a href="" class="block invisible">DRIBBBLE</a>
                     <div class="transition duration-500 absolute top-0 left-0">
                         <a href="" class="block">DRIBBBLE</a>
@@ -57,7 +68,7 @@
     
         <header class="flex items-center justify-center translate-y-[20px] lg:translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
             <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
                     <a href="" class="text-[#F74264] font-bold invisible block">ENG</a>
                     <div class="transition duration-500 absolute top-0 left-0">
                         <a href="" class="text-[#F74264] font-bold block">ENG</a>
@@ -65,7 +76,7 @@
                     </div>
                 </div>
                 
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
                     <a href="" class="block invisible">RO</a>
                     <div class="transition duration-500 absolute top-0 left-0">
                         <a href="" class="block">RO</a>
@@ -73,7 +84,7 @@
                     </div>
                 </div>
     
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
                     <a href="" class="block invisible">РУ</a>
                     <div class="transition duration-500 absolute top-0 left-0">
                         <a href="" class="block">РУ</a>
@@ -81,12 +92,12 @@
                     </div>
                 </div>
             </div>
-            <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%]">
+            <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%] cursour-button">
                 <div class="line-1"></div>
                 <div class="line-2"></div>
                 <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
             </div>
-            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo">
+            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo cursour-button">
                 <div class="transition duration-500">
                     <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px] mb-[10%]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
                     <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
@@ -151,21 +162,22 @@
                                 <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"></div> 
                             </div>
                         </div>
-                        <div class="relative z-10">                                
-                            <img src="images/HOME/SALES/TEXT1.png" alt="" class="mb-[2.3vh] heading left hidden lg:block">
-                            <img src="images/HOME/SALES/TEXT2.png" alt="" class="heading hidden lg:block">
+                        <div class="relative z-10">    
+                            <img src="images/HOME/SALES/TEXT1.png" alt="" class="mb-[2.3vh] heading left hidden lg:block 2xl:w-[80%] 3xl:w-full">
+                            <div class="flex justify-end">
+                                <img src="images/HOME/SALES/TEXT2.png" alt="" class="heading hidden lg:block 2xl:w-[80%] 3xl:w-full">
+                            </div>
 
                             <div class="my-[4.5vh] px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
-                                <p class="typing mt-[4.5vh] text-base lg:text-[1.3rem] 2xl:text-[1.7rem] text-justify lg:text-center">Modern Vision can establish you a powerful <span class="word website">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold">MARKETING</span> strategies, ensuring you target the right audience.</p>
+                                <p class="typing mt-[4.5vh] text-base lg:text-[1.3rem] text-justify lg:text-center">Modern Vision can establish you a powerful <span class="word website">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold">MARKETING</span> strategies, ensuring you target the right audience.</p>
                             </div>
-                            <div class="flex justify-center overflow-hidden mt-[25px] 2xl:mt-[8vh]">
-                                <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CHECK OUR SERVICES</button>
+                            <div class="flex justify-center overflow-hidden mt-[4.5vh] 3xl:mt-[8vh]">
+                                <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold cursour-button">CHECK OUR SERVICES</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container mt-[25px] z-20 w-screen overflow-x-hidden lg:hidden">
-                    <!-- <img src="images/HOME/HOME/color mob.png" alt="" class="h-[200vh] max-w-none absolute bottom-0 left-0 -z-10 lg:hidden"> -->
                     <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
                         <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
                         <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
@@ -407,7 +419,7 @@
             </section>
             
             <section id="portfolio" class="min-h-screen w-screen h-[250vh] z-10 relative mb-0 lg:my-[13.5vh]">
-                <div class="sticky w-screen h-screen top-0 flex justify-center items-center">
+                <div class="sticky w-screen h-screen top-0 flex justify-center items-center overflow-hidden lg:overflow-visible">
                     <img src="images/HOME/PORTFOLIO/color.png" alt="" class="absolute left-0 top-0 h-screen w-screen hidden lg:block">
                     <img src="images/HOME/PORTFOLIO/color mob.png" alt="" class="absolute left-0 top-0 h-screen w-screen lg:hidden">
 
@@ -545,28 +557,28 @@
                     <div class="w-1/3">
                         <p class="details">FIND MORE</p>
                         <br>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <a href="" class="block invisible">HOME</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">HOME</a>
                                 <a href="">HOME</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 1000);" class="block invisible">PORTFOLIO</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">PORTFOLIO</a>
                                 <a href="">PORTFOLIO</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 1000);" class="block invisible">SERVICES</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">SERVICES</a>
                                 <a href="">SERVICES</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <a href="javascript:setTimeout(()=>{window.location = 'ENG/contacts.html' }, 1000);" class="block invisible">CONTACTS</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">CONTACTS</a>
@@ -577,28 +589,28 @@
                     <div class="w-1/3">
                         <p class="details">SOCIALS</p>
                         <br>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <a href="" class="block invisible">INSTAGRAM</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">INSTAGRAM</a>
                                 <a href="">INSTAGRAM</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <a href="" class="block invisible">LINKEDIN</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">LINKEDIN</a>
                                 <a href="">LINKEDIN</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <a href="" class="block invisible">DRIBBBLE</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">DRIBBBLE</a>
                                 <a href="">DRIBBBLE</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button mix-blend-difference">
                             <a href="" class="block invisible">BEHANCE</a>
                             <div class="transition duration-500 absolute top-0 left-0">
                                 <a href="" class="block">BEHANCE</a>
@@ -609,18 +621,18 @@
                     <div class="hidden lg:block w-1/3">
                         <p class="details">LET'S WORK TOGETHER</p>
                         <br>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <p class="block invisible">studiomodvis@gmail.com</p>
                             <div class="transition duration-500 absolute top-0 left-0">
-                                <p class="block link">studiomodvis@gmail.com</p>
-                                <p class="link">studiomodvis@gmail.com</p>
+                                <p class="block">studiomodvis@gmail.com</p>
+                                <p class="">studiomodvis@gmail.com</p>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative">
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                             <p class="block invisible">+373 68 550 009</p>
                             <div class="transition duration-500 absolute top-0 left-0">
-                                <p class="block link">+373 68 550 009</p>
-                                <p class="link">+373 68 550 009</p>
+                                <p class="block">+373 68 550 009</p>
+                                <p class="">+373 68 550 009</p>
                             </div>
                         </div>
                     </div>

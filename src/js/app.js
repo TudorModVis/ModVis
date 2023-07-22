@@ -130,15 +130,78 @@ window.addEventListener('scroll', hideLogo);
 const pageTransition = document.querySelector('.page-transition');
 const pageLinks = document.querySelectorAll('.page-link');
 const bodyContainer = document.querySelector('body');
+const loadingScreen = document.querySelector('.loading');
+
+loadingScreen.querySelector('video').classList.add('active');
 
 setTimeout(() => {
     pageTransition.classList.add('active');
+    loadingScreen.classList.add('active');
     bodyContainer.classList.add('load');
-}, 1000);
+}, 1600);
 
 pageLinks.forEach(link => {
     link.addEventListener('click', () => {
         bodyContainer.classList.add('transition');
         pageTransition.classList.add('transition');
     })
-})
+});
+
+// -------- Cursor Follow -------- //
+
+const cursor = document.querySelector("#cursorFollow");
+
+function followCursor() {
+    const cursorHeight = cursor.clientHeight / 2;
+    const cursorWidth = cursor.clientWidth / 2;
+
+    const y = event.pageY;
+    const x = event.pageX;
+    const scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+    const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    setTimeout ( () => {
+      cursor.style.top = (y - cursorHeight) - scrollTop + 'px';
+      cursor.style.left = (x - cursorWidth) - scrollLeft + 'px';
+    } ,70);
+}
+
+window.addEventListener("mousemove", followCursor);
+
+let cursourButtons = document.querySelectorAll('.cursour-button');
+
+function enterCursour() {
+    cursor.classList.add('active');
+}
+
+function exitCursour() {
+    cursor.classList.remove('active');
+}
+
+cursourButtons.forEach(button => {
+    button.addEventListener('mouseover', enterCursour);
+    button.addEventListener('mouseout', exitCursour);
+});
+
+
+// -------- Footer -------- //
+
+const footer = document.querySelector('footer');
+const footerLogo = document.getElementById('footer-logo');
+const footerEye = document.querySelector('.footer .circle');
+
+const footerAnim = anime({
+    targets: footerLogo,
+    autoplay: false,
+    translateY: [100, 0],
+    easing: 'easeOutQuad',
+});
+
+
+function animateFooter() {
+    let percent = Math.abs(footer.getBoundingClientRect().bottom - window.innerHeight) / footer.clientHeight;
+    footerAnim.seek((1 -percent) * footerAnim.duration);
+
+    if (percent < .4) footerEye.classList.add('active'); else footerEye.classList.remove('active')
+}
+
+window.addEventListener('scroll', animateFooter)

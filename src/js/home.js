@@ -116,37 +116,12 @@ if (window.innerWidth < 1024) salesHeadings = salesContainer.querySelectorAll('.
 const typingText = document.querySelector('#sales .typing');
 
   typingText.innerHTML = typingText.textContent.split(' ').map(function(word) {
-    if (word == 'WEB-DEVELOPMENT') return "<span class='relative word hover:z-20 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
-    if (word == 'BRAND') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
-    if (word == 'MARKETING') return "<span class='relative word z-10 cursor-pointer accent'> <div class='font-bold inline font-['Saira'] text-[1.25rem] lg:text-[1.5rem]>" + word + " </div> <img src='images/HOME/SALES/word.jpg' class='absolute left-0 top-0 z-[-1] pointer-events-none max-w-none h-[10rem]'> </span>";
+    if (word == 'WEB-DEVELOPMENT') return "<div class='letter word accent cursour-button'>" + word + " </div>";
+    if (word == 'BRAND') return "<div class='letter word accent cursour-button'>" + word + " </div>";
+    if (word == 'MARKETING') return "<div class='letter word accent cursour-button'>" + word + " </div>";
 
     return "<span class='letter'>" + word + "</span>";
 }).join(' ');
-
-const highlightedWords = document.querySelectorAll('#sales .word');
-let highlightImage;
-
-function enterTextImage(event) {
-    highlightImage = event.currentTarget.querySelector('img');
-    highlightImage.classList.add('active');
-}
-
-function exitTextImage(event) {
-    highlightImage.classList.remove('active');
-}
-
-function moveTextImage(event) {
-    let rect = event.currentTarget.getBoundingClientRect();
-    
-    highlightImage.style.left = event.clientX - rect.left + 'px';
-    highlightImage.style.top = event.clientY - rect.top + 'px';
-}
-
-highlightedWords.forEach(word => {
-    word.addEventListener('mouseenter', enterTextImage);
-    word.querySelector('div').addEventListener('mousemove', moveTextImage);
-    word.addEventListener('mouseleave', exitTextImage);
-})
 
 const typingTimeline = anime.timeline({
     easing: 'easeOutQuad',
@@ -154,10 +129,17 @@ const typingTimeline = anime.timeline({
     duration: 1000,
 });
 
+cursourButtons = document.querySelectorAll('.cursour-button');
+
+cursourButtons.forEach(button => {
+    button.addEventListener('mouseover', enterCursour);
+    button.addEventListener('mouseout', exitCursour);
+})
+
 //Exit Timeline
 
 const exitAnimation = anime({
-    targets: typingText.querySelectorAll('span'),
+    targets: typingText.querySelectorAll('.letter'),
     opacity: (el) => {
         if (el.classList.contains('word')) return [1, 1];
         return [1, 0];
@@ -179,7 +161,7 @@ const exitAnimation = anime({
 
 typingTimeline
 .add({
-    targets: typingText.querySelectorAll('span'),
+    targets: typingText.querySelectorAll('.letter'),
     opacity: [0, 1],
     translateY: [15, 0], 
     delay: anime.stagger(300)
@@ -328,6 +310,7 @@ const aboutEyeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
+            aboutUsHeading.classList.add('active');
         } else {
             entry.target.classList.remove('active');
         }
@@ -390,7 +373,6 @@ function moveBox() {
     const percent = cord / (aboutUs.clientHeight - window.innerHeight);
     aboutUsTimeline.seek(percent * aboutUsTimeline.duration);
     if (percent >= .9 ) logo.classList.add('active'); else if (window.innerWidth > 1024) logo.classList.remove('active');
-    if (percent > 0) aboutUsHeading.classList.add('active'); else aboutUsHeading.classList.remove('active');
 }
 
 window.addEventListener('scroll', moveBox);
@@ -607,25 +589,33 @@ window.addEventListener('mousemove', (event) => {
     contactPupil.style.top = y;
 });
 
-// -------- Footer -------- //
+// -------- Cursour Buttons -------- //
 
-const footer = document.querySelector('footer');
-const footerLogo = document.getElementById('footer-logo');
-const footerEye = document.querySelector('.footer .circle');
-
-const footerAnim = anime({
-    targets: footerLogo,
-    autoplay: false,
-    translateY: [100, 0],
-    easing: 'easeOutQuad',
+salesButton.addEventListener('mouseover', () => {
+    cursor.classList.add('active');
+    cursor.querySelector('#offer').classList.add('active');
+});
+salesButton.addEventListener('mouseout', () => {
+    cursor.classList.remove('active');
+    cursor.querySelector('#offer').classList.remove('active');
 });
 
+const portfolioButton = portfolio.querySelector('button');
 
-function animateFooter() {
-    let percent = Math.abs(footer.getBoundingClientRect().bottom - window.innerHeight) / footer.clientHeight;
-    footerAnim.seek((1 -percent) * footerAnim.duration);
+portfolioButton.addEventListener('mouseover', () => {
+    cursor.classList.add('active');
+    cursor.querySelector('#projects').classList.add('active');
+});
+portfolioButton.addEventListener('mouseout', () => {
+    cursor.classList.remove('active');
+    cursor.querySelector('#projects').classList.remove('active');
+});
 
-    if (percent < .4) footerEye.classList.add('active'); else footerEye.classList.remove('active')
-}
-
-window.addEventListener('scroll', animateFooter);
+contactButton.addEventListener('mouseover', () => {
+    cursor.classList.add('active');
+    cursor.querySelector('#contact-text').classList.add('active');
+});
+contactButton.addEventListener('mouseout', () => {
+    cursor.classList.remove('active');
+    cursor.querySelector('#contact-text').classList.remove('active');
+});
