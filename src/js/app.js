@@ -132,13 +132,15 @@ const pageLinks = document.querySelectorAll('.page-link');
 const bodyContainer = document.querySelector('body');
 const loadingScreen = document.querySelector('.loading');
 
-loadingScreen.querySelector('video').classList.add('active');
+loadingScreen.querySelector('div').classList.add('active');
+let timeout = (window.innerWidth < 1024)? 1000 : 1600;
 
 setTimeout(() => {
     pageTransition.classList.add('active');
     loadingScreen.classList.add('active');
     bodyContainer.classList.add('load');
-}, 1600);
+    bodyContainer.classList.remove('open-menu');
+}, timeout);
 
 pageLinks.forEach(link => {
     link.addEventListener('click', () => {

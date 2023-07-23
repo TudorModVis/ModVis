@@ -15,15 +15,17 @@
     <script src="src/js/home.js" defer></script>
 
 </head>
-<body class="relative">
+<body class="relative open-menu">
     <div class="page-transition w-[200vw] h-full fixed top-0 bg-[#0E0E0E] z-[999]"></div>
 
     <div class="loading w-screen h-screen fixed bg-[#0E0E0E] z-[999] flex justify-center items-center">
-        <!-- <img src="../images/loading-modVis.gif" alt="" class="w-[23.8vw]"> -->
-        <video src="images/loadingmodvis.mp4" class="w-[23.8vw]" autoplay muted playsinline></video>
+        <div>
+            <img src="../images/HOME/Logo.png" alt="" class="w-[35vw] lg:hidden">
+            <video src="../images/loadingmodvis.mp4" class="w-[23.8vw] z-10 hidden lg:block" autoplay muted playsinline></video>
+        </div>
     </div>
 
-    <div id="cursorFollow" class="fixed rounded-full bg-transparent border border-[#F1F1F1] pointer-events-none z-50 min-h-[20px] min-w-[20px] h-[2.87vh] w-[2.87vh] mix-blend-difference flex justify-center items-center">
+    <div id="cursorFollow" class="fixed rounded-full bg-transparent border border-[#F1F1F1] pointer-events-none z-50 min-h-[15px] min-w-[15px] h-[1.4vh] w-[1.4vh] mix-blend-difference hidden lg:flex justify-center items-center">
         <img src="images/HOME/cursour text.svg" alt="" id="offer" class="h-0 max-w-none">
         <img src="images/HOME/projects text.svg" alt="" id="projects" class="h-0 max-w-none">
         <img src="images/HOME/contact text.svg" alt="" id="contact-text" class="h-0 max-w-none">
@@ -33,9 +35,9 @@
         <div class="cover h-screen w-screen z-20 bg-[#0E0E0E] bg-opacity-50 fixed hidden opacity-0"></div>
         <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-40 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
             <nav class="flex flex-col leading-none gap-[7vh] big-text">
-                <div class="relative link cursour-button">
+                <div class="relative link cursour-button cursor-pointer">
                     <h1>HOME</h1>
-                    <a href="" class="current">HOME</a>
+                    <a class="current">HOME</a>
                 </div>
                 <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 850);" class="link page-link cursour-button">PORTFOLIO</a>
                 <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 850);" class="link page-link cursour-button">SERVICES</a>
@@ -97,10 +99,10 @@
                 <div class="line-2"></div>
                 <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
             </div>
-            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo cursour-button">
+            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo cursour-button cursor-pointer">
                 <div class="transition duration-500">
-                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px] mb-[10%]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
-                    <a href="" class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                    <a class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px] mb-[10%]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                    <a class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
                 </div>
             </div>
         </header>        
@@ -172,7 +174,7 @@
                                 <p class="typing mt-[4.5vh] text-base lg:text-[1.3rem] text-justify lg:text-center">Modern Vision can establish you a powerful <span class="word website">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold">MARKETING</span> strategies, ensuring you target the right audience.</p>
                             </div>
                             <div class="flex justify-center overflow-hidden mt-[4.5vh] 3xl:mt-[8vh]">
-                                <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold cursour-button">CHECK OUR SERVICES</button>
+                                <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold cursour-button page-link">CHECK OUR SERVICES</button></a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +194,7 @@
                             <p class="mt-[4.5vh] text-justify">Modern Vision can establish you a powerful <span class="font-bold text-lg accent relative">BRAND</span> that sets you apart from the competition. We offer <span class="font-bold text-lg accent relative">WEB-DEVELOPMENT</span> services that leave a lasting impression on your audience. Finally, we can expand your reach through effective <span class="font-bold text-lg accent relative">MARKETING</span> strategies, ensuring you target the right audience.</p>
                         </div>
                         <div class="flex justify-center overflow-hidden mt-[calc(25px-.5rem)] 2xl:mt-[8vh]">
-                            <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold active">CHECK OUR SERVICES</button>
+                            <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold cursour-button active">CHECK OUR SERVICES</button></a>
                         </div>
                     </div>
                 </div>
@@ -444,7 +446,7 @@
                         </div>
 
                         <p class="mt-[15px] lg:mt-0 lg:text-[1.3rem]">Explore our recent projects.</p>
-                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold mt-[45px] lg:mt-[4.5vh]">CHECK OUR WORKS</button>
+                        <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold mt-[45px] lg:mt-[4.5vh] page-link">CHECK OUR WORKS</button></a>
                     </div>
                 </div>
             </section>
@@ -473,7 +475,7 @@
                         <p class="mt-[2.3vh] text-justify lg:text-center lg:text-[1.3rem]">Don't miss out on potential clients due to a lack of online visibility. This is an example of text that doesn’t have any meaning but soon will have more sense.</p>
                     </div>
                     <div class="flex justify-center overflow-hidden mt-[4.5vh]">
-                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold">CONTACT US</button>
+                        <a href="javascript:setTimeout(()=>{window.location = 'ENG/contacts.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold page-link">CONTACT US</button></a>
                     </div>
                     <div class="h-[calc(6.4vh+40px)] hidden lg:block"><div></div></div>
                 </div>
@@ -557,32 +559,32 @@
                     <div class="w-1/3">
                         <p class="details">FIND MORE</p>
                         <br>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a href="" class="block invisible">HOME</a>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button cursor-pointer">
+                            <a class="block invisible">HOME</a>
                             <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="" class="block">HOME</a>
-                                <a href="">HOME</a>
+                                <a class="block">HOME</a>
+                                <a>HOME</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 1000);" class="block invisible">PORTFOLIO</a>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
+                            <a class="block invisible">PORTFOLIO</a>
                             <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="" class="block">PORTFOLIO</a>
-                                <a href="">PORTFOLIO</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 850);" class="block">PORTFOLIO</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'ENG/portfolio.html' }, 850);">PORTFOLIO</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 1000);" class="block invisible">SERVICES</a>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
+                            <a class="block invisible">SERVICES</a>
                             <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="" class="block">SERVICES</a>
-                                <a href="">SERVICES</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 850);" class="block">SERVICES</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'ENG/services.html' }, 850);">SERVICES</a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a href="javascript:setTimeout(()=>{window.location = 'ENG/contacts.html' }, 1000);" class="block invisible">CONTACTS</a>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
+                            <a class="block invisible">CONTACTS</a>
                             <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="" class="block">CONTACTS</a>
-                                <a href="">CONTACTS</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'ENG/contacts.html' }, 850);" class="block">CONTACTS</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'ENG/contacts.html' }, 850);">CONTACTS</a>
                             </div>
                         </div>
                     </div>
