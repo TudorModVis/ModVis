@@ -372,7 +372,13 @@ function moveBox() {
 
     const percent = cord / (aboutUs.clientHeight - window.innerHeight);
     aboutUsTimeline.seek(percent * aboutUsTimeline.duration);
-    if (percent >= .9 ) logo.classList.add('active'); else if (window.innerWidth > 1024) logo.classList.remove('active');
+    if (percent >= .9 ) {
+        logo.classList.add('active');
+        languages.classList.add('hide');
+    } else if (window.innerWidth > 1024) {
+        logo.classList.remove('active');
+        languages.classList.remove('hide');
+    }
 }
 
 window.addEventListener('scroll', moveBox);
@@ -619,3 +625,9 @@ contactButton.addEventListener('mouseout', () => {
     cursor.classList.remove('active');
     cursor.querySelector('#contact-text').classList.remove('active');
 });
+
+const homeButton = document.getElementById('home-button');
+
+homeButton.addEventListener('click', () => {
+    salesContainer.scrollIntoView();
+})

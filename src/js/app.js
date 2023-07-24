@@ -25,6 +25,7 @@ const languages = document.querySelector('header .languages');
 const menuLinks = menu.querySelectorAll('.link');
 const menuWave = menu.querySelector('h1');
 const socialLinks = menu.querySelector('.social');
+let langTimeout;
 let logoSwitch;
 
 anime({
@@ -46,13 +47,21 @@ function menuClick () {
     })
 
     if (menu.classList.contains('open')) {
+        console.log(logo.classList.contains('active'));
         if (logo.classList.contains('active')) {
             logoSwitch = true;
 
-            if (window.innerWidth >= 1024) logo.classList.remove('active');
+            if (window.innerWidth >= 1024) {
+                logo.classList.remove('active');
+                console.log(logo);
+            }
         }
 
-        if (window.innerWidth < 1024) logo.classList.add('active');
+        if (window.innerWidth < 1024) {
+            console.log('oopsie')
+            logo.classList.add('active');
+        }
+
         cover.classList.add('active');
         setTimeout(() => {cover.classList.add('show')}, 100);
 
@@ -75,12 +84,18 @@ function menuClick () {
             });
         }, 400);
 
-        setTimeout(() => {
+        if (window.innerWidth > 1024) {
+            languages.classList.remove('hide');
+            languages.classList.add('active');
+        }
+
+        langTimeout = setTimeout(() => {
             socialLinks.classList.add('active');
             languages.classList.add('active');
         }, 1400);
         
     } else {
+        clearTimeout(langTimeout);
         languages.classList.remove('active');
         cover.classList.remove('show');
 
@@ -88,6 +103,7 @@ function menuClick () {
             cover.classList.remove('active');
             if (logoSwitch == true) {
                 logo.classList.add('active');
+                languages.classList.add('hide');
                 logoSwitch = false;
             }
         }, 300);
@@ -106,7 +122,8 @@ function menuClick () {
             delay: anime.stagger(100),
             complete: () => {
                 menuWave.classList.remove('active');
-                lines[1].style.transition = '0.3s';
+
+                if (window.innerWidth > 1024) lines[1].style.transition = '0.3s';
             }
         });
     }
@@ -140,6 +157,9 @@ setTimeout(() => {
     loadingScreen.classList.add('active');
     bodyContainer.classList.add('load');
     bodyContainer.classList.remove('open-menu');
+    setTimeout(() => {
+        loadingScreen.style.display = 'none';
+    }, 1300);
 }, timeout);
 
 pageLinks.forEach(link => {

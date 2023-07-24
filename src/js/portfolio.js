@@ -1,7 +1,19 @@
 // -------- Logo Hide -------- //
 
+let logoVisible = true;
+
 function hideLogo() {
-    if (window.scrollY > 0) logo.classList.add('active'); else logo.classList.remove('active');
+    if (window.scrollY > 0) {
+        if (logoVisible == false) return;
+        logo.classList.add('active');
+        languages.classList.add('hide');
+        logoVisible = false;
+    } else {
+        if (logoVisible == true) return;
+        logo.classList.remove('active');
+        languages.classList.remove('hide');
+        logoVisible = true;
+    }
 }
 
 window.addEventListener('scroll', hideLogo);
@@ -19,4 +31,4 @@ projects.forEach(project => {
         cursor.classList.remove('active');
         cursor.querySelector('img').classList.remove('active');
     });
-})
+});
