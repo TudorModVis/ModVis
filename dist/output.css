@@ -2321,6 +2321,10 @@ body.transition {
     margin-top: 9vh;
   }
 
+  .lg\:ml-0{
+    margin-left: 0px;
+  }
+
   .lg\:block{
     display: block;
   }
