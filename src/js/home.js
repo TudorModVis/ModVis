@@ -117,7 +117,7 @@ const typingText = document.querySelector('#sales .typing');
 
   typingText.innerHTML = typingText.textContent.split(' ').map(function(word) {
     if (word == 'WEB-DEVELOPMENT') return "<div class='letter word accent cursour-button'>" + word + " </div>";
-    if (word == 'BRAND') return "<div class='letter word accent cursour-button'>" + word + " </div>";
+    if (word == 'BRANDING') return "<div class='letter word accent cursour-button'>" + word + " </div>";
     if (word == 'MARKETING') return "<div class='letter word accent cursour-button'>" + word + " </div>";
 
     return "<span class='letter'>" + word + "</span>";
@@ -137,6 +137,39 @@ cursourButtons.forEach(button => {
 })
 
 //Exit Timeline
+
+const exitTimeline = anime.timeline({
+    easing: 'easeOutQuad',
+    autoplay: false,
+});
+
+exitTimeline
+.add({
+    targets: typingText.querySelectorAll('.letter'),
+    opacity: (el) => {
+        if (el.classList.contains('word')) return [1, 1];
+        return [1, 0];
+    },
+    rotate: function(el, i) {
+        return anime.random(-5, 5)
+      },
+      translateY: () => {
+        return [0, anime.random(-10, -20)]
+      },
+      translateX: () => {
+        return anime.random(-50, 50)
+      },
+})
+.add ({
+    targets: salesHeadings,
+    opacity: 0,
+    rotate: function(el, i) {
+        return -5 + (10 * i);
+    },
+    marginBottom: function(el, i) {
+        return 50 + (-10 * i);
+    },
+}, 0);
 
 const exitAnimation = anime({
     targets: typingText.querySelectorAll('.letter'),
@@ -207,7 +240,7 @@ function scrollEvents() {
         if (salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 * 2 <= 1) {
             salesButton.classList.remove('active');
         } else {salesButton.classList.add('active'); salesButton.classList.remove('bottom');}
-        exitAnimation.seek(0);
+        exitTimeline.seek(0);
     }
     else if (sales.getBoundingClientRect().top > 0) {
         typingTimeline.seek(0);
@@ -215,7 +248,7 @@ function scrollEvents() {
     }
     else {
         salesTitles.forEach(title => {title.classList.add('bottom');});
-        exitAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 - .65) * 2.5) * exitAnimation.duration);
+        exitTimeline.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * -1 - .65) * 2.5) * exitAnimation.duration);
     }
 
     if (sales.getBoundingClientRect().top * -1 > window.innerHeight / 3) { salesButton.classList.add('bottom'); salesEye.classList.remove('active');}
