@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <link href="../dist/output.css" rel="stylesheet">
+    <link href="../src/css/rus.css" rel="stylesheet">
 
     <script src="../src/js/libraries/anime.min.js" defer></script>
     <script src="../src/js/app.js" defer></script>
@@ -23,7 +24,7 @@
     </div>
 
     <div id="cursorFollow" class="fixed rounded-full bg-transparent border border-[#F1F1F1] pointer-events-none z-50 min-h-[15px] min-w-[15px] h-[1.4vh] w-[1.4vh] mix-blend-difference hidden lg:flex justify-center items-center">
-        <img src="../images/PORTFOLIO/text.svg" alt="" id="contact-text" class="h-0 max-w-none">
+        <img src="../images/PORTFOLIO/text ru.svg" alt="" id="contact-text" class="h-0 max-w-none">
     </div>
 
     <div class="max-w-screen min-w-screen h-full relative bg-[#0E0E0E] big-container z-10">
@@ -31,13 +32,13 @@
 
         <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-50 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
             <nav class="flex flex-col leading-none gap-[7vh] big-text">
-                <a href="javascript:setTimeout(()=>{window.location = 'home.html' }, 850);" class="link page-link cursour-button">HOME</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'home.html' }, 850);" class="link page-link cursour-button">ГЛАВНАЯ</a>
                 <div class="relative link cursour-button">
-                    <h1>PORTFOLIO</h1>
-                    <a href="" class="current">PORTFOLIO</a>
+                    <h1>ПОРТФОЛИО</h1>
+                    <a href="" class="current">ПОРТФОЛИО</a>
                 </div>
-                <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);" class="link page-link cursour-button">SERVICES</a>
-                <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);" class="link page-link cursour-button">CONTACTS</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);" class="link page-link cursour-button">УСЛУГИ</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);" class="link page-link cursour-button">КОНТАКТЫ</a>
             </nav>
             <div class="social flex gap-[25px] lg:gap-[2.5vw]">
                 <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
@@ -67,10 +68,10 @@
         <header class="flex items-center justify-center translate-y-[20px] lg:translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
             <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
                 <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a href="" class="text-[#F74264] font-bold invisible block">ENG</a>
+                    <a class="block invisible">ENG</a>
                     <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="" class="text-[#F74264] font-bold block">ENG</a>
-                        <a href="" class="text-[#F74264] font-bold">ENG</a>
+                        <a href="javascript:setTimeout(()=>{window.location = '../ENG/portfolio.html' }, 850);" class="block page-link">ENG</a>
+                        <a href="javascript:setTimeout(()=>{window.location = '../ENG/portfolio.html' }, 850);" class="page-link">ENG</a>
                     </div>
                 </div>
                 
@@ -83,10 +84,10 @@
                 </div>
                 
                 <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a class="block invisible">РУ</a>
+                    <a href="" class="text-[#F74264] font-bold invisible block">РУ</a>
                     <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="javascript:setTimeout(()=>{window.location = '../RU/portfolio.html' }, 850);" class="block page-link">РУ</a>
-                        <a href="javascript:setTimeout(()=>{window.location = '../RU/portfolio.html' }, 850);" class="page-link">РУ</a>
+                        <a href="" class="text-[#F74264] font-bold block">РУ</a>
+                        <a href="" class="text-[#F74264] font-bold">РУ</a>
                     </div>
                 </div>
             </div>
@@ -110,10 +111,10 @@
             <div class="flex flex-col items-center z-10 h-[calc(6.4vh+40px)]"><div></div></div>
             <div class="container flex flex-col items-center z-10 mt-[75px] lg:mt-[9vh] relative">
                 <div class="z-10 w-[100%] lg:w-[60%] text-center">
-                    <h1 class="text-[3rem] lg:text-[5.5rem] leading-none"> <span class="accent relative">PORTFOLIO.</span> </h1>
+                    <h1 class="text-[3rem] lg:text-[5.5rem] leading-none"> <span class="accent relative">ПОРТФОЛИО.</span> </h1>
                 </div>
                 <div class="container z-10 text-center my-[4.5vh]">
-                    <p class="text-justify lg:text-center">Our portfolio showcases successful websites and branding projects we have worked on for a variety of clients. Our work speaks for itself - take a closer look and see how we've helped our clients stand out from the crowd.</p>
+                    <p class="text-justify lg:text-center">В нашем портфолио представлены успешные сайты и брендинговые проекты, над которыми мы работали для самых разных клиентов. Наши работы говорят сами за себя - узнайте, как мы помогли нашим клиентам выделиться из толпы.</p>
                 </div>
                 
                 <div class="z-10 w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-x-[1vw] lg:gap-y-[9vh]">
@@ -126,17 +127,17 @@
                         <div class="title">
                             <div class="flex justify-between items-center">
                                 <h2>SOLIX</h2>
-                                <p class="text-[#F74264] text-sm hidden lg:block">WEB DEVELOPMENT - BRANDING</p>
-                                <p class="text-[#F74264] text-xs lg:hidden text-right">WEB DEVELOPMENT <br> - BRANDING</p>
+                                <p class="text-[#F74264] text-sm hidden lg:block">ВЕБ-РАЗРАБОТКА - БРЕНДИНГ</p>
+                                <p class="text-[#F74264] text-xs lg:hidden text-right">ВЕБ-РАЗРАБОТКА <br> - БРЕНДИНГ</p>
                             </div>
-                            <div class="flex items-center gap-2 hover:gap-4 transition-all duration-300 w-fit cursour-button cursor-pointer page-link" onclick="setTimeout(()=>{window.location = 'projects/solix.html' }, 850);">
-                                <p class="text-[#F74264] text-sm font-medium">CLICK FOR MORE</p>
+                            <div class="flex items-center gap-2 hover:gap-4 transition-all duration-300 w-fit cursour-button cursor-pointer">
+                                <p class="text-[#F74264] text-sm font-medium">НАЖМИТЕ ДЛЯ ДЕТАЛЕЙ</p>
                                 <img src="../images/PORTFOLIO/arrow.svg" alt="" class="h-[0.875rem]">
                             </div>
                         </div>
                     </div>
                     <div class="work w-full mb-[35px] lg:mb-0">
-                        <div class="background relative border border-[#F1F1F1] rounded-md hover:[&>.cover-project]:opacity-0 cursor-pointer page-link" onclick="setTimeout(()=>{window.location = 'projects/bioagroprim.html' }, 850);">
+                        <div class="background relative border border-[#F1F1F1] rounded-md hover:[&>.cover-project]:opacity-0 cursor-pointer">
                             <img src="../images/PORTFOLIO/bioagroprim.png" alt="" class="object-cover w-full">
                             <img src="../images/PORTFOLIO/bioagroprim cover.png" alt="" class="rounded-md absolute top-0 left-0 w-full h-full cover-project transition duration-500">
                         </div>  
@@ -144,10 +145,10 @@
                         <div class="title">
                             <div class="flex justify-between items-center">
                                 <h2>BIOAGROPRIM</h2>
-                                <p class="text-[#F74264] text-xs lg:text-sm">WEB DEVELOPMENT</p>
+                                <p class="text-[#F74264] text-xs lg:text-sm">ВЕБ-РАЗРАБОТКА</p>
                             </div>
-                            <div class="flex items-center gap-2 hover:gap-4 transition-all duration-300 w-fit cursour-button cursor-pointer page-link" onclick="setTimeout(()=>{window.location = 'projects/bioagroprim.html' }, 850);">
-                                <p class="text-[#F74264] text-sm font-medium">CLICK FOR MORE</p>
+                            <div class="flex items-center gap-2 hover:gap-4 transition-all duration-300 w-fit cursour-button cursor-pointer">
+                                <p class="text-[#F74264] text-sm font-medium">НАЖМИТЕ ДЛЯ ДЕТАЛЕЙ</p>
                                 <img src="../images/PORTFOLIO/arrow.svg" alt="" class="h-[0.875rem]">
                             </div>
                         </div>
@@ -161,10 +162,10 @@
                         <div class="title">
                             <div class="flex justify-between items-center">
                                 <h2>INVEST EASE</h2>
-                                <p class="text-[#F74264] text-xs lg:text-sm">WEB DEVELOPMENT</p>
+                                <p class="text-[#F74264] text-xs lg:text-sm">ВЕБ-РАЗРАБОТКА</p>
                             </div>
                             <div class="flex items-center gap-2 hover:gap-4 transition-all duration-300 w-fit cursour-button cursor-pointer" onclick="window.open('https://vasearar.github.io/RealEstate.github.io/')">
-                                <p class="text-[#F74264] text-sm font-medium">CLICK FOR MORE</p>
+                                <p class="text-[#F74264] text-sm font-medium">НАЖМИТЕ ДЛЯ ДЕТАЛЕЙ</p>
                                 <img src="../images/PORTFOLIO/arrow.svg" alt="" class="h-[0.875rem]">
                             </div>
                         </div>
@@ -178,10 +179,10 @@
                         <div class="title">
                             <div class="flex justify-between items-center">
                                 <h2>PASSPORT HQ</h2>
-                                <p class="text-[#F74264] text-xs lg:text-sm">WEB DEVELOPMENT</p>
+                                <p class="text-[#F74264] text-xs lg:text-sm">ВЕБ-РАЗРАБОТКА</p>
                             </div>
                             <div class="flex items-center gap-2 hover:gap-4 transition-all duration-300 w-fit cursour-button cursor-pointer" onclick="window.open('https://tudormodvis.github.io/PassportSite/')">
-                                <p class="text-[#F74264] text-sm font-medium">CLICK FOR MORE</p>
+                                <p class="text-[#F74264] text-sm font-medium">НАЖМИТЕ ДЛЯ ДЕТАЛЕЙ</p>
                                 <img src="../images/PORTFOLIO/arrow.svg" alt="" class="h-[0.875rem]">
                             </div>
                         </div>
@@ -195,10 +196,10 @@
                         <div class="title">
                             <div class="flex justify-between items-center">
                                 <h2>TALIE TRAVEL</h2>
-                                <p class="text-[#F74264] text-xs lg:text-sm">WEB DEVELOPMENT</p>
+                                <p class="text-[#F74264] text-xs lg:text-sm">ВЕБ-РАЗРАБОТКА</p>
                             </div>
                             <div class="flex items-center gap-2 hover:gap-4 transition-all duration-300 w-fit cursour-button cursor-pointer"  onclick="window.open('https://tudormodvis.github.io/TravelSite/')">
-                                <p class="text-[#F74264] text-sm font-medium">CLICK FOR MORE</p>
+                                <p class="text-[#F74264] text-sm font-medium">НАЖМИТЕ ДЛЯ ДЕТАЛЕЙ</p>
                                 <img src="../images/PORTFOLIO/arrow.svg" alt="" class="h-[0.875rem]">
                             </div>
                         </div>
@@ -271,7 +272,7 @@
                 </div>
             </div>
             <div class="lg:hidden mt-[190px] mb-[25px] text-center">
-                <p class="details">LET'S WORK TOGETHER</p>
+                <p class="details">КОНТАКТЫ</p>
                 <br>
                 <div class="flex justify-center w-full">
                     <div class="text-center flex flex-col items-center">
@@ -282,39 +283,39 @@
             </div>
             <div class="text flex w-full justify-between lg:justify-normal lg:w-1/2">
                 <div class="w-1/3">
-                    <p class="details">FIND MORE</p>
+                    <p class="details">БОЛЬШЕ</p>
                     <br>
                     <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
-                        <a class="block invisible">HOME</a>
+                        <a class="block invisible">ГЛАВНАЯ</a>
                         <div class="transition duration-500 absolute top-0 left-0">
-                            <a href="javascript:setTimeout(()=>{window.location = 'home.html' }, 850);" class="block">HOME</a>
-                            <a href="javascript:setTimeout(()=>{window.location = 'home.html' }, 850);">HOME</a>
+                            <a href="javascript:setTimeout(()=>{window.location = 'home.html' }, 850);" class="block">ГЛАВНАЯ</a>
+                            <a href="javascript:setTimeout(()=>{window.location = 'home.html' }, 850);">ГЛАВНАЯ</a>
                         </div>
                     </div>
                     <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button cursor-pointer">
-                        <a class="block invisible">PORTFOLIO</a>
+                        <a class="block invisible">ПОРТФОЛИО</a>
                         <div class="transition duration-500 absolute top-0 left-0">
-                            <a class="block">PORTFOLIO</a>
-                            <a>PORTFOLIO</a>
+                            <a class="block">ПОРТФОЛИО</a>
+                            <a>ПОРТФОЛИО</a>
                         </div>
                     </div>
                     <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
-                        <a class="block invisible">SERVICES</a>
+                        <a class="block invisible">УСЛУГИ</a>
                         <div class="transition duration-500 absolute top-0 left-0">
-                            <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);" class="block">SERVICES</a>
-                            <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);">SERVICES</a>
+                            <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);" class="block">УСЛУГИ</a>
+                            <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);">УСЛУГИ</a>
                         </div>
                     </div>
                     <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
-                        <a class="block invisible">CONTACTS</a>
+                        <a class="block invisible">КОНТАКТЫ</a>
                         <div class="transition duration-500 absolute top-0 left-0">
-                            <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);" class="block">CONTACTS</a>
-                            <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);">CONTACTS</a>
+                            <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);" class="block">КОНТАКТЫ</a>
+                            <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);">КОНТАКТЫ</a>
                         </div>
                     </div>
                 </div>
                 <div class="w-1/3">
-                    <p class="details">SOCIALS</p>
+                    <p class="details">СОЦСЕТИ</p>
                     <br>
                     <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                         <a href="" class="block invisible">INSTAGRAM</a>
@@ -339,7 +340,7 @@
                     </div>
                 </div>
                 <div class="hidden lg:block w-1/3">
-                    <p class="details">LET'S WORK TOGETHER</p>
+                    <p class="details">КОНТАКТЫ</p>
                     <br>
                     <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
                         <a class="block invisible">studiomodvis@gmail.com</a>

@@ -1,0 +1,35 @@
+h1 {
+    font-family: 'Play', sans-serif;
+}
+
+#sales .word {
+    font-family: 'Play';
+}
+
+.menu nav a {
+    font-family: 'Play', sans-serif;
+}
+
+.menu nav h1 {
+    font-family: 'Play', sans-serif;
+}
+
+.footer .details{
+    font-family: 'Play', sans-serif;
+}
+
+@media (min-width: 1024px) {
+    #portfolio .space {
+        margin-right: -1vw;
+    }
+
+    #portfolio .carousell.active {
+        transform: translateY(-4.5rem);
+    }
+}
+
+h1 .accent::after {
+    width: 100%;
+    height: 22%;
+    bottom: 13%;
+} 

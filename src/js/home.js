@@ -116,9 +116,9 @@ if (window.innerWidth < 1024) salesHeadings = salesContainer.querySelectorAll('.
 const typingText = document.querySelector('#sales .typing');
 
   typingText.innerHTML = typingText.textContent.split(' ').map(function(word) {
-    if (word == 'WEB-DEVELOPMENT') return "<div class='letter word accent cursour-button'>" + word + " </div>";
-    if (word == 'BRANDING') return "<div class='letter word accent cursour-button'>" + word + " </div>";
-    if (word == 'MARKETING') return "<div class='letter word accent cursour-button'>" + word + " </div>";
+    if (word == 'WEB-DEVELOPMENT' || word == 'ВЕБ-РАЗРАБОТКА') return "<div class='letter word accent cursour-button'>" + word + " </div>";
+    if (word == 'BRANDING' || word == 'БРЕНДИНГ,') return "<div class='letter word accent cursour-button'>" + word + " </div>";
+    if (word == 'MARKETING' || word == 'МАРКЕТИНГ') return "<div class='letter word accent cursour-button'>" + word + " </div>";
 
     return "<span class='letter'>" + word + "</span>";
 }).join(' ');

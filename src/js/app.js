@@ -47,18 +47,15 @@ function menuClick () {
     })
 
     if (menu.classList.contains('open')) {
-        console.log(logo.classList.contains('active'));
         if (logo.classList.contains('active')) {
             logoSwitch = true;
 
             if (window.innerWidth >= 1024) {
                 logo.classList.remove('active');
-                console.log(logo);
             }
         }
 
         if (window.innerWidth < 1024) {
-            console.log('oopsie')
             logo.classList.add('active');
         }
 
