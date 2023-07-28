@@ -9,8 +9,8 @@ servicesButtons.forEach(button => {
 });
 
 // -------- Menu -------- //
-
 const lang = document.getElementById('lang');
+
 const header = document.querySelector('header');
 function openMenu() {
     menu.classList.toggle('active');
@@ -73,14 +73,14 @@ function sendMessage(event) {
     let phoneNumber = 37369150744;
 
     let url = "https://wa.me/" + phoneNumber + "?text="
-    + 'Bună! Mă numesc, ' + name + '. ' + 'Serviciile ce mă interessează sunt:';
+    + 'Здравствуйте! Меня зовут, ' + name + '. ' + 'Услуги, которые меня интересуют:';
 
     servicesButtons.forEach(button => {
         if (button.classList.contains('active')) url += ' ' + button.textContent;
     })
 
-    url += '. Nr. meu de telefon: ' + tel + '. Email: ' 
-    + email + '. Detailiile proiectului meu: ' + detalii;
+    url += '. Мой номер телефона: ' + tel + '. Электронная почта: ' 
+    + email + '. Детали моего проекта: ' + detalii;
 
     console.log(url);
 
@@ -90,7 +90,6 @@ function sendMessage(event) {
 sumbit.addEventListener('click', sendMessage);
 
 // -------- Loading -------- //
-
 const loadingScreens = document.querySelector('.loading');
 if (window.innerWidth >= 1024) {
     document.body.style.overflow = 'hidden';

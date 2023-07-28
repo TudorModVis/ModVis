@@ -1,640 +1,580 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModVis</title>
-    <link rel="icon" type="image/x-icon" href="images/SVG/Logoochi.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="keywords" content="panouri sandwich md, construcții metalice md, construcții modulare md, panouri solare md, construcții, construcții industriale ,acoperiș">
+    <link rel="icon" type="image/x-icon" href="images/logo-icon.webp">
 
-    <link href="dist/output.css" rel="stylesheet">
+    <!-- Primary Meta Tags --> 
+    <title>Specialiști în Panouri Sandwich, Construcții Metalice, Panouri Solare și Construcții Modulare - SoliX</title> 
+    <meta name="title" content="Specialiști în Panouri Sandwich, Construcții Metalice, Panouri Solare și Construcții Modulare - SoliX" /> 
+    <meta name="description" content="Solix oferă soluții în domeniul panourilor sandwich, construcțiilor metalice, fotovoltaicelor și construcțiilor modulare în Moldova. Echipa noastră de experți vă asigură calitate, eficiență și durabilitate pentru proiectele dumneavoastră energoeficiente." /> 
+    
+    <!-- Open Graph / Facebook --> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:url" content="https://metatags.io" /> 
+    <meta property="og:title" content="Specialiști în Panouri Sandwich, Construcții Metalice, Panouri Solare și Construcții Modulare - SoliX" /> 
+    <meta property="og:description" content="Solix oferă soluții în domeniul panourilor sandwich, construcțiilor metalice, fotovoltaicelor și construcțiilor modulare în Moldova. Echipa noastră de experți vă asigură calitate, eficiență și durabilitate pentru proiectele dumneavoastră energoeficiente." /> 
+    <meta property="og:image" content="images/HOME/SoliX_facebook cover.webp" /> 
+    
+    <!-- Twitter --> 
+    <meta property="twitter:card" content="summary_large_image" /> 
+    <meta property="twitter:url" content="https://metatags.io" /> 
+    <meta property="twitter:title" content="Specialiști în Panouri Sandwich, Construcții Metalice, Panouri Solare și Construcții Modulare - SoliX" /> 
+    <meta property="twitter:description" content="Solix oferă soluții în domeniul panourilor sandwich, construcțiilor metalice, fotovoltaicelor și construcțiilor modulare în Moldova. Echipa noastră de experți vă asigură calitate, eficiență și durabilitate pentru proiectele dumneavoastră energoeficiente." /> 
+    <meta property="twitter:image" content="images/HOME/SoliX_facebook cover.webp" />
+
+    <!-- Language Configuration --> 
+    <link rel="alternate" hreflang="ro" href="https://solix.md/">
+    <link rel="alternate" hreflang="ru" href="https://solix.md/RU/home.html">
+
+    <link rel="stylesheet" href="src/css/libraries/fullpage.min.css">
+    <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="src/css/home.css">
 
-    <script src="src/js/libraries/anime.min.js"></script>
+    <script src="src/js/libraries/fullpage.min.js" defer></script>
+    <script src="src/js/libraries/anime.min.js" defer></script>
     <script src="src/js/app.js" defer></script>
     <script src="src/js/home.js" defer></script>
 
 </head>
-<body class="relative open-menu">
-    <div class="page-transition w-[200vw] h-full fixed top-0 bg-[#0E0E0E] z-[999]"></div>
-
-    <div class="loading w-screen h-screen fixed z-[999] flex justify-center items-center">
-        <div>
-            <img src="images/HOME/Logo.png" alt="" class="w-[35vw] lg:hidden">
-            <video src="images/loadingmodvis.mp4" class="w-[23.8vw] z-10 hidden lg:block" autoplay muted playsinline></video>
-        </div>
+<body>
+    <div class="loading fixed z-50 w-screen h-screen top-0 left-0 hidden lg:flex justify-center items-center bg-[#f1f1f1]">
+        <video autoplay muted playsinline class="w-[150%] max-w-none lg:w-1/2">
+            <source src="images/loading.webm" type="video/webm" />
+        </video>
     </div>
 
-    <div id="cursorFollow" class="fixed rounded-full bg-transparent border border-[#F1F1F1] pointer-events-none z-50 min-h-[15px] min-w-[15px] h-[1.4vh] w-[1.4vh] mix-blend-difference hidden lg:flex justify-center items-center">
-        <img src="images/HOME/cursor servicii.svg" alt="" id="offer" class="h-0 max-w-none">
-        <img src="images/HOME/text proiecte.svg" alt="" id="projects" class="h-0 max-w-none">
-        <img src="images/HOME/contacte text.svg" alt="" id="contact-text" class="h-0 max-w-none">
+    <div class="social-menu fixed right-[25px] lg:right-[50px] bottom-[50px] w-[70px] aspect-square z-10">
+        <div class="last w-[70px] aspect-square rounded-full bg-[#00ACBE] absolute flex justify-center items-center cursor-pointer"><img src="images/SOCIAL MENU/x.webp" alt="" class="w-[35px]"></div>
+        <div class="w-[70px] aspect-square rounded-full bg-[#00ACBE] absolute flex justify-center items-center cursor-pointer"><a href="viber://chat?number=+37369150744" target="_blank"><img src="images/SOCIAL MENU/viber.webp" alt="" class="w-[30px]"></a></div>
+        <div class="w-[70px] aspect-square rounded-full bg-[#00ACBE] absolute flex justify-center items-center cursor-pointer"><a href="https://wa.me/+37369150744" target="_blank"><img src="images/SOCIAL MENU/watsapp.webp" alt="" class="w-[30px]"></a></div>
+        <div class="w-[70px] aspect-square rounded-full bg-[#00ACBE] absolute flex justify-center items-center cursor-pointer"><a href="https://www.facebook.com/solix.moldova" target="_blank"><img src="images/SOCIAL MENU/messenger.webp" alt="" class="w-[30px]"></a></div>
+        <div class="first w-[70px] aspect-square rounded-full bg-[#00ACBE] absolute flex justify-center items-center cursor-pointer">
+            <a href="tel:+37369150744"><img src="images/SOCIAL MENU/phone.webp" alt="" class="w-[25px] hidden"></a>
+            <img src="images/SOCIAL MENU/phone.webp" alt="" class="w-[25px]">
+        </div>
     </div>
+    <div class="background bg-[#1E1E1E] fixed w-screen h-full">
+        <div class="circle absolute w-[300px] lg:w-[30vw] aspect-square rounded-full bg-[#00ACBE] bottom-[-150px] lg:bottom-[-25vh] left-[-350px] lg:left-[-50vw] blur-lg opacity-20" id="circle-left"></div>
+        <div class="circle absolute w-[300px] lg:w-[24vw] aspect-square rounded-full bg-[#00ACBE] top-[15vh] lg:top-[10vh] right-[-350px] lg:right-[-50vw] blur-lg opacity-20" id="circle-right"></div>
 
-    <div class="max-w-screen min-w-screen h-full relative bg-[#0E0E0E] big-container z-10">
-        <div class="cover h-screen w-screen z-20 bg-[#0E0E0E] bg-opacity-50 fixed hidden opacity-0"></div>
-        <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-40 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
-            <nav class="flex flex-col leading-none gap-[7vh] big-text">
-                <div class="relative link cursour-button cursor-pointer">
-                    <h1>ACASĂ</h1>
-                    <a class="current">ACASĂ</a>
-                </div>
-                <a href="javascript:setTimeout(()=>{window.location = 'RO/portfolio.html' }, 850);" class="link page-link cursour-button">PORTFOLIO</a>
-                <a href="javascript:setTimeout(()=>{window.location = 'RO/services.html' }, 850);" class="link page-link cursour-button">SERVICII</a>
-                <a href="javascript:setTimeout(()=>{window.location = 'RO/contacts.html' }, 850);" class="link page-link cursour-button">CONTACTE</a>
-            </nav>
-            <div class="social flex gap-[25px] lg:gap-[2.5vw]">
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a class="block invisible">INSTAGRAM</a>
-                    <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="https://www.instagram.com/studio.modvis/" target="_blank" class="block">INSTAGRAM</a>
-                        <a href="https://www.instagram.com/studio.modvis/" target="_blank" >INSTAGRAM</a>
-                    </div>
-                </div>
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a class="block invisible">FACEBOOK</a>
-                    <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="https://www.facebook.com/modvis.studio/" target="_blank" class="block">FACEBOOK</a>
-                        <a href="https://www.facebook.com/modvis.studio/" target="_blank">FACEBOOK</a>
-                    </div>
-                </div>
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a class="block invisible">DRIBBBLE</a>
-                    <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="https://dribbble.com/modvis" target="_blank" class="block">DRIBBBLE</a>
-                        <a href="https://dribbble.com/modvis" target="_blank">DRIBBBLE</a>
-                    </div>
-                </div>
+        <div class="particle absolute w-[10px] aspect-square rounded-full bg-[#00ACBE] left-[-10vw]"></div>
+        <div class="particle absolute w-[10px] aspect-square rounded-full bg-[#00ACBE] left-[-10vw]"></div>
+        <div class="particle absolute w-[10px] aspect-square rounded-full bg-[#00ACBE] left-[-10vw]"></div>
+        <div class="particle absolute w-[10px] aspect-square rounded-full bg-[#00ACBE] left-[-10vw]"></div>
+        <div class="particle absolute w-[10px] aspect-square rounded-full bg-[#00ACBE] left-[-10vw]"></div>
+        <div class="particle absolute w-[10px] aspect-square rounded-full bg-[#00ACBE] left-[-10vw]"></div>
+    </div>
+    <header class="fixed px-[25px] lg:px-[7.5vw] w-full top-[25px] lg:top-[2.3vh] z-40">
+        <div class="wrapper px-[2.5vw] flex items-center justify-center rounded-2xl py-[10px] lg:py-4 relative">
+            <span class="absolute left-[25px] 2lg:left-auto 2lg:right-[2.5vw] top-1/2 -translate-y-[50%] 2lg:text-[#212121] text-base 2lg:text-sm 2xl:text-base hidden opacity-0 2lg:opacity-100 2lg:block" id="lang"><a href="" class="font-bold text-[#00ACBE] hover:italic text-base 2lg:text-sm 2xl:text-base">RO</a> / <a href="RU/home.html" class="inactive 2lg:text-[#212121] hover:italic text-base 2lg:text-sm 2xl:text-base">РУ</a></span>
+            <div class="menu-btn 2lg:hidden">
+                <div class="line line--1"></div>
+                <div class="line line--2"></div>
+                <div class="line line--3"></div>
+            </div>
+            <div class="min-h-[4.5vh] lg:min-h-[6.5vh] max-h-[60px]"></div>
+            <a href=""><img src="images/logo-negru.webp" alt="" class="h-[4.5vh] lg:h-[6.5vh] max-h-[60px] w-auto absolute left-1/2 -translate-x-[50%] 2lg:translate-x-0 2lg:left-[2.5vw] top-1/2 -translate-y-[50%]" id="logo"></a>
+            <div class="pages 2lg:flex gap-[1.8vw] hidden text-[#212121] ml-[5vw] items-center">
+                <a href="" class="font-bold">Despre Noi</a>
+                <a href="RO/sandwich.html" class="font-bold  opacity-75">Panouri Sandwich</a>
+                <a href="RO/fotovoltaice.html" class="font-bold  opacity-75">Fotovoltaice</a>
+                <a href="RO/modulare.html" class="font-bold  opacity-75">Construcții Modulare</a>
+                <a href="RO/portfolio.html" class="font-bold  opacity-75">Portfolio</a>
+                <a href="RO/contacte.html" class="font-bold  opacity-75">Contacte</a>
             </div>
         </div>
-    
-        <header class="flex items-center justify-center translate-y-[20px] lg:translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
-            <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a class="invisible block">ENG</a>
-                    <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="javascript:setTimeout(()=>{window.location = 'ENG/home.html' }, 850);" class="block page-link">ENG</a>
-                        <a href="javascript:setTimeout(()=>{window.location = 'ENG/home.html' }, 850);" class=" page-link">ENG</a>
-                    </div>
-                </div>
-                
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a href="" class="block invisible text-[#F74264] font-bold">RO</a>
-                    <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="" class="text-[#F74264] font-bold block">RO</a>
-                        <a href="" class="text-[#F74264] font-bold">RO</a>
-                    </div>
-                </div>
-    
-                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
-                    <a href="" class="block invisible">РУ</a>
-                    <div class="transition duration-500 absolute top-0 left-0">
-                        <a href="" class="block">РУ</a>
-                        <a href="">РУ</a>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%] cursour-button">
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-                <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
-            </div>
-            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo cursour-button cursor-pointer">
-                <div class="transition duration-500">
-                    <a class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px] mb-[10%]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
-                    <a class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
-                </div>
-            </div>
-        </header>        
+    </header>
 
-            <section id="home" class="lg:min-h-screen w-screen h-screen z-10 relative lg:overflow-hidden">
-                <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute top-0 left-0 -z-10 hidden lg:block">
-                <img src="images/HOME/HOME/color mob.png" alt="" class="h-[200vh] max-w-none w-full absolute top-0 left-0 -z-10 lg:hidden">
-                <div class="container flex flex-col h-screen relative z-10">
-                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto translate-y-[-50%] top-[35vh] lg:top-[50vh] lg:right-[-3%]"> 
-                        <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                            </div> 
+    <div class="menu fixed w-screen h-screen bg-[#1E1E1E] top-0 right-0 z-30 px-[25px] overflow-y-scroll translate-x-full">
+        <nav class="flex flex-col my-[150px] text-[1.75rem] gap-[40px]">
+            <div>
+                <div class="link unfold relative cursor-pointer">
+                    <span class="font-bold">Despre Noi</span>
+                    <img src="images/HOME/menu arrow.webp" alt="" class="absolute h-full top-0 right-0 py-[7px]">
+                </div>
+                <div class="sections flex flex-col gap-[15px] h-0 [&>a]:cursor-pointer">
+                    <a class="text-[1.6rem] opacity-0" onclick="fullpage_api.moveTo(1);">Acasă</a>
+                    <a class="text-[1.6rem] opacity-0" onclick="fullpage_api.moveTo(2);">Servicii</a>
+                    <a class="text-[1.6rem] opacity-0" onclick="fullpage_api.moveTo(3);">Colaborare</a>
+                    <a class="text-[1.6rem] opacity-0" onclick="fullpage_api.moveTo(4);">Proiecte</a>
+                    <a class="text-[1.6rem] opacity-0" onclick="fullpage_api.moveTo(5);">Clienți</a>
+                </div>
+            </div>
+            <div>
+                <div class="link relative">
+                    <a href="RO/sandwich.html" class="font-medium">Panouri Sandwich</a>
+                </div>
+            </div>
+            <div>
+                <div class="link relative">
+                    <a class="font-medium" href="RO/fotovoltaice.html">Fotovoltaice</a>
+                </div>
+            </div>
+            <div>
+                <div class="link relative">
+                    <a class="font-medium 2xl:whitespace-nowrap" href="RO/modulare.html">Construcții Modulare</a>
+                </div>
+            </div>
+            <div class="link relative">
+                <a href="RO/portfolio.html" class="font-medium">Portfolio</a>
+            </div>
+            <div class="link relative">
+                <a href="RO/contacte.html" class="font-medium">Contacte</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="w-screen h-full overflow-hidden">
+        <div id="fullpage">
+            <div class="section bg-[#E2D7D1]" id="home">
+                <img src="images/HOME/HOME/cer.webp" alt="" class="absolute top-0 w-full max-h-[48%] object-cover hidden lg:block">
+                <img src="images/HOME/HOME/cer mob.webp" alt="" class="absolute top-0 w-full h-[60%] object-cover lg:hidden">
+                <img src="images/HOME/HOME/iarba.webp" alt="" class="absolute bottom-0 lg:w-full h-[40%] lg:h-auto max-h-[66%] object-cover">
+                <img src="images/HOME/HOME/home.webp" alt="" class="absolute w-[150%] max-w-none lg:w-[86%] max-h-[73%] object-contain object-right-bottom left-1/2 lg:left-auto translate-x-[-50%] lg:translate-x-0 lg:right-0 bottom-[6%] lg:bottom-0" id="house">
+                <img src="images/HOME/HOME/iarba negru.webp" alt="" class="absolute bottom-0 max-w-max max-h-[9%] lg:max-h-[16%] z-10" id="iarba">
+                <div class="w-full lg:w-1/3 absolute top-[28%] lg:top-1/2 lg:translate-y-[-50%] ml-[25px] lg:ml-[13vw] 2xl:ml-[10.4vw] z-10 text-[#212121]">
+                    <h1 class="mb-[25px] lg:mb-[2.3vh] leading-tight tracking-wide">Construcții Energoeficiente</h1>
+                    <h3 class="text-[1.3rem] mb-[50px] lg:mb-[4.5vh] leading-tight tracking-wide font-medium">Inovație și durabilitate <br> pentru un viitor mai luminos.</h3>
+                    <button class="bg-[#00ACBE] hover:bg-[#F1F1F1] transition-all duration-300 py-[1.3vh] px-[15vw] lg:px-[3.7vw] rounded-[10px] font-medium" onclick="fullpage_api.moveSectionDown();">Află mai multe</button>
+                </div>
+            </div>
+    
+            <div class="section" id="service">
+                <div class="header hidden lg:block"></div>
+                <div class="container mt-[50px] lg:mt-[4.5vh] 2xl:mt-[7vh] flex flex-col relative">
+                    <div>
+                        <h1 class="mb-[50px] lg:mb-[2.3vh] w-[65%] lg:w-auto">Ce servicii oferă SoliX?</h1>
+                        <p class="text-justify">Fiind printre primii, cu o experiență <span class="font-bold">de 20 de ani</span>, suntem lideri în soluții durabile. De la <span class="font-bold">construcții metalice</span> și <span class="font-bold">panouri sandwich</span> la <span class="font-bold">panouri solare</span> și <span class="font-bold">construcții modulare</span>. Cu peste 1000 de proiecte realizate și o echipă de <span class="font-bold">specialiști calificați</span> cu <span class="font-bold">experiență</span> în inginerie, SoliX este partenerul tău de <span class="font-bold">încredere</span>. Accesează serviciul de care ai nevoie:</p>
+                    </div>
+                    
+                    <div class="flex flex-col lg:flex-row justify-between mt-[75px] lg:mt-[4.5vh] 2xl:mt-[9vh] lg:flex-1 pb-[1.5vh]">
+                        <div class="service w-full lg:w-[32%] 2xl:w-[30%] h-fit flex lg:items-end 2xl:items-start relative overflow-hidden rounded-[10px] px-[1.5vw] pb-[25px] lg:pb-[3.5vh] mb-[25px] lg:mb-0 cursor-pointer" onclick="window.open('RO/sandwich.html', '_self')">
+                            <div class="absolute top-0 w-full h-[15vh]">
+                                <div class="shape h-full aspect-square rounded-full absolute bg-[#00ACBE] top-0 left-0"></div>
+                                <img src="images/HOME/SERVICII/sandwich.webp" alt="" class="absolute h-[95%] 2xl:h-[90%] top-1/2 translate-y-[-50%]">
+                            </div>
+                            <div class="z-10 mt-[18vh] lg:mt-[16.3vh] 2xl:mt-[17.5vh]">
+                                <h2 class="font-semibold">Panouri Sandwich</h2>
+                                <p class="mb-[25px] mt-[30px] lg:my-[1.3vh] 2xl:my-[2.3vh]">Descoperă avantajele panourilor sandwich împreună cu SoliX. Alege calitatea pentru proiectele tale împreună cu noi!</p>
+                                <span class="lg:text-sm flex items-center gap-[10px]">Mai multe <img src="images/HOME/Arrow.webp" alt="" class="arrow inline"></span>
+                            </div>
+                        </div>
+
+                        <div class="service w-full lg:w-[32%] 2xl:w-[30%] h-fit flex lg:items-end 2xl:items-start relative overflow-hidden rounded-[10px] px-[1.5vw] pb-[25px] lg:pb-[3.5vh] mb-[25px] lg:mb-0 cursor-pointer" onclick="window.open('RO/fotovoltaice.html', '_self')">
+                            <div class="absolute top-0 w-full h-[15vh]">
+                                <img src="images/HOME/SERVICII/hex.webp" alt="" class="shape absolute h-full top-0 left-0">
+                                <img src="images/HOME/SERVICII/solar.webp" alt="" class="absolute h-[70%] 2xl:h-[75%] top-[30%] left-[7%]">
+                            </div>
+                            <div class="z-10 mt-[18vh] lg:mt-[16.3vh] 2xl:mt-[17.5vh]">
+                                <h2 class="font-semibold">Panouri Solare</h2>
+                                <p class="mb-[25px] mt-[30px] lg:my-[1.3vh] 2xl:my-[2.3vh]">Energie curată și independență energetică cu panouri solare instalate de echipa SoliX. Descoperă beneficiile energiei regenerabile!</p>
+                                <span class="lg:text-sm flex items-center gap-[10px]">Mai multe <img src="images/HOME/Arrow.webp" alt="" class="arrow inline"></span>
+                            </div>    
+                        </div>
+
+                        <div class="service w-full lg:w-[32%] 2xl:w-[30%] lg:h-fit flex lg:items-end 2xl:items-start relative overflow-hidden rounded-[10px] px-[1.5vw] pb-[25px] lg:pb-[3.5vh] cursor-pointer" onclick="window.open('RO/modulare.html', '_self')">
+                            <div class="absolute top-0 w-[68%] lg:w-[55%] 2xl:w-[65%] h-[17vh] lg:h-[15vh]">
+                                <img src="images/HOME/SERVICII/triangle.webp" alt="" class="shape absolute h-[80%] top-0 right-0">
+                                <img src="images/HOME/SERVICII/modular.webp" alt="" class="absolute h-[70%] top-1/2 translate-y-[-50%]">
+                            </div>
+                            <div class="z-10 mt-[18vh] lg:mt-[16.3vh] 2xl:mt-[17.5vh]">
+                                <h2 class="font-semibold 2xl:whitespace-nowrap">Construcții Modulare</h2>
+                                <p class="mb-[25px] mt-[30px] lg:my-[1.3vh] 2xl:my-[2.3vh]">Dorești o casă de vară sau un oficiu modern în termen scurt? Optează pentru construcți modulare din panouri sandwich.</p>
+                                <span class="lg:text-sm flex items-center gap-[10px]">Mai multe <img src="images/HOME/Arrow.webp" alt="" class="arrow inline"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="wrapper flex-[10%] flex flex-col justify-end relative z-10">
-                        <div class="z-10 mb-[50px] lg:mb-[4vh]">
-                            <p class="text-[#F74264] text-center lg:text-left">MODVIS - MODERN VISION</p>
+                </div>
+            </div>
+    
+            <div class="section fp-auto-height-responsive" id="colab">
+                <div class="header hidden lg:block"></div>
+                <div class="container lg:mt-[4.5vh] 2xl:mt-[7vh] flex flex-col">
+                    <h1 class="mb-[50px] lg:mb-0 2xl:mb-[4.5vh] text-left lg:text-center">De ce să alegi echipa noastră?</h1>
+                    <div class="hidden 2xl:block">
+                        <div class="glass">
+                            <div class="panel w-full px-[2.5vw] py-[2.7vh] overflow-hidden mb-[2.3vh] relative">
+                                <div class="circle-glass"></div>
+                                <div class="flex justify-between">
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/hamer.webp" alt="" class="h-[5.3vh]">
+                                        <h2 class="my-[2.3vh]">Experiență</h2>
+                                        <p class="text-sm">Cu o experiență de 20 de ani, garantăm construcții de înaltă calitate, cu materiale fiabile de la furnizori de încredere.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/prof.webp" alt="" class="h-[5.3vh]">
+                                        <h2 class="my-[2.3vh]">Profesionalism</h2>
+                                        <p class="text-sm">Peste 1000 de proiecte de montaj finalizate cu succes, inclusiv construcții mobile și hale de producție mari, demonstrând abilități eficiente în abordarea oricărei provocări.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/check.webp" alt="" class="h-[5.3vh]">
+                                        <h2 class="my-[2.3vh]">Garanție</h2>
+                                        <p class="text-sm">Oferim o garanție de 5 ani și înlăturăm rapid orice deficiență, în cazul improbabil în care apar.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel w-full px-[2.5vw] py-[2.7vh] overflow-hidden mb-[2.3vh] relative">
+                                <div class="circle-glass"></div>
+                                <div class="flex justify-between">
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/quality.webp" alt="" class="h-[5.3vh]">
+                                        <h2 class="my-[2.3vh]">Durabilitate</h2>
+                                        <p class="text-sm">Calitatea materialelor este esențială pentru noi, motiv pentru care efectuăm teste riguroase înainte de a lucra cu furnizorii noștri.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/list.webp" alt="" class="h-[5.3vh]">
+                                        <h2 class="my-[2.3vh] min-w-max">Termeni Respectați</h2>
+                                        <p class="text-sm">Înțelegem importanța respectării termenilor din contract, motiv pentru care ne asigurăm că satisfacem cerințele tehnice, dar și estetice.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/team.webp" alt="" class="h-[5.3vh]">
+                                        <h2 class="my-[2.3vh]">Echipă Amabilă</h2>
+                                        <p class="text-sm">Echipa noastră amabilă este mereu disponibilă să ofere suport și informații detaliate la întrebările dumneavoastră, indiferent de complexitatea acestora.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 items-center hidden lg:flex 2xl:hidden overflow-hidden w-full lg:w-[78vw] lg:ml-[-3vw]">
+                        <div class="glass carousell flex">
+                            <div class="panel w-[71vw] px-[2.5vw] py-[4.5vh] mx-[3vw] relative overflow-hidden first">
+                                <div class="circle-glass"></div>
+                                <div class="flex justify-between">
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/hamer.webp" alt="" class="h-[9.5vh]">
+                                        <h2 class="my-[2.3vh]">Experiență <h2>
+                                        <p class="text-sm">Cu o experiență de 20 de ani, garantăm construcții de înaltă calitate, cu materiale fiabile de la furnizori de încredere.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/prof.webp" alt="" class="h-[9.5vh]">
+                                        <h2 class="my-[2.3vh]">Profesionalism</h2>
+                                        <p class="text-sm">Peste 1000 de proiecte de montaj finalizate cu succes, inclusiv construcții mobile și hale de producție mari, demonstrând abilități eficiente în abordarea oricărei provocări.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/check.webp" alt="" class="h-[9.5vh]">
+                                        <h2 class="my-[2.3vh]">Garanție</h2>
+                                        <p class="text-sm">Oferim o garanție de 5 ani și înlăturăm rapid orice deficiență, în cazul improbabil în care apar.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center justify-center mt-[4.5vh] h-[40px] relative">
+                                    <div class="arrow left"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mx-[10px] active"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px]"></div>
+                                    <div class="arrow right"></div>
+                                </div>
+                            </div>
                             
-                                <div class="change-container overflow-hidden relative z-10">
-                                    <img src="images/HOME/MOD VIS.svg" id="pc" alt="" class="invisible hidden lg:block">
-                                    <img src="images/HOME/MOD VIS MOBILE.svg" id="mobile" alt="" class="invisible lg:hidden">
-                                    <div class="change absolute w-full">
-                                        <img src="images/HOME/MOD VIS.svg" alt="" class="hidden lg:block">
-                                        <img src="images/HOME/MOD VIS MOBILE.svg" alt="" class="lg:hidden">
-                                        <img src="images/HOME/HOME/RO/un webiste.png" alt="" class="hidden lg:block">
-                                        <img src="images/HOME/HOME/RO/un webiste mob.svg" alt="" class="lg:hidden">
-                                        <img src="images/HOME/BRAND IDENTITY.svg" alt="" class="hidden lg:block">
-                                        <img src="images/HOME/BRAND IDENTITY MOBILE.svg" alt="" class="lg:hidden">
-                                        <img src="images/HOME/MARKETING.svg" alt="" class="hidden lg:block">
-                                        <img src="images/HOME/MARKETING MOBILE.svg" alt="" class="lg:hidden">
-                                        <img src="images/HOME/MOD VIS.svg" alt="" class="hidden lg:block">
-                                        <img src="images/HOME/MOD VIS MOBILE.svg" alt="" class="lg:hidden">
+                            <div class="panel w-[71vw] mx-[3vw] px-[2.5vw] py-[4.5vh] relative overflow-hidden">
+                                <div class="circle-glass"></div>
+                                <div class="flex justify-between">
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/quality.webp" alt="" class="h-[9.5vh]">
+                                        <h2 class="my-[2.3vh]">Durabilitate</h2>
+                                        <p class="text-sm">Calitatea materialelor este esențială pentru noi, motiv pentru care efectuăm teste riguroase înainte de a lucra cu furnizorii noștri.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/list.webp" alt="" class="h-[9.5vh]">
+                                        <h2 class="my-[2.3vh] xl:whitespace-nowrap">Termeni Respectați</h2>
+                                        <p class="text-sm">Înțelegem importanța respectării termenilor din contract, motiv pentru care ne asigurăm că satisfacem cerințele tehnice, dar și estetice.</p>
+                                    </div>
+                                    <div class="w-[30%]">
+                                        <img src="images/HOME/COLABORARE/team.webp" alt="" class="h-[9.5vh]">
+                                        <h2 class="my-[2.3vh]">Echipă Amabilă</h2>
+                                        <p class="text-sm">Echipa noastră amabilă este mereu disponibilă să ofere suport și informații detaliate la întrebările dumneavoastră, indiferent de complexitatea acestora.</p>
                                     </div>
                                 </div>
-                           
-                            <img src="images/HOME/HOME/RO/iti dezvolta mob.svg" alt="" class="lg:hidden w-full homeTextMob">
-                            <img src="images/HOME/HOME/RO/prezenta mob.svg" alt="" class="lg:hidden w-full homeTextMob">
-                            <img src="images/HOME/HOME/RO/online mob.svg" alt="" class="lg:hidden w-full homeTextMob">
-
-                            <img src="images/HOME/HOME/RO/iti va dezvolta.png" alt="" class="w-full hidden lg:block homeText">
-                            <img src="images/HOME/HOME/RO/prezenta online.png" alt="" class="w-full hidden lg:block homeText">
-                        </div>
-                    </div>
-                    <div class="flex justify-center lg:hidden mb-[50px]">
-                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold" id="home-button">MAI MULTE</button>
-                    </div>
-                </div>
-            </section>
-
-            <section id="sales" class="h-fit lg:h-[300vh] w-screen relative z-10 mb-[75px] lg:mb-0">
-                <div class="sticky top-0 w-screen h-screen overflow-hidden hidden lg:block">
-                <img src="images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute bottom-0 left-0 hidden lg:block">
-                    <div class="flex-col items-center z-10 h-[calc(6.4vh+40px)] hidden lg:flex"><div></div></div>
-                    <div class="container mt-[20px] lg:mt-[4.5vh] 3xl:mt-[9vh] z-20 w-screen overflow-x-hidden">
-                        <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
-                            <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                            <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                                <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"></div> 
-                            </div>
-                        </div>
-                        <div class="relative z-10">    
-                            <img src="images/HOME/SALES/RO/TEXT1.png" alt="" class="mb-[2.3vh] heading left hidden lg:block 2xl:w-[80%] 3xl:w-full">
-                            <div class="flex justify-end">
-                                <img src="images/HOME/SALES/RO/TEXT2.png" alt="" class="heading hidden lg:block 2xl:w-[80%] 3xl:w-full">
-                            </div>
-
-                            <div class="my-[4.5vh] px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
-                                <p class="typing mt-[4.5vh] text-base lg:text-[1.3rem] text-justify lg:text-center">Modern Vision Studio oferă soluții originale ce reflectă identitatea unică a fiecărui beneficiar. Oferim servicii de <span class="word website">BRANDING</span> care vă distinge de competitori, servicii de <span class="font-bold">WEB-DEVELOPMENT</span> care lasă o impresie de neuitat și servicii de <span class="font-bold">MARKETING</span> care vă extind audiența. Echipa noastră vă asigură o prezență remarcabilă în mediul online.</p>
-                            </div>
-                            <div class="flex justify-center overflow-hidden mt-[4.5vh] 3xl:mt-[8vh]">
-                                <a href="javascript:setTimeout(()=>{window.location = 'RO/services.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold cursour-button page-link">VEZI SERVICIILE</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container mt-[50px] z-20 w-screen overflow-x-hidden lg:hidden">
-                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
-                        <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"></div> 
-                        </div>
-                    </div>
-                    <div class="relative z-10">                                
-                        <img src="images/HOME/SALES/RO/text1 mob.svg" alt="" class="mb-[2.3vh] headingMob left lg:hidden">
-                        <img src="images/HOME/SALES/RO/text2 mob.svg" alt="" class="headingMob lg:hidden">
-
-                        <div class="my-[4.5vh] px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
-                            <p class="mt-[4.5vh] text-justify">Modern Vision Studio oferă soluții originale ce reflectă identitatea unică a fiecărui beneficiar. Oferim servicii de <span class="word website">BRANDING</span> care vă distinge de competitori, servicii de <span class="font-bold">WEB-DEVELOPMENT</span> care lasă o impresie de neuitat și servicii de <span class="font-bold">MARKETING</span> care vă extind audiența. Echipa noastră vă asigură o prezență remarcabilă în mediul online.</p>
-                        </div>
-                        <div class="flex justify-center overflow-hidden mt-[calc(25px-.5rem)] 2xl:mt-[8vh]">
-                            <a href="javascript:setTimeout(()=>{window.location = 'RO/services.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold cursour-button active page-link">VEZI SERVICIILE</button></a>
-                        </div>
-                    </div>
-                </div>
-            </section> 
-
-            <section id="about-us" class="h-[calc(265vw+100vh)] xl:h-[calc(192vw+100vh)] 3xl:h-[calc(134vw+100vh)] w-screen relative z-10 hidden lg:block">
-                <div class="sticky top-0 h-screen w-screen overflow-hidden">
-                    <div class="flex flex-col justify-center scroll absolute top-0 left-0 h-screen">
-                        <div class="overflow-hidden absolute z-10 left-[25px] lg:left-[7.5vw] 3xl:left-[10vw] top-[calc(13.5vh+40px)]">
-                            <h1 class="leading-none heading">DE CE <span class="accent relative">MODERN VISION?</span></h1>
-                        </div>
-                        <img src="images/ABOUT US/color.png" alt="" class="absolute bottom-0 left-0 h-full w-[150vw] 3xl:w-[135vw] max-w-none">
-                        <img src="images/ABOUT US/color top.png" alt="" class="absolute top-0 right-[-5vw] h-full w-[125vw] max-w-none">
-                        <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-[8vw] bottom-[18vh]"> 
-                            <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                            <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                                <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="flex gap-[10vw] ml-[35vw] z-10">
-                            <div class="flex w-[100vw] xl:w-[77vw] 3xl:w-[58vw] translate-y-[6.5vh] h-fit relative">
-                                <div class="w-[40%] relative">
-                                    <img src="images/ABOUT US/01.png" alt="" class="absolute w-full h-full object-contain">
-                                </div>
-                                <img src="images/ABOUT US/1.png" alt="" class="absolute w-[40vw] xl:w-[33vw] -top-[120%] 3xl:-top-[170%] left-[20%] 3xl:left-[16%] one">
-                                <div class="w-[65%] h-fit z-10 overflow-hidden">
-                                    <div class="text">
-                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh] uppercase">Ne cunoaștem mai bine <br> CU CLIENTUL prin dicuții.</h1>
-                                        <p>Modern Vision crede în puterea unei <span class='font-bold'>comunicări eficiente</span>. Înțelegem că fiecare client este unic, cu propriile <span class='font-bold'>scopuri</span> și <span class='font-bold'>viziuni</span>. Prin urmare, abordarea noastră implică ascultarea activă și înțelegerea corectă a nevoilor dumneavoastră. Prin intermediul conversațiilor, stabilim o bază solidă pentru <span class='font-bold'>colaborare</span>.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex w-[105vw] xl:w-[79vw] 3xl:w-[55vw] translate-y-[25vh] h-fit relative">
-                                <div class="w-[40%] relative">
-                                    <img src="images/ABOUT US/02.png" alt="" class="absolute w-full h-full object-contain">
-                                </div>
-                                <img src="images/ABOUT US/2.png" alt="" class="absolute w-[30vw] xl:w-[23vw] -top-[120%] 3xl:-top-[175%] left-[27%] 3xl:left-[23%] two">
-                                <div class="w-[65%] h-fit z-10 overflow-hidden">
-                                    <div class="text">
-                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh] uppercase">facem totul pentru a <br> corespunde viziunii tale.</h1>
-                                        <p>Cu o atenție minuțioasă la detalii, lucrăm îndeaproape cu dumneavoastră pentru a ne asigura că rezultatul final se aliniază perfect cu<span class='font-bold'> viziunea inițială</span>. La Modern Vision, credem că dedicația față de <span class='font-bold'>soluții</span> și <span class='font-bold'>design-uri unice</span> este ceea ce atrage atenția publicului.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex w-[100vw] xl:w-[76vw] 3xl:w-[61vw] translate-y-[6.7vh] h-fit">
-                                <div class="w-[40%] relative">
-                                    <img src="images/ABOUT US/03.png" alt="" class="absolute w-full h-full object-contain">
-                                </div>
-                                <img src="images/ABOUT US/3.png" alt="" class="absolute w-[33vw] xl:w-[28vw] -bottom-[80%] 3xl:-bottom-[120%] -left-[5%] three">
-                                <img src="images/ABOUT US/4.png" alt="" class="absolute w-[18vw] xl:w-[15vw] -top-[90%] 3xl:-top-[130%] right-[15%] four">
-
-                                <div class="w-[65%] h-fit z-10 overflow-hidden">
-                                    <div class="text">
-                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh] uppercase">Obținem REZULTATE <br> & Oferim MENTENANȚĂ.</h1>
-                                        <p>Îmbinăm <span class='font-bold'>creativitatea</span> și <span class='font-bold'>strategia</span> pentru un marketing eficient care să <span class='font-bold'>stimuleze traficul</span> și să vă <span class='font-bold'>atragă publicul</span>. De asemenea, înțelegem că menținerea unei prezențe online eficiente necesită un efort continuu. De aceea, oferim servicii complete <span class='font-bold'>de întreținere</span> pentru a vă menține site-ul dvs. actualizat și sigur.</p>
-                                    </div>
+                                <div class="flex items-center justify-center mt-[4.5vh] h-[40px] relative">
+                                    <div class="arrow left"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mx-[10px]"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px] active"></div>
+                                    <div class="arrow right"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <section id="about-us-mobile" class="w-screen mb-[75px] relative lg:hidden">
-                <img src="images/ABOUT US/color mob.png" alt="" class="absolute w-full -top-1/4 left-0">
-                <div class="container overflow-hidden">
-                    <h1 class="text-center mb-[25px]">DE CE <span class="accent relative">MODERN</span> <span class="accent relative">VISION?</span></h1>
-                    <div class="carousell w-fit flex">
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container border border-[#F1F1F1] rounded-md overflow-hidden first relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/01.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/1.png" alt="" class="absolute right-0 translate-x-[15%] top-[40%] -translate-y-1/2 h-[220%]">
-                            </div>
-                            <h2 class="text-center relative uppercase">Ne cunoaștem mai bine CU CLIENTUL prin dicuții..</h2>
-                            <p class="text-justify mt-[25px] mb-[70px]">Modern Vision crede în puterea unei <span class='font-bold'>comunicări eficiente</span>. Înțelegem că fiecare client este unic, cu propriile <span class='font-bold'>scopuri</span> și <span class='font-bold'>viziuni</span>. Prin urmare, abordarea noastră implică ascultarea activă și înțelegerea corectă a nevoilor dumneavoastră. Prin intermediul conversațiilor, stabilim o bază solidă pentru <span class='font-bold'>colaborare</span>.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180  arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                    <div class="flex-1 items-center flex lg:hidden overflow-hidden w-full lg:w-[78vw] lg:ml-[-3vw]">
+                        <div class="glass mobile flex">
+                            <div class="panel w-[calc(100vw-50px)] px-[20px] py-[4.5vh] relative overflow-hidden mr-[25px] first">
+                                <div class="circle-glass"></div>
+                                <div class="flex flex-col">
+                                    <div class="w-full mb-[50px]">
+                                        <img src="images/HOME/COLABORARE/hamer.webp" alt="" class="h-[75px]">
+                                        <h2 class="mb-[25px] mt-[10px]">Experiență</h2>
+                                        <p class="text-sm">Cu o experiență de 20 de ani, garantăm construcții de înaltă calitate, cu materiale fiabile de la furnizori de încredere.</p>
                                     </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/02.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/2.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[170%]">
-                            </div>
-                            <h2 class="text-center z-10 relative uppercase">facem totul pentru a corespunde viziunii tale.</h2>
-                            <p class="text-justify mt-[50px] mb-[70px]">Cu o atenție minuțioasă la detalii, lucrăm îndeaproape cu dumneavoastră pentru a ne asigura că rezultatul final se aliniază perfect cu<span class='font-bold'> viziunea inițială</span>. La Modern Vision, credem că dedicația față de <span class='font-bold'>soluții</span> și <span class='font-bold'>design-uri unice</span> este ceea ce atrage atenția publicului.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                    <div class="w-full mb-[50px]">
+                                        <img src="images/HOME/COLABORARE/prof.webp" alt="" class="h-[75px]">
+                                        <h2 class="mb-[25px] mt-[10px]">Profesionalism</h2>
+                                        <p class="text-sm">Peste 1000 de proiecte de montaj finalizate cu succes, inclusiv construcții mobile și hale de producție mari, demonstrând abilități eficiente în abordarea oricărei provocări.</p>
                                     </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                                
+                                <div class="flex items-center justify-center h-[40px] absolute left-1/2 translate-x-[-50%] bottom-[20px]">
+                                    <div class="arrow left"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mx-[10px] active"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px]"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px]"></div>
+                                    <div class="arrow right"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] container pb-[25px] mr-[10px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/03.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/3.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[150%]">
-                            </div>
-                            <h2 class="text-center relative uppercase">Obținem REZULTATE <br> & Oferim MENTENANȚĂ.</h2>
-                            <p class="text-justify mt-[25px] mb-[70px]">Îmbinăm <span class='font-bold'>creativitatea</span> și <span class='font-bold'>strategia</span> pentru un marketing eficient care să <span class='font-bold'>stimuleze traficul</span> și să vă <span class='font-bold'>atragă publicul</span>. De asemenea, înțelegem că menținerea unei prezențe online eficiente necesită un efort continuu. De aceea, oferim servicii complete <span class='font-bold'>de întreținere</span> pentru a vă menține site-ul dvs. actualizat și sigur.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                            
+                            <div class="panel w-[calc(100vw-50px)] px-[20px] py-[4.5vh] relative overflow-hidden mr-[25px]">
+                                <div class="circle-glass"></div>
+                                <div class="flex flex-col">
+                                    <div class="w-full mb-[50px]">
+                                        <img src="images/HOME/COLABORARE/check.webp" alt="" class="h-[75px]">
+                                        <h2 class="mb-[25px] mt-[10px]">Garanție</h2>
+                                        <p class="text-sm">Oferim o garanție de 5 ani și înlăturăm rapid orice deficiență, în cazul improbabil în care apar.</p>
                                     </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right ">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container border border-[#F1F1F1] rounded-md overflow-hidden first relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/01.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/1.png" alt="" class="absolute right-0 translate-x-[15%] top-[40%] -translate-y-1/2 h-[220%]">
-                            </div>
-                            <h2 class="text-center relative uppercase">Ne cunoaștem mai bine CU CLIENTUL prin dicuții..</h2>
-                            <p class="text-justify mt-[25px] mb-[70px]">Modern Vision crede în puterea unei <span class='font-bold'>comunicări eficiente</span>. Înțelegem că fiecare client este unic, cu propriile <span class='font-bold'>scopuri</span> și <span class='font-bold'>viziuni</span>. Prin urmare, abordarea noastră implică ascultarea activă și înțelegerea corectă a nevoilor dumneavoastră. Prin intermediul conversațiilor, stabilim o bază solidă pentru <span class='font-bold'>colaborare</span>.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180  arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                    <div class="w-full mb-[50px]">
+                                        <img src="images/HOME/COLABORARE/quality.webp" alt="" class="h-[75px]">
+                                        <h2 class="mb-[25px] mt-[10px]">Durabilitate</h2>
+                                        <p class="text-sm">Calitatea materialelor este esențială pentru noi, motiv pentru care efectuăm teste riguroase înainte de a lucra cu furnizorii noștri.</p>
                                     </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                                
+                                <div class="flex items-center justify-center h-[40px] absolute left-1/2 translate-x-[-50%] bottom-[20px]">
+                                    <div class="arrow left"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mx-[10px]"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px] active"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px]"></div>
+                                    <div class="arrow right"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/02.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/2.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[170%]">
-                            </div>
-                            <h2 class="text-center z-10 relative uppercase">facem totul pentru a corespunde viziunii tale.</h2>
-                            <p class="text-justify mt-[50px] mb-[70px]">Cu o atenție minuțioasă la detalii, lucrăm îndeaproape cu dumneavoastră pentru a ne asigura că rezultatul final se aliniază perfect cu<span class='font-bold'> viziunea inițială</span>. La Modern Vision, credem că dedicația față de <span class='font-bold'>soluții</span> și <span class='font-bold'>design-uri unice</span> este ceea ce atrage atenția publicului.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+
+                            <div class="panel w-[calc(100vw-50px)] px-[20px] py-[4.5vh] relative overflow-hidden mr-[25px]">
+                                <div class="circle-glass"></div>
+                                <div class="flex flex-col">
+                                    <div class="w-full mb-[50px]">
+                                        <img src="images/HOME/COLABORARE/list.webp" alt="" class="h-[75px]">
+                                        <h2 class="mb-[25px] mt-[10px]">Termeni Respectați</h2>
+                                        <p class="text-sm">Înțelegem importanța respectării termenilor din contract, motiv pentru care ne asigurăm că satisfacem cerințele tehnice, dar și estetice.</p>
                                     </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] container pb-[25px] mr-[10px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/03.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/3.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[150%]">
-                            </div>
-                            <h2 class="text-center relative uppercase">Obținem REZULTATE <br> & Oferim MENTENANȚĂ.</h2>
-                            <p class="text-justify mt-[25px] mb-[70px]">Îmbinăm <span class='font-bold'>creativitatea</span> și <span class='font-bold'>strategia</span> pentru un marketing eficient care să <span class='font-bold'>stimuleze traficul</span> și să vă <span class='font-bold'>atragă publicul</span>. De asemenea, înțelegem că menținerea unei prezențe online eficiente necesită un efort continuu. De aceea, oferim servicii complete <span class='font-bold'>de întreținere</span> pentru a vă menține site-ul dvs. actualizat și sigur.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                    <div class="w-full mb-[50px]">
+                                        <img src="images/HOME/COLABORARE/team.webp" alt="" class="h-[75px]">
+                                        <h2 class="mb-[25px] mt-[10px]">Echipă Amabilă</h2>
+                                        <p class="text-sm">Echipa noastră amabilă este mereu disponibilă să ofere suport și informații detaliate la întrebările dumneavoastră, indiferent de complexitatea acestora.</p>
                                     </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right ">
+                                </div>
+                                
+                                <div class="flex items-center justify-center h-[40px] absolute left-1/2 translate-x-[-50%] bottom-[20px]">
+                                    <div class="arrow left"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mx-[10px]"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px]"></div>
+                                    <div class="circle border-[0.5px] border-[#F1F1F1] aspect-square h-[15px] rounded-full cursor-pointer mr-[10px] active"></div>
+                                    <div class="arrow right"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container border border-[#F1F1F1] rounded-md overflow-hidden first relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/01.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/1.png" alt="" class="absolute right-0 translate-x-[15%] top-[40%] -translate-y-1/2 h-[220%]">
-                            </div>
-                            <h2 class="text-center relative uppercase">Ne cunoaștem mai bine CU CLIENTUL prin dicuții..</h2>
-                            <p class="text-justify mt-[25px] mb-[70px]">Modern Vision crede în puterea unei <span class='font-bold'>comunicări eficiente</span>. Înțelegem că fiecare client este unic, cu propriile <span class='font-bold'>scopuri</span> și <span class='font-bold'>viziuni</span>. Prin urmare, abordarea noastră implică ascultarea activă și înțelegerea corectă a nevoilor dumneavoastră. Prin intermediul conversațiilor, stabilim o bază solidă pentru <span class='font-bold'>colaborare</span>.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180  arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
-                                    </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
-                            <div class="mb-[10px] mt-[50px] relative w-full">
-                                <img src="images/ABOUT US/02.png" alt="" class="h-[12vh]">
-                                <img src="images/ABOUT US/2.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[170%]">
-                            </div>
-                            <h2 class="text-center z-10 relative uppercase">facem totul pentru a corespunde viziunii tale.</h2>
-                            <p class="text-justify mt-[50px] mb-[70px]">Cu o atenție minuțioasă la detalii, lucrăm îndeaproape cu dumneavoastră pentru a ne asigura că rezultatul final se aliniază perfect cu<span class='font-bold'> viziunea inițială</span>. La Modern Vision, credem că dedicația față de <span class='font-bold'>soluții</span> și <span class='font-bold'>design-uri unice</span> este ceea ce atrage atenția publicului.</p>
-                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
-                                <div class="flex items-center gap-[5vw]">
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
-                                    <div class="flex gap-[2.5vw]">
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
-                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
-                                    </div>
-                                    <img src="images/ABOUT US/arrow.svg" alt="" class="arrow right">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="portfolio" class="min-h-screen w-screen h-[250vh] z-10 relative mb-0 lg:my-[13.5vh]">
-                <div class="sticky w-screen h-screen top-0 flex justify-center items-center overflow-hidden lg:overflow-visible">
-                    <img src="images/HOME/PORTFOLIO/color.png" alt="" class="absolute left-0 top-0 h-screen w-screen hidden lg:block">
-                    <img src="images/HOME/PORTFOLIO/color mob.png" alt="" class="absolute left-0 top-0 h-screen w-screen lg:hidden">
-
-                    <img src="images/HOME/PORTFOLIO/3 PLAN.png" alt="" class="plan absolute -left-[13%] bottom-0 w-[60%] hidden lg:block">
-                    <img src="images/HOME/PORTFOLIO/2 PLAN.png" alt="" class="plan absolute left-0 bottom-0 w-[105%] max-w-none hidden lg:block">
-                    <img src="images/HOME/PORTFOLIO/1 PLAN.png" alt="" class="plan absolute left-0 bottom-0 w-[90%] hidden lg:block">
-
-                    <img src="images/HOME/PORTFOLIO/2 PLAN MOB.png" alt="" class="plan absolute left-0 bottom-0 h-screen max-w-none lg:hidden">
-                    <img src="images/HOME/PORTFOLIO/1 PLAN MOB.png" alt="" class="plan absolute left-0 bottom-0 h-screen max-w-none lg:hidden">
-                
-                    <div class="flex flex-col items-center text">
-                        <div class="flex flex-col lg:flex-row wrapper space items-center lg:items-start">
-                            <h1 class="font-semibold text-[3rem] hidden lg:block">DESCOPERĂ&nbsp;</h1>
-                            <h1 class="font-semibold text-[2.3rem] leading-tight lg:hidden">DESCOPERĂ</h1>
-                            <div class="relative overflow-hidden h-[3.5rem] lg:h-[4.5rem]">
-                                <h1 class="text-[2.3rem] lg:text-[3rem] invisible">MODERN VISION.</h1>
-                                <div class="carousell absolute top-0 left-0 flex flex-col items-center lg:items-start">
-                                    <h1 class="text-[2.3rem] lg:text-[3rem] accent relative w-fit">FRUMUSEȚEA.</h1>
-                                    <h1 class="text-[2.3rem] lg:text-[3rem] accent relative">MODERN VISION.</h1>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="mt-[15px] lg:mt-0 lg:text-[1.3rem]">Explorează proiectele noastre recente..</p>
-                        <a href="javascript:setTimeout(()=>{window.location = 'RO/portfolio.html' }, 850);"><button class="py-[1.8vh] w-[15rem] lg:w-[17.5rem] rounded-lg font-['Saira'] font-semibold mt-[45px] lg:mt-[4.5vh] page-link">VEZI LUCRĂRILE NOASTRE</button></a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="relative z-10 w-screen" id="contact-us">
-                <div class="container pb-[100px] lg:pb-[9vh] w-screen overflow-x-hidden">
-                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:left-[14vw] top-[15vh] lg:top-1/2"> 
-                        <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="h-[calc(6.4vh+40px)] hidden lg:block"><div></div></div>
-
-                    <img src="images/HOME/CONTACT US/RO/TEXT1.png" alt="" class="heading w-full mt-[9vh] left hidden lg:block">
-                    <img src="images/HOME/CONTACT US/RO/TEXT2.png" alt="" class="heading w-full mt-[2.3vh] hidden lg:block">
-                    <img src="images/HOME/CONTACT US/RO/TEXT3.png" alt="" class="heading w-full mt-[2.3vh] left hidden lg:block">
-
-                    <img src="images/HOME/CONTACT US/RO/text1 mob.svg" alt="" class="headingMob w-full mt-[33vh] left lg:hidden">
-                    <img src="images/HOME/CONTACT US/RO/text2 mob.svg" alt="" class="headingMob w-full lg:hidden">
-                    <img src="images/HOME/CONTACT US/RO/text3 mob.svg" alt="" class="headingMob w-full left lg:hidden">
-                    <img src="images/HOME/CONTACT US/RO/text4 mob.svg" alt="" class="headingMob w-full lg:hidden">
-
-                    <div class="px-0 lg:px-[7.5vw] 4xl:px-[10vw] overflow-hidden">
-                        <p class="mt-[2.3vh] text-justify lg:text-center lg:text-[1.3rem]">Proiectele noastre devin o parte din noi. Dincolo de portofolii și social media, ne propunem să vă ajutăm să vă dezvoltați afacerea. Haideți să colaborăm și să atingem măreția împreună.</p>
-                    </div>
-                    <div class="flex justify-center overflow-hidden mt-[4.5vh]">
-                        <a href="javascript:setTimeout(()=>{window.location = 'RO/contacts.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Saira'] font-semibold page-link">CONTACTEAZĂ-NE</button></a>
-                    </div>
-                    <div class="h-[calc(6.4vh+40px)] hidden lg:block"><div></div></div>
-                </div>
-            </section>
-    </div>
-
-    <footer class="bg-[#0E0E0E] relative pt-[4.5vh] overflow-hidden invisible">
-        <div class="container w-full">
-            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-top-[40%] lg:right-[8vw]"> 
-                <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                    <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-[75%] left-[35%] translate-x-[-50%] translate-y-[-50%]">
-                    </div> 
-                </div>
-            </div>
-            <div class="lg:hidden mt-[190px] mb-[25px] text-center">
-                <p class="details">LET'S WORK TOGETHER</p>
-                <br>
-                <div class="flex justify-center w-full">
-                    <div class="text-center flex flex-col items-center">
-                        <p class="link w-fit cursor-pointer">modvis3@gmail.com</p>
-                        <p class="link w-fit cursor-pointer">+373 68 550 009</p>
                     </div>
                 </div>
             </div>
-            <div class="text flex w-full justify-between lg:justify-normal lg:w-1/2">
-                    <div class="w-1/3">
-                        <p class="details">FIND MORE</p>
-                        <br>
-                        <a href="">HOME</a>
-                        <br>
-                        <a href="">PORTFOLIO</a>
-                        <br>
-                        <a href="">SERVICES</a>
-                        <br>
-                        <a href="">CONTACTS</a>
+    
+            <div class="section fp-auto-height-responsive">
+                <div class="header hidden lg:block"></div>
+                <div class="container mt-[50px] lg:mt-[4.5vh] 2xl:mt-[7vh] flex flex-col">
+                    <h1 class="mb-[50px] lg:mb-[4.5vh] text-left lg:text-center">Proiectele noastre recente</h1>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-[15px] lg:gap-[10px] 2xl:gap-[25px]">
+                        <div class="card">
+                            <div class="front" style="background-image: url(images/SOLARE/PROIECTE/proiect1.webp);">
+                            </div>
+                            <div class="back"  style="background-image: url(images/SOLARE/PROIECTE/proiect1.webp);">
+                                <div class="inner text-center">
+                                    <h3 class="font-semibold tracking-wider">Casă particulară Chișinău - 10 kw</h3>
+                                    <p class="text-sm">Fotovoltaice</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="front" style="background-image: url(images/SOLARE/PROIECTE/proiect2.webp);">
+                            </div>
+                            <div class="back"  style="background-image: url(images/SOLARE/PROIECTE/proiect2.webp);">
+                                <div class="inner text-center">
+                                    <h3 class="font-semibold tracking-wider">Depozit frigorific - 70kW</h3>
+                                    <p class="text-sm">Fotovoltaice</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="front" style="background-image: url(images/SANDWICH/PROJECTS/proiecte2.webp);">
+                            </div>
+                            <div class="back"  style="background-image: url(images/SANDWICH/PROJECTS/proiecte2.webp);">
+                                <div class="inner text-center">
+                                    <h3 class="font-semibold tracking-wider">FRIGIDER FORWARD - str. Muncesti 801A - 2021</h3>
+                                    <p class="text-sm">Construcție Metalică</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="front" style="background-image: url(images/SANDWICH/PROJECTS/proiecte3.webp);">
+                            </div>
+                            <div class="back"  style="background-image: url(images/SANDWICH/PROJECTS/proiecte3.webp);">
+                                <div class="inner text-center">
+                                    <h3 class="font-semibold tracking-wider">Oficii Avis MMS - or. Hincesti - 2008</h3>
+                                    <p class="text-sm">Panouri Sandwich</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card hidden lg:block">
+                            <div class="front" style="background-image: url(images/SANDWICH/PROJECTS/proiecte5.webp);">
+                            </div>
+                            <div class="back"  style="background-image: url(images/SANDWICH/PROJECTS/proiecte5.webp);">
+                                <div class="inner text-center">
+                                    <h3 class="font-semibold tracking-wider">DEPOZIT FORWARD - str. Muncesti 801A - 2021</h3>
+                                    <p class="text-sm">Panouri Sandwich</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card hidden lg:block">
+                            <div class="front" style="background-image: url(images/SOLARE/PROIECTE/proiect6.webp);">
+                            </div>
+                            <div class="back"  style="background-image: url(images/SOLARE/PROIECTE/proiect6.webp);">
+                                <div class="inner text-center">
+                                    <h3 class="font-semibold tracking-wider">Frigider de fructe - 60kw</h3>
+                                    <p class="text-sm">Fotovoltaice</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-1/3">
-                        <p class="details">SOCIALS</p>
-                        <br>
-                        <a href="">INSTAGRAM</a>
-                        <br>
-                        <a href="">LINKEDIN</a>
-                        <br>
-                        <a href="">DRIBBBLE</a>
-                        <br>
-                        <a href="">BEHANCE</a>
+                    <div class="flex justify-center my-[25px] lg:my-[2.3vh]">
+                        <a href="RO/portfolio.html"><button class="lg:py-[2.3vh] p-[15px] lg:px-[1.6vw] bg-[#00ACBE] rounded-xl flex items-center" id="submit"> <span>Mai multe Proiecte</span> <img src="images/HOME/Arrow.webp" alt="" class="inline ml-[10px] h-[0.65rem] transition duration-300"></button></a>
                     </div>
-                    <div class="hidden lg:block w-1/3">
-                        <p class="details">LET'S WORK TOGETHER</p>
-                        <br>
-                        <p class="link w-fit">modvis3@gmail.com</p>
-                        <p class="link w-fit">+373 68 550 009</p>
+                    <div class="specs w-full lg:w-[80%] rounded-b-[10px] lg:rounded-b-none rounded-t-[10px] mx-auto bg-[#00ACBE] flex flex-col lg:flex-row flex-1 justify-center items-center gap-[5vw] py-[25px] lg:py-0">
+                        <div class="text-center">
+                            <p class="font-bold" id="surface">500 000</p>
+                            <p class="text-sm">m2 / Montați</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold" id="projects">1000+</p>
+                            <p class="text-sm">Proiecte Finisate</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold" id="years">20</p>
+                            <p class="text-sm">Experiență / Ani</p>
+                        </div>
                     </div>
-            </div>
-            <p class="pb-[10px] lg:py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
-            </div>
-            <img src="images/FOOTER/logo.png" alt="">
-        </footer>
-
-    <div class="fixed pt-[4.5vh] overflow-hidden bottom-0 footer w-screen bg-[#010101]">
-        <div class="container w-full">
-            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 top-[-15%] lg:-top-[40%] lg:right-[8vw]"> 
-                <img src="images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
-                <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
-                    <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-[75%] left-[35%] translate-x-[-50%] translate-y-[-50%]">
-                    </div> 
                 </div>
             </div>
-            <div class="lg:hidden mt-[190px] mb-[25px] text-center">
-                <p class="details">HAI SĂ COLABORĂM</p>
-                <br>
-                <div class="flex justify-center w-full">
-                    <div class="text-center flex flex-col items-center">
-                        <a href="mailto:studiomodvis@gmail.com" class="link w-fit cursor-pointer">studiomodvis@gmail.com</a>
-                        <a href="tel:+373 68 550 009" class="link w-fit cursor-pointer">+373 68 550 009</a>
+            <div class="section fp-auto-height-responsive" id="sponsors">
+                <div class="header hidden lg:block"></div>
+                <div class="circle absolute border-[2px] border-[#F1F1F1] aspect-square h-[50px] rounded-full pointer-events-none mix-blend-difference opacity-0">
+                    <img src="images/HOME/arrow2.webp" alt="" class="absolute left-[-25px] top-1/2 translate-y-[-50%] rotate-180">
+                    <img src="images/HOME/arrow2.webp" alt="" class="absolute right-[-25px] top-1/2 translate-y-[-50%]">
+                </div>
+                <div class="container mt-[50px] lg:mt-[4.5vh] 2xl:mt-[7vh] flex flex-col">
+                    <h1 class="hidden lg:block 2xl:hidden text-center">Clienții și partenerii noștri</h1>
+                    <h1 class="lg:hidden text-left">Clienții și partenerii noștri</h1>
+                    <h1 class="hidden 2xl:block text-center">Clienți și parteneri - <br> Bazele succesului nostru</h1>
+                    <div class="lg:flex-1 mt-[25px] mb-[50px] lg:my-0 lg:py-[9vh] 2xl:py-[4.5vh]">
+                        <div class="partners mt-[50px] lg:mt-0 h-full w-full overflow-x-scroll flex items-center whitespace-nowrap cursor-grab pb-[50px] lg:pb-[2.3vh] gap-[8vw] 2xl:gap-[10vw]">
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/salamer.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/farmaprim.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/avicolafloreni.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/bemol.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/b_mtest.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/international.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/cet.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/nanu.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/centruteh.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/centaur.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/cegoaltar.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/capcap.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/mf.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/tronex.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/numina.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/bimetcom.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/lapmol.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/bennet.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/orheivit.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/bosh_.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/vartely.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/suncity.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/cascad.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/metro.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                            <div class="h-full flex flex-col justify-between">
+                                <img src="images/HOME/PARTNERS/gardurimd.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                                <img src="images/HOME/PARTNERS/teraru.webp" alt="" class="object-contain h-[132px] lg:h-[12vh] 2xl:h-[15vh] max-w-none max-h-full">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="text flex w-full justify-between lg:justify-normal lg:w-1/2">
-                    <div class="w-1/3">
-                        <p class="details">MAI MULTE</p>
-                        <br>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button cursor-pointer">
-                            <a class="block invisible">ACASĂ</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a class="block">ACASĂ</a>
-                                <a>ACASĂ</a>
+                <footer class="px-[25px] lg:px-[7.5vw] flex flex-col lg:flex-row justify-between bg-[#0E0E0E] py-[50px] lg:pt-[4.5vh] lg:pb-[15px] relative rounded-t-xl lg:rounded-none">
+                    <div>
+                        <div class="flex flex-col lg:flex-row gap-[2.5vw] items-center">
+                            <img src="images/HOME/solixmark.webp" alt="" class="w-[30%] lg:w-[6.2vw] mb-[30px] lg:mb-0">
+                            <div class="flex flex-col justify-center gap-[2.3vh]">
+                                <p class="text-sm text-[#5E5E5E] mb-[15px] lg:mb-0">Pentru o ofertă individuală</p>
+                                <a href="RO/contacte.html"><button class="bg-[#212121] hover:bg-[#f1f1f1] bg-opacity-50 hover:text-[#212121] border-[0.5px] border-[#F1F1F1] border-opacity-50 text-sm w-full py-[1vh] rounded-[10px] transition duration-300">Contactează-ne</button></a>
                             </div>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
-                            <a class="block invisible">PORTFOLIO</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="javascript:setTimeout(()=>{window.location = 'RO/portfolio.html' }, 850);" class="block">PORTFOLIO</a>
-                                <a href="javascript:setTimeout(()=>{window.location = 'RO/portfolio.html' }, 850);">PORTFOLIO</a>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
-                            <a class="block invisible">SERVICII</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="javascript:setTimeout(()=>{window.location = 'RO/services.html' }, 850);" class="block">SERVICII</a>
-                                <a href="javascript:setTimeout(()=>{window.location = 'RO/services.html' }, 850);">SERVICII</a>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
-                            <a class="block invisible">CONTACTE</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="javascript:setTimeout(()=>{window.location = 'RO/contacts.html' }, 850);" class="block">CONTACTE</a>
-                                <a href="javascript:setTimeout(()=>{window.location = 'RO/contacts.html' }, 850);">CONTACTE</a>
-                            </div>
-                        </div>
+                        <p class="mt-[9vh] text-sm text-[#5E5E5E] hidden lg:block">Copyright © 2023 SOLIX All rights reserved</p>
                     </div>
-                    <div class="w-1/3">
-                        <p class="details">REȚELE</p>
-                        <br>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a href="" class="block invisible">INSTAGRAM</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="https://www.instagram.com/studio.modvis/" target="_blank" class="block">INSTAGRAM</a>
-                                <a href="https://www.instagram.com/studio.modvis/" target="_blank">INSTAGRAM</a>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a href="" class="block invisible">FACEBOOK</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="https://www.facebook.com/modvis.studio/" target="_blank" class="block">FACEBOOK</a>
-                                <a href="https://www.facebook.com/modvis.studio/" target="_blank">FACEBOOK</a>
-                            </div>
-                        </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a href="" class="block invisible">DRIBBBLE</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="https://dribbble.com/modvis" target="_blank" class="block">DRIBBBLE</a>
-                                <a href="https://dribbble.com/modvis" target="_blank">DRIBBBLE</a>
-                            </div>
-                        </div>
+                    <nav class="hidden lg:flex flex-col text-sm gap-[1vh] text-[#5E5E5E]">
+                        <a href="" class="text-[#f1f1f1]">Despre Noi</a>
+                        <a href="RO/sandwich.html">Panouri Sandwich</a>
+                        <a href="RO/fotovoltaice.html">Fotovoltaice</a>
+                        <a href="RO/modulare.html">Construcții Modulare</a>
+                        <a href="RO/portfolio.html">Portfolio</a>
+                        <a href="RO/contacte.html">Contacte</a>
+                    </nav>
+                    <div class="[&>p]:text-base lg:[&>p]:text-sm [&>p]:text-[#5E5E5E] px-[25%] lg:px-0 mt-[50px] lg:mt-0">
+                        <p class="mb-[1vh]">+373 (69) 15 07 44</p>
+                        <p class="mb-[1vh]">+373 (69) 13 11 63</p>
+                        <p class="mb-[1vh]">+373 (60) 87 13 95</p>
+                        <p class="mb-[1vh]">solixmoldova@gmail.com</p>
+                        <p>mun.Chișinău, str. Alexandru cel Bun 99</p>
                     </div>
-                    <div class="hidden lg:block w-1/3">
-                        <p class="details">HAI SĂ COLABORĂM</p>
-                        <br>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a class="block invisible">studiomodvis@gmail.com</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="mailto:studiomodvis@gmail.com" class="block">studiomodvis@gmail.com</a>
-                                <a href="mailto:studiomodvis@gmail.com" class="">studiomodvis@gmail.com</a>
-                            </div>
+                    <div class="w-[70%] lg:w-auto mx-auto lg:mx-0">
+                        <div class="flex gap-[1.8vw] mt-[50px] mb-[70px] lg:my-0 lg:w-auto justify-between">
+                            <a href="https://wa.me/+37369150744" target="_blank" class="w-[15%] lg:w-auto"><img src="images/HOME/SOCIALS/watsapp.webp" alt="" class="w-full lg:w-[2.2vw] max-w-[45px] object-contain"></a>
+                            <a href="https://www.instagram.com/solix.moldova/" target="_blank" class="w-[15%] lg:w-auto"><img src="images/HOME/SOCIALS/insta.webp" alt="" class="w-full lg:w-[2.2vw] max-w-[45px] object-contain"></a>
+                            <a href="https://www.facebook.com/solix.moldova" target="_blank" class="w-[15%] lg:w-auto"><img src="images/HOME/SOCIALS/facebook.webp" alt="" class="w-full lg:w-[2.2vw] max-w-[45px] object-contain"></a>
+                            <a href="viber://chat?number=+37369150744" target="_blank" class="w-[15%] lg:w-auto"><img src="images/HOME/SOCIALS/viber.webp" alt="" class="w-full lg:w-[2.2vw] max-w-[45px] object-contain"></a>
                         </div>
-                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
-                            <a class="block invisible">+373 68 550 009</a>
-                            <div class="transition duration-500 absolute top-0 left-0">
-                                <a href="tel:+373 68 550 009" class="block text-base">+373 68 550 009</a>
-                                <a href="tel:+373 68 550 009" class="">+373 68 550 009</a>
-                            </div>
-                        </div>
+                        <span class="text-sm text-[#5E5E5E] absolute bottom-[15px] hidden lg:block">Powered by Modern Vision <img src="images/HOME/mod.webp" alt="" class="inline"></span>
                     </div>
+                    <div class="text-center relative lg:absolute lg:left-1/2 lg:translate-x-[-50%] lg:hidden">
+                        <p class="mb-[20px] lg:mb-[2.3vh] text-sm text-[#5E5E5E]">Copyright © 2023 SOLIX All rights reserved</p>
+                        <span class="text-sm text-[#5E5E5E]">Powered by Modern Vision <img src="images/HOME/mod.webp" alt="" class="inline"></span>
+                    </div>
+                 </footer>
             </div>
-            <p class="pb-[10px] pt-[50px] lg:py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
-            </div>
-            <img src="images/FOOTER/logo.png" alt="" class="w-full" id="footer-logo">
         </div>
+    </div>
+    
 </body>
 </html>

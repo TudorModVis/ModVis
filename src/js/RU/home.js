@@ -12,7 +12,7 @@ const socialMenu = document.querySelector('.social-menu');
 const page = new fullpage('#fullpage', {
     navigation: true,
     navigationPosition: 'left',
-    navigationTooltips: ['ACASĂ', 'SERVICII', 'COLABORARE', 'PROIECTE', 'CLIENȚI'],
+    navigationTooltips: ['ГЛАВНАЯ', 'УСЛУГИ', 'КОЛЛАБОРАЦИЯ', 'ПРОЕКТЫ', 'КЛИЕНТЫ'],
     showActiveTooltip: true,
     licenseKey: 'gplv3-license',
     responsiveWidth: 1024,
@@ -46,7 +46,7 @@ const page = new fullpage('#fullpage', {
             header.classList.add('alt');
             iarba.classList.add('open');
             house.classList.add('open');
-            logo.src = 'images/logo.webp';
+            logo.src = '../images/logo.webp';
             navigationSpan.forEach(nav => nav.classList.add('white'));
             navigationText.forEach(nav => nav.classList.add('white'));
 
@@ -64,7 +64,7 @@ const page = new fullpage('#fullpage', {
 
             circleLeft.style.left = '-50vw';
             circleRight.style.right = '-50vw';
-            logo.src = 'images/logo-negru.webp';
+            logo.src = '../images/logo-negru.webp';
             navigationSpan.forEach(nav => nav.classList.remove('white'));
             navigationText.forEach(nav => nav.classList.remove('white'));
         }
@@ -359,8 +359,8 @@ pcPanels.forEach(panel => {
 })
 
 // -------- Menu -------- //
-
 const lang = document.getElementById('lang');
+
 function openMenu() {
     menu.classList.toggle('active');
 
@@ -371,7 +371,7 @@ function openMenu() {
     if (menu.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
 
-        logo.src = 'images/logo.webp';
+        logo.src = '../images/logo.webp';
         header.classList.toggle('menu');
         setTimeout(() => {
             anime({
@@ -402,7 +402,7 @@ function openMenu() {
 
         closeSection();
 
-        if (!header.classList.contains('mobile') && !header.classList.contains('alt')) logo.src = 'images/logo-negru.webp';
+        if (!header.classList.contains('mobile') && !header.classList.contains('alt')) logo.src = '../images/logo-negru.webp';
         setTimeout(() => { header.classList.toggle('menu'); }, 500)
         
         anime({
@@ -464,13 +464,13 @@ function scrollMobile() {
         circleLeft.style.left = '-150px';
         circleRight.style.right = '-150px';
         header.classList.add('mobile');
-        logo.src = 'images/logo.webp';
+        logo.src = '../images/logo.webp';
     }
     else {
         circleLeft.style.left = '-350px';
         circleRight.style.right = '-350px';
         header.classList.remove('mobile');
-        logo.src = 'images/logo-negru.webp';
+        logo.src = '../images/logo-negru.webp';
     }
 } 
 
@@ -478,11 +478,10 @@ window.addEventListener('scroll', scrollMobile);
 
 // -------- Loading -------- //
 const loadingScreens = document.querySelector('.loading');
-
 if (window.innerWidth >= 1024) {
     document.body.style.overflow = 'hidden';
     fullpage_api.setAllowScrolling(false);
-}
+  }
 
 function stopLoading() {
     setTimeout(() => {

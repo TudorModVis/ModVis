@@ -1,0 +1,87 @@
+#tipuri button.active {
+    background-color: #00ACBE;
+}
+
+#colab .carousell, #colab .mobile {
+    transition: .7s;
+}
+
+@media (min-width: 1024px) {
+    #colab .circle:hover {
+        background-color: #00ACBE;
+        transform: scale(1);
+    }
+}
+
+#colab .circle.active {
+    background-color: #00ACBE;
+    transform: scale(1);
+}
+
+#colab .circle {
+    background-color: #0E0E0E;
+}
+
+#colab .glass .panel{
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border: 0.255px solid rgba(241, 241, 241, 0.50);
+}
+
+#colab .nav-circle {
+    background-color: transparent;
+    transition: .3s;
+}
+
+#colab .nav-circle.active {
+    background-color: #00ACBE;
+}
+
+@media (min-width: 1024px) {
+    #colab .nav-circle:hover {
+        background-color: #00ACBE;
+    }
+}
+
+@media (min-width: 1024px) {
+    .building:hover .shape {
+        transform: translateX(40px) scale(1.25);
+    }    
+}
+
+.building .shape {
+    transition: .3s;
+}
+
+@media (min-width: 1024px) {
+    #colab .arrow {
+        width: 15px;
+        height: 15px;
+        border-top: 3px solid #F1F1F1;
+        border-right: 3px solid #F1F1F1;
+    }
+    
+    #colab .arrow:hover {
+        border-color: #00ACBE;
+        box-shadow: 3px -3px 0 #F1F1F1;
+    }
+
+    #colab .circle:hover {
+        background-color: #00ACBE;
+        transition: all 200ms ease;
+    }
+}
+
+#submit {
+    transition: .3s;
+  }
+  
+  #submit:hover {
+    background-color: #f1f1f1;
+    color: #00ACBE;
+  }
+  
+  #submit:hover img {
+    transform: translateX(7px);
+    filter: brightness(0) saturate(100%) invert(67%) sepia(70%) saturate(6104%) hue-rotate(154deg) brightness(99%) contrast(101%);
+  }

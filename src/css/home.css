@@ -1,188 +1,121 @@
-/* -------- Home -------- */
+/* -------- Home Shadow -------- */
 
-.circle img {
-    animation: circle 20s linear infinite;
-}
-
-/* -------- Sales -------- */
-#sales .circle{
-    transform: translateX(-50%) scale(0);
-    transform-origin: center;
-    transition: .5s ease-out;
-}
-
-#sales .circle.active {
-    transform: translateX(-50%) scale(1);
-}
-
-#sales .accent::after {
-    bottom: 5%;
-    height: 30%;
-}
-
-#about-us .circle {
-    transform: scale(0);
-    transition: .5s ease-out;
-}
-
-#contact-us .circle {
-    transform: translateX(-50%) scale(0);
-    transition: .5s ease-out;
-}
-
-#contact-us .circle.active {
-    transform: translateX(-50%) scale(1);
+#home .fp-overflow::after{
+    position: absolute;
+    content: '';
+    top: 0px;
+    height: 60%;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(47, 104, 97, 0) 100%);
 }
 
 @media (min-width: 1024px) {
-    #contact-us .circle {
-        transform: translateY(-50%) scale(0);
+    #home .fp-overflow::after{
+        top: auto;
+        left: 0;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(47, 104, 97, 0) 100%);
     }
-    
-    #contact-us .circle.active {
-        transform: translateY(-50%) scale(1);
-    }
-}
-
-#about-us .circle.active {
-    transform: scale(1);
-}
-
-#about-us .text.active {
-    transform: translateX(0);
-}
-
-#about-us-mobile .carousell {
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-#about-us-mobile .active {
-    transition: none;
 }
 
 
-#about-us-mobile .panel {
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: scaleY(.9);
-}
+/* -------- Colaboration -------- */
 
-#about-us-mobile .panel.active {
-    transform: scaleY(1);
-}
-
-#sales h1, #contact-us p, #about-us .heading {
-    transform: translateY(100%);
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-#sales h1.active, #contact-us p.active, #about-us .heading.active {
-    transform: translateY(0);
-}
-
-#sales h1.bottom {
-    transform: translateY(-100%);
-}
-
-#sales .letter{
-    display: inline-block;
-    opacity: 0;
-    margin-bottom: .5rem;
-}
-
-#sales .word {
-    font-weight: bold;
-    position: relative;
-    font-family: 'Saira';
-    font-size: 1.25rem;
-    cursor: pointer;
+#colab .carousell, #colab .mobile {
+    transition: .7s;
 }
 
 @media (min-width: 1024px) {
-    #sales .word {
-        font-size: 1.5rem;
+    #colab .arrow:hover {
+        border-color: #00ACBE;
+        box-shadow: 4px -4px 0 #F1F1F1;
     }
 }
 
-@media (min-width: 1536px) {
-    #sales .letter {
-        margin-bottom: 1rem;
+@media (min-width: 1024px) {
+    #colab .circle:hover {
+        background-color: #00ACBE;
+        transition: all 200ms ease;
     }
 }
 
-#sales button, #contact-us button  {
-    background: rgb(238,64,99);
-    background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
-    background-size: 200% 100%;
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: translateY(110%);
+/* -------- Services -------- */
+
+.service .shape {
+    transition: .8s all;
 }
 
-#sales button:hover, #portfolio button:hover,  #contact-us button:hover {
-    background-position: 100% 0;
-    transition: .5s ease-out;
+.service:hover .shape {
+    transform: scale(10);
 }
 
-#sales button.active, #contact-us button.active {
-    transform: translateY(0);
+.service .arrow {
+    transition: .5s;
 }
 
-#sales button.bottom {
-    transform: translateY(-110%);
+.service:hover .arrow {
+    transform: translateX(10px);
 }
 
 
-/* -------- Portfolio -------- */
+/* -------- Partners -------- */
 
-#portfolio .text {
-    opacity: 0;
-    scale: 0;
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+#sponsors .circle.close {
+    animation: closeCircle .5s;
 }
 
-
-#portfolio .text.active {
+#sponsors .circle.active {
+    animation: openCircle .5s;
     opacity: 1;
-    scale: 1;
 }
 
-#portfolio .plan {
-    transition: none;
+@keyframes openCircle {
+    from {transform: scale(0.3); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
 }
 
-#portfolio .plan.active {
-    transition: .15s;
+@keyframes closeCircle {
+    from {transform: scale(1); opacity: 1;}
+    to {transform: scale(0.3); opacity: 0;}
 }
 
-#portfolio button, #home button {
-    background: rgb(238,64,99);
-    background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
-    background-size: 200% 100%;
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.partners.active {
+    cursor: grabbing;
 }
 
-#portfolio .carousell {
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.partners::-webkit-scrollbar-track {
+	background-color: #5E5E5E;
+    border-top: 2px solid #1E1E1E;
+    border-bottom: 2px solid #1E1E1E;
 }
 
-#portfolio .carousell.active {
-    transform: translateY(-3.5rem);
+.partners::-webkit-scrollbar {
+	height: 6px;
+	background-color: #F5F5F5;
 }
 
-#portfolio .space {
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    margin-right: 0;
+.partners::-webkit-scrollbar-thumb {
+    background: #F1F1F1;
+    opacity: 1;
 }
 
-@media (min-width: 1024px) {
-    #portfolio .space {
-        margin-right: -4.16vw;
-    }
+.front,
+  .back{
+      min-height: 20vh;
+      height: auto;
+  }
 
-    #portfolio .carousell.active {
-        transform: translateY(-4.5rem);
-    }
-}
-
-#portfolio .space.active {
-    margin-right: 0;
-}
+  #submit {
+    transition: .3s;
+  }
+  
+  #submit:hover {
+    background-color: #f1f1f1;
+    color: #00ACBE;
+  }
+  
+  #submit:hover img {
+    transform: translateX(7px);
+    filter: brightness(0) saturate(100%) invert(67%) sepia(70%) saturate(6104%) hue-rotate(154deg) brightness(99%) contrast(101%);
+  }

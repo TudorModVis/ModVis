@@ -64,175 +64,175 @@ menuButton.addEventListener('click', openMenu);
 
 // -------- Projects Selector -------- //
 const projects = [{
-    titlu: 'Forward International - Depozit frigorific',
+    titlu: 'Forward International - Холодное хранение',
     localitate: 'Chișinău',
     suprafata: '16.000 m2',
     anul: 2021
 },
 {
-    titlu: 'Casă particulară - 11 kw',
+    titlu: 'Частный дом - 11 kw',
     localitate: 'Schinoasa',
     suprafata: '11 kW',
     anul: 2023
 },
 {
-    titlu: 'Sun City - Construcție comercială',
+    titlu: 'Sun City - Коммерческое строительство',
     localitate: 'Chișinău',
     suprafata: '1.500 m2',
     anul: 2020
 },
 {
-    titlu: 'Agropiese TGR / Master LUX - Construcție comercială',
+    titlu: 'Agropiese TGR - Коммерческое строительство',
     localitate: 'Bălți',
     suprafata: '5.000 m2',
     anul: 2007
 },
 {
-    titlu: 'Frigider pentru păstrarea fructelor - 60kW',
+    titlu: 'Холодильный склад для хранения фруктов - 60kW',
     localitate: 'Balțata',
     suprafata: '60 kW',
     anul: 2022
 },
 {
-    titlu: 'Centrul pentru Tineret și Sport - Complex sportiv',
+    titlu: 'Центр Молодежи и Спорта - Спортивный комплекс',
     localitate: 'Căușeni',
     suprafata: '6.000 m2',
     anul: 2013
 },
 {
-    titlu: 'NANU Market - Construcție comercială și Depozit',
+    titlu: 'NANU Market - Коммерческое строительство и Склад',
     localitate: 'Chișinău',
     suprafata: '8.000 m2',
     anul: 2011
 },
 {
-    titlu: 'Casă particulară - 10kW',
+    titlu: 'Частный дом - 10kW',
     localitate: 'Dumbrava',
     suprafata: '10 kW',
     anul: 2023
 },
 {
-    titlu: 'Cegoltar - Construcție  comercială și Depozit',
+    titlu: 'Cegoltar - Коммерческое строительство и Склад',
     localitate: 'Chișinău',
     suprafata: '4.000 m2',
     anul: 2020
 },
 {
-    titlu: 'Casă particulară - 7 kW',
+    titlu: 'Частный дом - 7 kW',
     localitate: 'Anenii Noi',
     suprafata: '7 kW',
     anul: 2023
 },
 {
-    titlu: 'Cap-Cap - Construcție comercială și Showroom',
+    titlu: 'Cap-Cap - Коммерческое строительство и Шоу-рум',
     localitate: 'Chișinău',
     suprafata: '3.000 m2',
     anul: 2018
 },
 {
-    titlu: 'Megapolis - Construcție comercială',
+    titlu: 'Megapolis - Коммерческое строительство',
     localitate: 'Chișinău',
     suprafata: '200 m2',
     anul: 2010
 },
 {
-    titlu: 'Piața Centru din Căușeni - Construcție comercială',
+    titlu: 'Центральная площадь в Căușeni - Коммерческое строительство',
     localitate: 'Căușeni',
     suprafata: '3.000 m2',
     anul: 2018
 },
 {
-    titlu: 'Teraru Auto Serive - Spălătorie Auto cu Service',
+    titlu: 'Teraru Auto Serive - Автомойка с Сервисом',
     localitate: 'Chișinău',
     suprafata: '1.000 m2',
     anul: 2019
 },
 {
-    titlu: 'Construcție comercială str. Igor Vieru',
+    titlu: 'Коммерческое строительство ул. Igor Vieru',
     localitate: 'Chișinău',
     suprafata: '2.000 m2',
     anul: 2012
 },
 {
-    titlu: 'Fabrica de Brichete - Spațiu de producere cu Depozit',
+    titlu: 'Фабрика зажигалок - Производственное помещение со Складом',
     localitate: 'Porumbeni',
     suprafata: '4.500 m2',
     anul: 2015
 },
 {
-    titlu: 'Avicola Floreni - Hale de păsări',
+    titlu: 'Avicola Floreni - Птицефабрики',
     localitate: 'Floreni',
     suprafata: '20.000 m2',
     anul: 2017
 },
 {
-    titlu: 'Producere confecții metalice cu Depozit',
+    titlu: 'Производство металлических изделий со Складом',
     localitate: 'Ialoveni',
     suprafata: '2.000 m2',
     anul: 2018
 },
 {
-    titlu: 'Depozit cu Complex Oficii str. Uzinelor',
+    titlu: 'Склад с Офисным комплексом ул. Uzinelor',
     localitate: 'Chișinău',
     suprafata: '1.200 m2',
     anul: 2014
 },
 {
-    titlu: 'Tronex-Com - Construcție comercială',
+    titlu: 'Tronex-Com - Коммерческое строительство',
     localitate: 'Chișinău',
     suprafata: '2.500 m2',
     anul: 2013
 },
 {
-    titlu: 'Benett-Auto Group - Service Auto cu Depozit',
+    titlu: 'Benett-Auto Group - Автосервис со Складом',
     localitate: 'Sîngera',
     suprafata: '4.000 m2',
     anul: 2010
 },
 {
-    titlu: 'Service Auto cu Spălătorie',
+    titlu: 'Автомойка с Сервисом',
     localitate: 'Nisporeni',
     suprafata: '1.800 m2',
     anul: 2018
 },
 {
-    titlu: 'Cheton Grup - Fabrică de vopsele',
+    titlu: 'Cheton Grup - Завод по производству красок',
     localitate: 'Chișinău',
     suprafata: '4.000 m2',
     anul: 2017
 },
 {
-    titlu: 'Garduri.MD - Fabrica de plase și garduri',
+    titlu: 'Garduri.MD - Завод по производству сеток и заборов',
     localitate: 'Chișinău',
     suprafata: '1.300 m2',
     anul: 2017
 },
 {
-    titlu: 'Depozit frigorific str. Varnița',
+    titlu: 'Холодильный склад ул. Varnița',
     localitate: 'Chișinău',
     suprafata: '350 m2',
     anul: 2018
 },
 {
-    titlu: 'Lapmol - Complex Oficii și Depozit frigorific',
+    titlu: 'Lapmol - Комплекс офисов и Холодный склад',
     localitate: 'Chișinău',
     suprafata: '3.500 m2',
     anul: 2015
 },
 {
-    titlu: 'Service Auto și Spălătorie',
+    titlu: 'Автомойка с Сервисом',
     localitate: 'Căușeni',
     suprafata: '1.200 m2',
     anul: 2013
 },
 {
-    titlu: 'Fabrica de cusut, confecții',
+    titlu: 'Швейная фабрика, производство одежды',
     localitate: 'Vulcănești',
     suprafata: '4.000 m2',
     anul: 2012
 },
 {
-    titlu: 'Garma Grup - Spațiu de producere',
+    titlu: 'Garma Grup - Производственное помещение',
     localitate: 'Fîrlădeni',
     suprafata: '1.500 m2',
     anul: 2012
@@ -258,21 +258,21 @@ function generateProjects() {
                     <div>
                         <div class="flex justify-between mb-[2.3vh]">
                             <div>
-                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Locație</h3>
+                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Город</h3>
                                 <p class="text-xl lg:text-base">${projects[i].localitate}</p>
                             </div>
                             <img src="../images/PORTFOLIO/ICONS/suprafata.svg" alt="" class="h-[4.5vh]">
                         </div>
                         <div class="flex justify-between mb-[2.3vh]">
                             <div>
-                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Suprafața</h3>
+                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Поверхность</h3>
                                 <p class="text-xl lg:text-base">${projects[i].suprafata}</p>
                             </div>
                             <img src="../images/PORTFOLIO/ICONS/inaltime.svg" alt="" class="h-[4.5vh]">
                         </div>
                         <div class="flex justify-between">
                             <div>
-                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Anul construcției</h3>
+                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Год постройки</h3>
                                 <p class="text-xl lg:text-base">${projects[i].anul}</p>
                             </div>
                             <img src="../images/PORTFOLIO/ICONS/calendar.svg" alt="" class="h-[4.5vh]">
@@ -296,21 +296,21 @@ function generateProjects() {
                     <div>
                         <div class="flex justify-between mb-[2.3vh]">
                             <div>
-                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Locație</h3>
+                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Город</h3>
                                 <p class="text-xl lg:text-base">${projects[i].localitate}</p>
                             </div>
                             <img src="../images/PORTFOLIO/ICONS/suprafata.svg" alt="" class="h-[4.5vh]">
                         </div>
                         <div class="flex justify-between mb-[2.3vh]">
                             <div>
-                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Suprafața</h3>
+                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Поверхность</h3>
                                 <p class="text-xl lg:text-base">${projects[i].suprafata}</p>
                             </div>
                             <img src="../images/PORTFOLIO/ICONS/inaltime.svg" alt="" class="h-[4.5vh]">
                         </div>
                         <div class="flex justify-between">
                             <div>
-                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Anul construcției</h3>
+                                <h3 class="font-bold text-2xl lg:text-base 2xl:text-xl mb-[20px] lg:mb-[2vh]">Год постройки</h3>
                                 <p class="text-xl lg:text-base">${projects[i].anul}</p>
                             </div>
                             <img src="../images/PORTFOLIO/ICONS/calendar.svg" alt="" class="h-[4.5vh]">
