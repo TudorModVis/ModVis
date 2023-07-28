@@ -1,0 +1,18 @@
+.accent::after {
+    height: 30%;
+    bottom: 7%;
+}
+
+/* -------- Website -------- */
+
+button {
+    background: rgb(238,64,99);
+    background-image: linear-gradient(to right, #EE4063, #F06F88, #EE4063);
+    background-size: 200% 100%;
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+button:hover {
+    background-position: 100% 0;
+    transition: .5s ease-out;
+}

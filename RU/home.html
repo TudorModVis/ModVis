@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModVis</title>
+    <link rel="icon" type="image/x-icon" href="../images/SVG/Logoochi.png">
+
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/home.css">
+    <link rel="stylesheet" href="../src/css/rus.css">
+
+    <script src="../src/js/libraries/anime.min.js"></script>
+    <script src="../src/js/app.js" defer></script>
+    <script src="../src/js/home.js" defer></script>
+
+</head>
+<body class="relative open-menu">
+    <div class="page-transition w-[200vw] h-full fixed top-0 bg-[#0E0E0E] z-[999]"></div>
+
+    <div class="loading w-screen h-screen fixed z-[999] flex justify-center items-center">
+        <div>
+            <img src="../images/HOME/Logo.png" alt="" class="w-[35vw] lg:hidden">
+            <video src="../images/loadingmodvis.mp4" class="w-[23.8vw] z-10 hidden lg:block" autoplay muted playsinline></video>
+        </div>
+    </div>
+
+    <div id="cursorFollow" class="fixed rounded-full bg-transparent border border-[#F1F1F1] pointer-events-none z-50 min-h-[15px] min-w-[15px] h-[1.4vh] w-[1.4vh] mix-blend-difference hidden lg:flex justify-center items-center">
+        <img src="../images/HOME/cursor servicii rus.svg" alt="" id="offer" class="h-0 max-w-none">
+        <img src="../images/HOME/cursor proiecte rus.svg" alt="" id="projects" class="h-0 max-w-none">
+        <img src="../images/HOME/cursor contacte rus.svg" alt="" id="contact-text" class="h-0 max-w-none">
+    </div>
+
+    <div class="max-w-screen min-w-screen h-full relative bg-[#0E0E0E] big-container z-10">
+        <div class="cover h-screen w-screen z-20 bg-[#0E0E0E] bg-opacity-50 fixed hidden opacity-0"></div>
+        <div class="menu fixed w-full lg:w-fit h-screen bg-[#0E0E0E] text-[#F1F1F1] z-40 flex flex-col items-center justify-between right-[-130%] px-[25px] lg:px-[5vw] pb-[10vh] lg:pb-[9vh] text-right">
+            <nav class="flex flex-col leading-none gap-[7vh] big-text">
+                <div class="relative link cursour-button cursor-pointer">
+                    <h1>ГЛАВНАЯ</h1>
+                    <a class="current">ГЛАВНАЯ</a>
+                </div>
+                <a href="javascript:setTimeout(()=>{window.location = 'portfolio.html' }, 850);" class="link page-link cursour-button">ПОРТФОЛИО</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);" class="link page-link cursour-button">УСЛУГИ</a>
+                <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);" class="link page-link cursour-button">КОНТАКТЫ</a>
+            </nav>
+            <div class="social flex gap-[25px] lg:gap-[2.5vw]">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
+                    <a class="block invisible">INSTAGRAM</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="https://www.instagram.com/studio.modvis/" target="_blank" class="block">INSTAGRAM</a>
+                        <a href="https://www.instagram.com/studio.modvis/" target="_blank" >INSTAGRAM</a>
+                    </div>
+                </div>
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
+                    <a class="block invisible">FACEBOOK</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="https://www.facebook.com/modvis.studio/" target="_blank" class="block">FACEBOOK</a>
+                        <a href="https://www.facebook.com/modvis.studio/" target="_blank">FACEBOOK</a>
+                    </div>
+                </div>
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
+                    <a class="block invisible">DRIBBBLE</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="https://dribbble.com/modvis" target="_blank" class="block">DRIBBBLE</a>
+                        <a href="https://dribbble.com/modvis" target="_blank">DRIBBBLE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <header class="flex items-center justify-center translate-y-[20px] lg:translate-y-[40px] w-[calc(100vw-50px)] lg:w-[90vw] mx-[25px] lg:mx-[5vw] fixed z-50">
+            <div class="languages absolute top-1/2 translate-y-[-50%] left-[-50%] opacity-0 lg:opacity-100 lg:left-0 flex gap-[25px] z-10">
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
+                    <a class="block invisible">EN</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="javascript:setTimeout(()=>{window.location = '../ENG/home.html' }, 850);" class="block page-link">EN</a>
+                        <a href="javascript:setTimeout(()=>{window.location = '../ENG/home.html' }, 850);" class="page-link">EN</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
+                    <a class="block invisible">RO</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="javascript:setTimeout(()=>{window.location = '../index.html' }, 850);" class="block page-link">RO</a>
+                        <a href="javascript:setTimeout(()=>{window.location = '../index.html' }, 850);" class="page-link">RO</a>
+                    </div>
+                </div>
+                
+                <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative cursour-button">
+                    <a href="" class="text-[#F74264] font-bold invisible block">РУ</a>
+                    <div class="transition duration-500 absolute top-0 left-0">
+                        <a href="" class="text-[#F74264] font-bold block">РУ</a>
+                        <a href="" class="text-[#F74264] font-bold">РУ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-btn absolute right-0 z-20 flex flex-col items-end top-1/2 translate-y-[-50%] cursour-button">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <span class="absolute w-[50px] h-[20px] left-0 cursor-pointer"></span>
+            </div>
+            <div class="h-[6.4vh] max-h-[70px] overflow-hidden logo cursour-button cursor-pointer">
+                <div class="transition duration-500">
+                    <a class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px] mb-[10%]"><img src="../images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                    <a class="flex justify-center items-center z-10 h-[6.4vh] max-h-[70px]"><img src="../images/HOME/Logo.png" alt="" class="h-full w-auto mix-blend-overlay"></a>
+                </div>
+            </div>
+        </header>        
+
+            <section id="home" class="lg:min-h-screen w-screen h-screen z-10 relative lg:overflow-hidden">
+                <img src="../images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute top-0 left-0 -z-10 hidden lg:block">
+                <img src="../images/HOME/HOME/color mob.png" alt="" class="h-[200vh] max-w-none w-full absolute top-0 left-0 -z-10 lg:hidden">
+                <div class="container flex flex-col h-screen relative z-10">
+                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] lg:left-auto translate-y-[-50%] top-[35vh] lg:top-[50vh] lg:right-[-3%]"> 
+                        <img src="../images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="wrapper flex-[10%] flex flex-col justify-end relative z-10">
+                        <div class="z-10 mb-[50px] lg:mb-[4vh]">
+                            <p class="text-[#F74264] text-center lg:text-left">MODVIS - MODERN VISION</p>
+                            
+                                <div class="change-container overflow-hidden relative z-10">
+                                    <img src="../images/HOME/MOD VIS.svg" id="pc" alt="" class="invisible hidden lg:block">
+                                    <img src="../images/HOME/MOD VIS MOBILE.svg" id="mobile" alt="" class="invisible lg:hidden">
+                                    <div class="change absolute w-full">
+                                        <img src="../images/HOME/HOME/RU/modvis.png" alt="" class="hidden lg:block">
+                                        <img src="../images/HOME/HOME/RU/modvis mob.svg" alt="" class="lg:hidden">
+                                        <img src="../images/HOME/HOME/RU/website.png" alt="" class="hidden lg:block">
+                                        <img src="../images/HOME/HOME/RU/website mob.svg" alt="" class="lg:hidden">
+                                        <img src="../images/HOME/HOME/RU/branding.png" alt="" class="hidden lg:block">
+                                        <img src="../images/HOME/HOME/RU/branding mob.svg" alt="" class="lg:hidden">
+                                        <img src="../images/HOME/HOME/RU/marketing.png" alt="" class="hidden lg:block">
+                                        <img src="../images/HOME/HOME/RU/marketing mob.svg" alt="" class="lg:hidden">
+                                        <img src="../images/HOME/HOME/RU/modvis.png" alt="" class="hidden lg:block">
+                                        <img src="../images/HOME/HOME/RU/modvis mob.svg" alt="" class="lg:hidden">
+                                    </div>
+                                </div>
+                           
+                            <img src="../images/HOME/HOME/RU/povisit mob.svg" alt="" class="lg:hidden w-full homeTextMob">
+                            <img src="../images/HOME/HOME/RU/vashu mob.svg" alt="" class="lg:hidden w-full homeTextMob">
+                            <img src="../images/HOME/HOME/RU/auditoriu mob.svg" alt="" class="lg:hidden w-full homeTextMob">
+
+                            <img src="../images/HOME/HOME/RU/povisit vasu.png" alt="" class="w-full hidden lg:block homeText">
+                            <img src="../images/HOME/HOME/RU/auditoriu.png" alt="" class="w-full hidden lg:block homeText">
+                        </div>
+                    </div>
+                    <div class="flex justify-center lg:hidden mb-[50px]">
+                        <button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Play'] font-semibold" id="home-button">БОЛЬШЕ</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sales" class="h-fit lg:h-[300vh] w-screen relative z-10 mb-[75px] lg:mb-0">
+                <div class="sticky top-0 w-screen h-screen overflow-hidden hidden lg:flex flex-col">
+                    <img src="../images/HOME/HOME/color.png" alt="" class="h-[200vh] max-w-none absolute bottom-0 left-0 hidden lg:block">
+                        <div class="flex-col items-center z-10 h-[calc(6.4vh+40px)] hidden lg:flex"><div></div></div>
+                        <div class="container mt-[20px] lg:mt-[4.5vh] 3xl:mt-[9vh] z-20 w-screen overflow-hidden flex flex-col flex-1">
+                            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
+                                <img src="../images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                                <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                                    <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"></div> 
+                                </div>
+                            </div>
+                            <div class="relative z-10 flex flex-col h-full">    
+                                <img src="../images/HOME/SALES/RU/text1 rus.png" alt="" class="mb-[2.3vh] heading left hidden lg:block w-[80%] 3xl:w-full">
+                            <div class="flex justify-end">
+                                <img src="../images/HOME/SALES/RU/text2 rus.png" alt="" class="heading hidden lg:block w-[80%] 3xl:w-full">
+                            </div>
+    
+                                <div class="flex flex-col flex-1 justify-center overflow-visible">
+                                        <div class=" px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
+                                            <p class="typing mt-[4.5vh] text-base lg:text-[1.3rem] text-justify lg:text-center">Студия Modern Vision предлагает свежие решения, отражающие индивидуальность каждого клиента. Мы предлагаем <span class="word website">БРЕНДИНГ</span>, который выделит вас среди конкурентов, <span class="font-bold">ВЕБ-РАЗРАБОТКА</span> которая оставит длительное впечатление, и <span class="font-bold">МАРКЕТИНГ</span> который расширит охват вашей аудитории. Наша команда гарантирует заметное присутствие в цифровом мире.</p>
+                                        </div>
+                                        <div class="flex justify-center overflow-hidden my-[2.3vh] xl:my-[4.5vh] 3xl:my-[4vh]">
+                                            <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Play'] font-semibold cursour-button page-link">НАШИ УСЛУГИ</button></a>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                <div class="container mt-[50px] z-20 w-screen overflow-x-hidden lg:hidden">
+                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 translate-x-[-50%] bottom-[12vh]"> 
+                        <img src="../images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"></div> 
+                        </div>
+                    </div>
+                    <div class="relative z-10">                                
+                        <img src="../images/HOME/SALES/RU/text1 mob.svg" alt="" class="mb-[2.3vh] headingMob left lg:hidden">
+                        <img src="../images/HOME/SALES/RU/text2 mob.svg" alt="" class="headingMob lg:hidden">
+
+                        <div class="my-[4.5vh] px-0 lg:px-[7.5vw] 4xl:px-[10vw]">
+                            <p class="mt-[4.5vh] text-justify">Студия Modern Vision предлагает свежие решения, отражающие индивидуальность каждого клиента. Мы предлагаем <span class="word website">БРЕНДИНГ</span>, который выделит вас среди конкурентов, <span class="font-bold">ВЕБ-РАЗРАБОТКА</span> которая оставит длительное впечатление, и <span class="font-bold">МАРКЕТИНГ</span> который расширит охват вашей аудитории. Наша команда гарантирует заметное присутствие в цифровом мире.</p>
+                        </div>
+                        <div class="flex justify-center overflow-hidden mt-[calc(25px-.5rem)] 2xl:mt-[8vh]">
+                            <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Play'] font-semibold cursour-button active">НАШИ УСЛУГИ</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+
+            <section id="about-us" class="h-[calc(280vw+100vh)] xl:h-[calc(207vw+100vh)] 2xl:h-[calc(202vw+100vh)] 3xl:h-[calc(153vw+100vh)] w-screen relative z-10 hidden lg:block">
+                <div class="sticky top-0 h-screen w-screen overflow-hidden">
+                    <div class="flex flex-col justify-center scroll absolute top-0 left-0 h-screen">
+                        <div class="overflow-hidden absolute z-10 left-[25px] lg:left-[7.5vw] 3xl:left-[10vw] top-[calc(13.5vh+40px)]">
+                            <h1 class="leading-none heading">ПОЧЕМУ <span class="accent relative">MODERN VISION?</span></h1>
+                        </div>
+                        <img src="../images/ABOUT US/color.png" alt="" class="absolute bottom-0 left-0 h-full w-[150vw] 3xl:w-[135vw] max-w-none">
+                        <img src="../images/ABOUT US/color top.png" alt="" class="absolute top-0 right-[-5vw] h-full w-[125vw] max-w-none">
+                        <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-[8vw] bottom-[18vh]"> 
+                            <img src="../images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                            <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                                <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="flex gap-[10vw] ml-[35vw] z-10">
+                            <div class="flex w-[100vw] xl:w-[77vw] 3xl:w-[58vw] translate-y-[6.5vh] h-fit relative">
+                                <div class="w-[40%] relative">
+                                    <img src="../images/ABOUT US/01.png" alt="" class="absolute h-full right-0 top-0">
+                                </div>
+                                <img src="../images/ABOUT US/1.png" alt="" class="absolute w-[40vw] xl:w-[33vw] -top-[120%] 3xl:-top-[170%] left-[20%] 3xl:left-[16%] one">
+                                <div class="w-[65%] h-fit z-10 overflow-hidden">
+                                    <div class="text">
+                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh] uppercase">мы верим в силу <br> общения с клиентом.</h1>
+                                        <p>Modern Vision верит в силу <span class='font-bold'>эффективной коммуникации</span>. Мы понимаем, что каждый клиент уникален, со <span class='font-bold'>своими целями</span> и <span class='font-bold'>видением</span>. Наш подход заключается в том, чтобы активно слушать и по-настоящему вникать в ваши потребности. В ходе бесед мы закладываем прочный фундамент для  <span class='font-bold'>сотрудничества</span>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex w-[90vw] xl:w-[65vw] 3xl:w-[55vw] translate-y-[25vh] h-fit relative">
+                                <div class="w-[40%] relative">
+                                    <img src="../images/ABOUT US/02.png" alt="" class="absolute h-full right-0 top-0">
+                                </div>
+                                <img src="../images/ABOUT US/2.png" alt="" class="absolute w-[30vw] xl:w-[23vw] -top-[120%] 3xl:-top-[175%] left-[27%] 3xl:left-[23%] two">
+                                <div class="w-[65%] h-fit z-10 overflow-hidden">
+                                    <div class="text">
+                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh] uppercase">Мы соответствуем <br> вашему видению.</h1>
+                                        <p>Внимательно относясь к деталям, мы работаем в сотрудничестве с вами, чтобы конечный результат полностью соответствовал<span class='font-bold'> вашему видению</span>. В Modern Vision мы считаем, что стремление к <span class='font-bold'>уникальным решениям</span> и <span class='font-bold'>дизайну</span> - это то, что привлекает <span class='font-bold'>внимание публики</span>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex w-[130vw] xl:w-[105vw] 2xl:w-[100vw] 3xl:w-[80vw] translate-y-[6.7vh] h-fit">
+                                <div class="w-[40%] relative">
+                                    <img src="../images/ABOUT US/03.png" alt="" class="absolute h-full right-0 top-0">
+                                </div>
+                                <img src="../images/ABOUT US/3.png" alt="" class="absolute w-[33vw] xl:w-[28vw] -bottom-[80%] 3xl:-bottom-[120%] -left-[5%] three">
+                                <img src="../images/ABOUT US/4.png" alt="" class="absolute w-[18vw] xl:w-[15vw] -top-[90%] 3xl:-top-[130%] right-[15%] four">
+
+                                <div class="w-[65%] h-fit z-10 overflow-hidden">
+                                    <div class="text">
+                                        <h1 class="text-[3rem] font-semibold leading-none mb-[2.3vh] uppercase">добиваемся РЕЗУЛЬТАТОВ <br> & предлагаем обслуживание.</h1>
+                                        <p>Мы объединяем <span class='font-bold'>творческий</span> подход и <span class='font-bold'>стратегию</span> для эффективного маркетинга, который <span class='font-bold'>увеличивает трафик</span> и <span class='font-bold'>вовлекает</span> аудиторию. Мы также понимаем, что поддержание присутствия в сети требует постоянных усилий. Поэтому мы предлагаем <span class='font-bold'>комплексные услуги</span> по техническому обслуживанию, чтобы поддерживать ваш сайт в рабочем и безопасном состоянии.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about-us-mobile" class="w-screen mb-[75px] relative lg:hidden">
+                <img src="../images/ABOUT US/color mob.png" alt="" class="absolute w-full -top-1/4 left-0">
+                <div class="container overflow-hidden">
+                    <h1 class="text-center mb-[25px]">ПОЧЕМУ <span class="accent relative">MODERN</span> <span class="accent relative">VISION?</span></h1>
+                    <div class="carousell w-fit flex">
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container border border-[#F1F1F1] rounded-md overflow-hidden first relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/01.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/1.png" alt="" class="absolute right-0 translate-x-[15%] top-[40%] -translate-y-1/2 h-[220%]">
+                            </div>
+                            <h2 class="text-center relative uppercase">мы верим в силу общения с клиентом.</h2>
+                            <p class="text-justify mt-[25px] mb-[70px]">Modern Vision верит в силу <span class='font-bold'>эффективной коммуникации</span>. Мы понимаем, что каждый клиент уникален, со <span class='font-bold'>своими целями</span> и <span class='font-bold'>видением</span>. Наш подход заключается в том, чтобы активно слушать и по-настоящему вникать в ваши потребности. В ходе бесед мы закладываем прочный фундамент для  <span class='font-bold'>сотрудничества</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180  arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/02.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/2.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[170%]">
+                            </div>
+                            <h2 class="text-center z-10 relative uppercase">Мы соответствуем вашему видению.</h2>
+                            <p class="text-justify mt-[50px] mb-[70px]">Внимательно относясь к деталям, мы работаем в сотрудничестве с вами, чтобы конечный результат полностью соответствовал<span class='font-bold'> вашему видению</span>. В Modern Vision мы считаем, что стремление к <span class='font-bold'>уникальным решениям</span> и <span class='font-bold'>дизайну</span> - это то, что привлекает <span class='font-bold'>внимание публики</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] container pb-[25px] mr-[10px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/03.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/3.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[150%]">
+                            </div>
+                            <h2 class="text-center relative uppercase">добиваемся РЕЗУЛЬТАТОВ <br> & предлагаем обслуживание.</h2>
+                            <p class="text-justify mt-[25px] mb-[70px]">Мы объединяем <span class='font-bold'>творческий</span> подход и <span class='font-bold'>стратегию</span> для эффективного маркетинга, который <span class='font-bold'>увеличивает трафик</span> и <span class='font-bold'>вовлекает</span> аудиторию. Мы также понимаем, что поддержание присутствия в сети требует постоянных усилий. Поэтому мы предлагаем <span class='font-bold'>комплексные услуги</span> по техническому обслуживанию, чтобы поддерживать ваш сайт в рабочем и безопасном состоянии.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container border border-[#F1F1F1] rounded-md overflow-hidden first relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/01.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/1.png" alt="" class="absolute right-0 translate-x-[15%] top-[40%] -translate-y-1/2 h-[220%]">
+                            </div>
+                            <h2 class="text-center relative uppercase">мы верим в силу общения с клиентом.</h2>
+                            <p class="text-justify mt-[25px] mb-[70px]">Modern Vision верит в силу <span class='font-bold'>эффективной коммуникации</span>. Мы понимаем, что каждый клиент уникален, со <span class='font-bold'>своими целями</span> и <span class='font-bold'>видением</span>. Наш подход заключается в том, чтобы активно слушать и по-настоящему вникать в ваши потребности. В ходе бесед мы закладываем прочный фундамент для  <span class='font-bold'>сотрудничества</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180  arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/02.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/2.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[170%]">
+                            </div>
+                            <h2 class="text-center z-10 relative uppercase">Мы соответствуем вашему видению.</h2>
+                            <p class="text-justify mt-[50px] mb-[70px]">Внимательно относясь к деталям, мы работаем в сотрудничестве с вами, чтобы конечный результат полностью соответствовал<span class='font-bold'> вашему видению</span>. В Modern Vision мы считаем, что стремление к <span class='font-bold'>уникальным решениям</span> и <span class='font-bold'>дизайну</span> - это то, что привлекает <span class='font-bold'>внимание публики</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] container pb-[25px] mr-[10px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/03.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/3.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[150%]">
+                            </div>
+                            <h2 class="text-center relative uppercase">добиваемся РЕЗУЛЬТАТОВ <br> & предлагаем обслуживание.</h2>
+                            <p class="text-justify mt-[25px] mb-[70px]">Мы объединяем <span class='font-bold'>творческий</span> подход и <span class='font-bold'>стратегию</span> для эффективного маркетинга, который <span class='font-bold'>увеличивает трафик</span> и <span class='font-bold'>вовлекает</span> аудиторию. Мы также понимаем, что поддержание присутствия в сети требует постоянных усилий. Поэтому мы предлагаем <span class='font-bold'>комплексные услуги</span> по техническому обслуживанию, чтобы поддерживать ваш сайт в рабочем и безопасном состоянии.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container border border-[#F1F1F1] rounded-md overflow-hidden first relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/01.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/1.png" alt="" class="absolute right-0 translate-x-[15%] top-[40%] -translate-y-1/2 h-[220%]">
+                            </div>
+                            <h2 class="text-center relative uppercase">мы верим в силу общения с клиентом.</h2>
+                            <p class="text-justify mt-[25px] mb-[70px]">Modern Vision верит в силу <span class='font-bold'>эффективной коммуникации</span>. Мы понимаем, что каждый клиент уникален, со <span class='font-bold'>своими целями</span> и <span class='font-bold'>видением</span>. Наш подход заключается в том, чтобы активно слушать и по-настоящему вникать в ваши потребности. В ходе бесед мы закладываем прочный фундамент для  <span class='font-bold'>сотрудничества</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180  arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel bg-[#0E0E0E] w-[calc(100vw-50px)] mr-[10px] container pb-[25px] border border-[#F1F1F1] rounded-md overflow-hidden relative">
+                            <div class="mb-[10px] mt-[50px] relative w-full">
+                                <img src="../images/ABOUT US/02.png" alt="" class="h-[12vh]">
+                                <img src="../images/ABOUT US/2.png" alt="" class="absolute right-0 translate-x-[5%] top-[40%] -translate-y-1/3 h-[170%]">
+                            </div>
+                            <h2 class="text-center z-10 relative uppercase">Мы соответствуем вашему видению.</h2>
+                            <p class="text-justify mt-[50px] mb-[70px]">Внимательно относясь к деталям, мы работаем в сотрудничестве с вами, чтобы конечный результат полностью соответствовал<span class='font-bold'> вашему видению</span>. В Modern Vision мы считаем, что стремление к <span class='font-bold'>уникальным решениям</span> и <span class='font-bold'>дизайну</span> - это то, что привлекает <span class='font-bold'>внимание публики</span>.</p>
+                            <div class="flex justify-center absolute bottom-[25px] left-1/2 -translate-x-1/2">
+                                <div class="flex items-center gap-[5vw]">
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="rotate-180 arrow left">
+                                    <div class="flex gap-[2.5vw]">
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] "></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1] bg-[#F1F1F1]"></div>
+                                        <div class="circle w-[15px] h-[15px] rounded-full border border-[#F1F1F1]"></div>
+                                    </div>
+                                    <img src="../images/ABOUT US/arrow.svg" alt="" class="arrow right">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            
+            <section id="portfolio" class="min-h-screen w-screen h-[250vh] z-10 relative mb-0 lg:my-[13.5vh]">
+                <div class="sticky w-screen h-screen top-0 flex justify-center items-center overflow-hidden lg:overflow-visible">
+                    <img src="../images/HOME/PORTFOLIO/color.png" alt="" class="absolute left-0 top-0 h-screen w-screen hidden lg:block">
+                    <img src="../images/HOME/PORTFOLIO/color mob.png" alt="" class="absolute left-0 top-0 h-screen w-screen lg:hidden">
+
+                    <img src="../images/HOME/PORTFOLIO/3 PLAN.png" alt="" class="plan absolute -left-[13%] bottom-0 w-[60%] hidden lg:block">
+                    <img src="../images/HOME/PORTFOLIO/2 PLAN.png" alt="" class="plan absolute left-[-5vw] bottom-[-5vh] w-[110vw] h-[110vh] object-cover max-w-none hidden lg:block">
+                    <img src="../images/HOME/PORTFOLIO/1 PLAN.png" alt="" class="plan absolute left-[-5vw] bottom-[-5vh] w-[110vw] h-[110vh] object-cover max-w-none hidden lg:block">
+
+                    <img src="../images/HOME/PORTFOLIO/2 PLAN MOB.png" alt="" class="plan absolute left-0 bottom-0 h-screen max-w-none min-w-full object-cover lg:hidden">
+                    <img src="../images/HOME/PORTFOLIO/1 PLAN MOB.png" alt="" class="plan absolute left-0 bottom-0 h-screen max-w-none min-w-full object-cover lg:hidden">
+                
+                    <div class="flex flex-col items-center text">
+                        <div class="flex flex-col lg:flex-row wrapper space items-center lg:items-start">
+                            <h1 class="font-semibold text-[3rem] hidden lg:block">УЗНАЙ&nbsp;</h1>
+                            <h1 class="font-semibold text-[2.3rem] leading-tight lg:hidden">УЗНАЙ</h1>
+                            <div class="relative overflow-hidden h-[3.5rem] lg:h-[4.5rem]">
+                                <h1 class="text-[2.3rem] lg:text-[3rem] invisible">О MODERN VISION.</h1>
+                                <div class="carousell absolute top-0 left-0 flex flex-col items-center lg:items-start">
+                                    <h1 class="text-[2.3rem] lg:text-[3rem] accent relative w-fit">НАШУ КРАСОТУ.</h1>
+                                    <h1 class="text-[2.3rem] lg:text-[3rem] accent relative">О MODERN VISION.</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-[15px] lg:mt-0 lg:text-[1.3rem]">Ознакомьтесь с нашими недавними проектами.</p>
+                        <a href="javascript:setTimeout(()=>{window.location = 'portfolio.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Play'] font-semibold mt-[45px] lg:mt-[4.5vh] page-link">ПОСМОТРЕТЬ РАБОТЫ</button></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative z-10 w-screen" id="contact-us">
+                <div class="container pb-[100px] lg:pb-[9vh] w-screen overflow-x-hidden">
+                    <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:left-[14vw] top-[15vh] lg:top-1/2"> 
+                        <img src="../images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                        <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                            <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="h-[calc(6.4vh+40px)] hidden lg:block"><div></div></div>
+
+                    <img src="../images/HOME/CONTACT US/RU/TEXT1.png" alt="" class="heading w-full mt-[9vh] left hidden lg:block">
+                    <img src="../images/HOME/CONTACT US/RU/TEXT2.png" alt="" class="heading w-full mt-[2.3vh] hidden lg:block">
+                    <img src="../images/HOME/CONTACT US/RU/TEXT3.png" alt="" class="heading w-full mt-[2.3vh] left hidden lg:block">
+
+                    <img src="../images/HOME/CONTACT US/RU/text1 mob.svg" alt="" class="headingMob w-full mt-[33vh] left lg:hidden">
+                    <img src="../images/HOME/CONTACT US/RU/text2 mob.svg" alt="" class="headingMob w-full lg:hidden">
+                    <img src="../images/HOME/CONTACT US/RU/text3 mob.svg" alt="" class="headingMob w-full left lg:hidden">
+                    <img src="../images/HOME/CONTACT US/RU/text4 mob.svg" alt="" class="headingMob w-full lg:hidden">
+
+                    <div class="px-0 lg:px-[7.5vw] 4xl:px-[10vw] overflow-hidden">
+                        <p class="mt-[2.3vh] text-justify lg:text-center lg:text-[1.3rem]">Наши проекты становятся частью нас самих. Вместо портфолио или социальных сетей, мы стремимся содействовать развитию вашего бизнеса. Давайте сотрудничать и достигать успехов вместе.</p>
+                    </div>
+                    <div class="flex justify-center overflow-hidden mt-[4.5vh]">
+                        <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);"><button class="py-[1.8vh] w-[14rem] lg:w-[16.5rem] rounded-lg font-['Play'] font-semibold page-link">КОНТАКТЫ</button></a>
+                    </div>
+                    <div class="h-[calc(6.4vh+40px)] hidden lg:block"><div></div></div>
+                </div>
+            </section>
+    </div>
+
+    <footer class="bg-[#0E0E0E] relative pt-[4.5vh] overflow-hidden invisible">
+        <div class="container w-full">
+            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-top-[40%] lg:right-[8vw]"> 
+                <img src="../images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                    <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-[75%] left-[35%] translate-x-[-50%] translate-y-[-50%]">
+                    </div> 
+                </div>
+            </div>
+            <div class="lg:hidden mt-[190px] mb-[25px] text-center">
+                <p class="details">LET'S WORK TOGETHER</p>
+                <br>
+                <div class="flex justify-center w-full">
+                    <div class="text-center flex flex-col items-center">
+                        <p class="link w-fit cursor-pointer">modvis3@gmail.com</p>
+                        <p class="link w-fit cursor-pointer">+373 68 550 009</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text flex w-full justify-between lg:justify-normal lg:w-1/2">
+                    <div class="w-1/3">
+                        <p class="details">FIND MORE</p>
+                        <br>
+                        <a href="">HOME</a>
+                        <br>
+                        <a href="">PORTFOLIO</a>
+                        <br>
+                        <a href="">SERVICES</a>
+                        <br>
+                        <a href="">CONTACTS</a>
+                    </div>
+                    <div class="w-1/3">
+                        <p class="details">SOCIALS</p>
+                        <br>
+                        <a href="">INSTAGRAM</a>
+                        <br>
+                        <a href="">LINKEDIN</a>
+                        <br>
+                        <a href="">DRIBBBLE</a>
+                        <br>
+                        <a href="">BEHANCE</a>
+                    </div>
+                    <div class="hidden lg:block w-1/3">
+                        <p class="details">LET'S WORK TOGETHER</p>
+                        <br>
+                        <p class="link w-fit">modvis3@gmail.com</p>
+                        <p class="link w-fit">+373 68 550 009</p>
+                    </div>
+            </div>
+            <p class="pb-[10px] lg:py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
+            </div>
+            <img src="../images/FOOTER/logo.png" alt="">
+        </footer>
+
+    <div class="fixed pt-[4.5vh] overflow-hidden bottom-0 footer w-screen bg-[#010101]">
+        <div class="container w-full">
+            <div class="circle absolute w-[65vw] lg:w-[27vw] aspect-square bg-[#F1F1F1] rounded-full opacity-20 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 top-[-15%] lg:-top-[40%] lg:right-[8vw]"> 
+                <img src="../images/HOME/textpath.svg" alt="" class="min-w-[136%] aspect-square absolute left-[-18%] top-[-18%]">
+                <div class="eye w-[85%] aspect-square rounded-full bg-[#F74264] border-[15px] border-[#0E0E0E] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"> 
+                    <div class="pupil w-[34%] bg-[#212121] aspect-square rounded-full absolute top-[75%] left-[35%] translate-x-[-50%] translate-y-[-50%]">
+                    </div> 
+                </div>
+            </div>
+            <div class="lg:hidden mt-[190px] mb-[25px] text-center">
+                <p class="details">КОНТАКТЫ</p>
+                <br>
+                <div class="flex justify-center w-full">
+                    <div class="text-center flex flex-col items-center">
+                        <p class="link w-fit cursor-pointer">studiomodvis@gmail.com</p>
+                        <p class="link w-fit cursor-pointer">+373 68 550 009</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text flex w-full justify-between lg:justify-normal lg:w-1/2">
+                    <div class="w-1/3">
+                        <p class="details">БОЛЬШЕ</p>
+                        <br>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button cursor-pointer">
+                            <a class="block invisible">ГЛАВНАЯ</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a class="block">ГЛАВНАЯ</a>
+                                <a>ГЛАВНАЯ</a>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
+                            <a class="block invisible">ПОРТФОЛИО</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="javascript:setTimeout(()=>{window.location = 'portfolio.html' }, 850);" class="block">ПОРТФОЛИО</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'portfolio.html' }, 850);">ПОРТФОЛИО</a>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
+                            <a class="block invisible">УСЛУГИ</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);" class="block">УСЛУГИ</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'services.html' }, 850);">УСЛУГИ</a>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button page-link">
+                            <a class="block invisible">КОНТАКТЫ</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);" class="block">КОНТАКТЫ</a>
+                                <a href="javascript:setTimeout(()=>{window.location = 'contacts.html' }, 850);">КОНТАКТЫ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/3">
+                        <p class="details">СОЦСЕТИ</p>
+                        <br>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
+                            <a href="" class="block invisible">INSTAGRAM</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="https://www.instagram.com/studio.modvis/" target="_blank" class="block">INSTAGRAM</a>
+                                <a href="https://www.instagram.com/studio.modvis/" target="_blank">INSTAGRAM</a>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
+                            <a href="" class="block invisible">FACEBOOK</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="https://www.facebook.com/modvis.studio/" target="_blank" class="block">FACEBOOK</a>
+                                <a href="https://www.facebook.com/modvis.studio/" target="_blank">FACEBOOK</a>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
+                            <a href="" class="block invisible">DRIBBBLE</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="https://dribbble.com/modvis" target="_blank" class="block">DRIBBBLE</a>
+                                <a href="https://dribbble.com/modvis" target="_blank">DRIBBBLE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block w-1/3">
+                        <p class="details">КОНТАКТЫ</p>
+                        <br>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
+                            <a class="block invisible">studiomodvis@gmail.com</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="mailto:studiomodvis@gmail.com" class="block">studiomodvis@gmail.com</a>
+                                <a href="mailto:studiomodvis@gmail.com" class="">studiomodvis@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden hover:[&>div]:-translate-y-1/2 relative link w-fit cursour-button">
+                            <a class="block invisible">+373 68 550 009</a>
+                            <div class="transition duration-500 absolute top-0 left-0">
+                                <a href="tel:+373 68 550 009" class="block text-base">+373 68 550 009</a>
+                                <a href="tel:+373 68 550 009" class="">+373 68 550 009</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <p class="pb-[10px] pt-[50px] lg:py-[4.5vh] text-[#414141] text-center lg:text-left w-[70%] lg:w-full mx-auto text-sm">©2023 ALL RIGHTS RESERVED - MODERN VISION STUDIO</p>
+            </div>
+            <img src="../images/FOOTER/logo.png" alt="" class="w-full" id="footer-logo">
+        </div>
+</body>
+</html>
