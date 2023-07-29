@@ -119,6 +119,7 @@ const typingText = document.querySelector('#sales .typing');
     if (word == 'WEB-DEVELOPMENT' || word == 'ВЕБ-РАЗРАБОТКА') return "<div class='letter word accent cursour-button'>" + word + " </div>";
     if (word == 'BRANDING' || word == 'БРЕНДИНГ,') return "<div class='letter word accent cursour-button'>" + word + " </div>";
     if (word == 'MARKETING' || word == 'МАРКЕТИНГ') return "<div class='letter word accent cursour-button'>" + word + " </div>";
+    if ((word == 'beneficiar.' || word == 'identity.' || word == 'клиента.') && window.innerWidth >= 1700) return "<span class='letter'>" + word + "</span> <br>";
 
     return "<span class='letter'>" + word + "</span>";
 }).join(' ');
@@ -595,6 +596,7 @@ function animateContacts() {
 window.addEventListener('scroll', animateContacts);
 
 const footerObserver = new IntersectionObserver(entries => {
+    if (window.innerWidth < 1024) return;
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             contactText.classList.add('active');
