@@ -3,6 +3,8 @@ const wrapper = service.querySelector('.wrapper');
 
 function moveWrapper() {
     if (service.getBoundingClientRect().bottom < window.innerHeight) return;
+
+    footer.classList.remove('active');
     let prog = service.getBoundingClientRect().top * -1 / (service.clientHeight + window.innerHeight) * 1.12;
     wrapper.style.transform = 'translateY(' + prog * 100 + '%)';
 }
@@ -21,4 +23,16 @@ contactButtons.forEach(butotn => {
         cursor.classList.remove('active');
         cursor.querySelector('img').classList.remove('active');
     });
-})
+});
+
+/* -------- Footer -------- */
+
+function footerScroll () {
+    if (window.scrollY >= document.body.clientHeight - window.innerHeight) {
+        setTimeout(() => {
+            footer.classList.add('active');
+        }, 300);
+    }
+}
+
+window.addEventListener('scroll', footerScroll);
