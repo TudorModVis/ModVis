@@ -431,6 +431,10 @@ header {
 
 .page-transition {
     transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
 }
 
 .page-transition.active {
@@ -480,12 +484,31 @@ body.transition {
 }
 
 @keyframes load {
-    to {transform: translateX(-200vw);}
+    to {
+        transform: translateX(-200vw);
+        transform: translateX(-200vw);
+        -ms-transform: translateX(-200vw);
+        -webkit-transform: translateX(-200vw);
+        -moz-transform: translateX(-200vw);
+        -o-transform: translateX(-200vw);
+    }
 }
 
 @keyframes transition {
-    from {transform: translateX(100vw);}
-    to {transform: translateX(0);}
+    from {
+        transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+        -webkit-transform: translateX(100vw);
+        -moz-transform: translateX(100vw);
+        -o-transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+        -ms-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
 }
 
 #cursorFollow{
