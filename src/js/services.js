@@ -28,7 +28,7 @@ contactButtons.forEach(butotn => {
 /* -------- Footer -------- */
 
 function footerScroll () {
-    if (window.scrollY >= document.body.clientHeight - window.innerHeight) {
+    if (window.scrollY >= document.body.clientHeight - (window.innerHeight + 20)) {
         setTimeout(() => {
             footer.classList.add('active');
         }, 300);
