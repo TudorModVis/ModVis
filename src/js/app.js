@@ -168,12 +168,13 @@ pageLinks.forEach(link => {
     })
 });
 
-const entries = performance.getEntriesByType("navigation");
-entries.forEach((entry) => {
-  if (entry.type === "back_forward") {
-    location.reload(true);
-  }
-});
+(function () {
+    window.onpageshow = function(event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    };
+})();
 
 // -------- Cursor Follow -------- //
 
