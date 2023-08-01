@@ -65,38 +65,20 @@ setInterval(changeWords, 2000);
 
 let homeAnimation;
 
-if (window.innerWidth < 1024) {
-    homeAnimation = anime({
-        targets: [changeContainer, document.querySelectorAll('.homeTextMob')],
-        opacity: 0,
-        rotate: function(el, i) {
-            return -5 + (5 * i);
-          },
-        marginBottom: function(el, i) {
-            return 50 + (-10 * i);
-          },
-        delay: anime.stagger(150),
-        easing: 'easeInOutQuad',
-        autoplay: false,
-        duration: 1000,
-    });
-} else {
-    homeAnimation = anime({
-        targets: [changeContainer, document.querySelectorAll('.homeText')],
-        opacity: 0,
-        rotate: function(el, i) {
-            return -5 + (5 * i);
-          },
-        marginBottom: function(el, i) {
-            return 50 + (-10 * i);
-          },
-        delay: anime.stagger(150),
-        easing: 'easeInOutQuad',
-        autoplay: false,
-        duration: 1000,
-    });
-}
-
+homeAnimation = anime({
+    targets: [changeContainer, document.querySelectorAll('.homeText')],
+    opacity: 0,
+    rotate: function(el, i) {
+        return -5 + (5 * i);
+      },
+    marginBottom: function(el, i) {
+        return 50 + (-10 * i);
+      },
+    delay: anime.stagger(150),
+    easing: 'easeInOutQuad',
+    autoplay: false,
+    duration: 1000,
+});
 
 const home = document.getElementById('home');
 const homeEye = document.querySelector('#home .circle');
@@ -209,23 +191,36 @@ typingTimeline
 
 //Heading animation
 
+let delay = 290;
+if (window.innerWidth < 1024) delay = 0;
+
 const headingAnimation = anime({
     targets: salesHeadings,
     translateX: (el) => {
         if (el.classList.contains('left')) return ['-30%', 0];
         return ['30%', 0];
     },
-    delay: anime.stagger(290),
+    delay: anime.stagger(delay),
     easing: 'easeOutQuad',
     autoplay: false
 });
+
+const headingObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            headingAnimation.play();
+            contactAnimation.play();
+        }
+    });
+});
+
+if (window.innerWidth < 1024) headingObserver.observe(salesHeadings[0]);
 
 function scrollEvents() {
     let posY = window.scrollY;
     let amplifier = 4;
 
-    if (window.innerWidth < 1024) amplifier = 1;
-    headingAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * amplifier * -1) + 1) * headingAnimation.duration)
+    if (window.innerWidth >= 1024) headingAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * amplifier * -1) + 1) * headingAnimation.duration);
 
     if (home.getBoundingClientRect().bottom > window.innerHeight / 100 * 10) {
         homeAnimation.seek((posY / (home.clientHeight - (window.innerHeight / 100 * 10))) * homeAnimation.duration);
@@ -586,14 +581,17 @@ const contactAnimation = anime({
         if (el.classList.contains('left')) return ['-20%', 0];
         return ['20%', 0];
     },
-    delay: anime.stagger(290),
+    delay: anime.stagger(delay),
     easing: 'easeOutQuad',
     autoplay: false
 });
 
+if (window.innerWidth < 1024) headingObserver.observe(contactHeadings[0]);
 aboutEyeObserver.observe(contactEye);
 
 function animateContacts() {
+    if (window.innerWidth < 1024) return;
+
     let percent = contactUs.getBoundingClientRect().top / (window.innerHeight * .8) * -1 + 1;
     contactAnimation.seek(percent * contactAnimation.duration);
 }
