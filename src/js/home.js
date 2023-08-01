@@ -225,15 +225,20 @@ function scrollEvents() {
     let amplifier = 4;
 
     if (window.innerWidth < 1024) amplifier = 1;
-
     headingAnimation.seek(((salesContainer.getBoundingClientRect().top / salesContainer.clientHeight * amplifier * -1) + 1) * headingAnimation.duration)
 
     if (home.getBoundingClientRect().bottom > window.innerHeight / 100 * 10) {
         homeAnimation.seek((posY / (home.clientHeight - (window.innerHeight / 100 * 10))) * homeAnimation.duration);
         homeEye.style.display = 'block';
-        homeEye.style.transform = 'translate(-50%, -50%) scale(' + (1 - posY / home.clientHeight) + ')';
+        if (window.innerWidth > 1024) homeEye.style.transform = 'translate(-50%, -50%) scale(' + (1 - posY / home.clientHeight) + ')';
         salesEye.classList.remove('active');
-    } else { homeEye.style.transform = 'translate(-50%, -50%) scale(0)'; homeEye.style.display = 'none'; salesEye.classList.add('active');}
+    } else {
+        if (window.innerWidth >= 1024) {
+            homeEye.style.transform = 'translate(-50%, -50%) scale(0)'; 
+            homeEye.style.display = 'none'; 
+        }
+        
+        salesEye.classList.add('active');}
 
     if (sales.getBoundingClientRect().top == 0) {
         salesTitles.forEach(title => {title.classList.add('active'); title.classList.remove('bottom');}); 
