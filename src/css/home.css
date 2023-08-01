@@ -20,6 +20,11 @@
     height: 30%;
 }
 
+#sales .accent.small:after {
+    bottom: 15%;
+    height: 20%;
+}
+
 #about-us .circle {
     transform: scale(0);
     transition: .5s ease-out;

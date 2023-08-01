@@ -147,6 +147,7 @@ const pageLinks = document.querySelectorAll('.page-link');
 const bodyContainer = document.querySelector('body');
 const loadingScreen = document.querySelector('.loading');
 
+pageTransition.classList.add('ready');
 loadingScreen.querySelector('div').classList.add('active');
 let timeout = (window.innerWidth < 1024)? 1000 : 1600;
 
@@ -165,6 +166,13 @@ pageLinks.forEach(link => {
         bodyContainer.classList.add('transition');
         pageTransition.classList.add('transition');
     })
+});
+
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  if (entry.type === "back_forward") {
+    location.reload(true);
+  }
 });
 
 // -------- Cursor Follow -------- //
